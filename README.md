@@ -465,9 +465,6 @@ Al finalizar esta sección el participante comprenderá:
 
 ✅ Cuáles son los beneficios y limitaciones de la herramienta.
 
-
-# 3. Prompts Efectivos
-
 # 3. Prompts Efectivos
 
 ## 🎯 Objetivo
