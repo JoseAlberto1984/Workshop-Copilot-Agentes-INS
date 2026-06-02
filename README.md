@@ -1,20 +1,64 @@
 # 🏛️ Workshop-Copilot-Agentes-INS
 Workshop práctico sobre GitHub Copilot, Agentes, Instructions y Skills aplicado al desarrollo moderno con IA.
 
-## Desarrollo Asistido por IA
+🏛 Workshop GitHub Copilot y Agentes
 
-### Agenda
+Desarrollo Asistido por IA
 
-1. [Configuración de VS Code](docs/01-configuracion-vscode.md)
+📋 Agenda
+
+1. Configuración de VS Code para Desarrollo Moderno
 2. Introducción a GitHub Copilot
 3. Prompts Efectivos
-4. Introducción a Agentes
-5. Instructions
-6. Caso Práctico
-7. Buenas Prácticas
+4. Agentes, Instructions y Skills
+5. Caso Práctico
+6. Buenas Prácticas y Uso Empresarial
+7. Conclusiones
 
----
+--------------------------------------------------
 
-## Objetivo
+🎯 Objetivo
 
-Aprender a utilizar GitHub Copilot y Agentes para acelerar el desarrollo de software mediante inteligencia artificial.
+...
+
+--------------------------------------------------
+
+# 1. Configuración de VS Code para Desarrollo Moderno
+
+...
+
+--------------------------------------------------
+
+# 2. Introducción a GitHub Copilot
+
+...
+
+--------------------------------------------------
+
+# 3. Prompts Efectivos
+
+...
+
+--------------------------------------------------
+
+# 4. Agentes, Instructions y Skills
+
+...
+
+--------------------------------------------------
+
+# 5. Caso Práctico
+
+...
+
+--------------------------------------------------
+
+# 6. Buenas Prácticas y Uso Empresarial
+
+...
+
+--------------------------------------------------
+
+# 7. Conclusiones
+
+...
