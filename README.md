@@ -765,10 +765,299 @@ Al finalizar esta sección el participante será capaz de:
 
 ✅ Aprovechar mejor GitHub Copilot durante el desarrollo.
 
-
 # 4. Agentes, Instructions y Skills
 
-...
+## 🎯 Objetivo
+
+Comprender cómo los Agentes, Instructions y Skills permiten personalizar y especializar el comportamiento de GitHub Copilot para diferentes escenarios de trabajo.
+
+---
+
+## Evolución del Uso de la IA
+
+La mayoría de los usuarios comienza utilizando GitHub Copilot mediante consultas aisladas:
+
+```text
+¿Qué es una API REST?
+```
+
+```text
+Genera una clase Cliente.
+```
+
+```text
+Explícame este método.
+```
+
+Sin embargo, cuando las tareas se vuelven más complejas, es necesario proporcionar contexto, reglas y comportamiento especializado.
+
+Es aquí donde aparecen los Agentes.
+
+---
+
+## ¿Qué es un Agente?
+
+Un Agente es una configuración especializada que permite a GitHub Copilot actuar bajo un conjunto de reglas, instrucciones y capacidades específicas.
+
+Puede verse como un miembro virtual del equipo con un rol determinado.
+
+Ejemplos:
+
+* Arquitecto de Software
+* Desarrollador Backend
+* Especialista en Seguridad
+* Analista de Negocio
+* Revisor de Código
+* Especialista en Pruebas
+
+---
+
+## Diferencia entre Chat y Agente
+
+### Chat Tradicional
+
+Cada conversación inicia prácticamente desde cero.
+
+```text
+Usuario
+   │
+   ▼
+GitHub Copilot
+```
+
+---
+
+### Agente
+
+El agente incorpora conocimiento, reglas y comportamiento especializado.
+
+```text
+Usuario
+   │
+   ▼
+Agente
+   │
+   ├── Instructions
+   ├── Skills
+   │
+   ▼
+GitHub Copilot
+```
+
+---
+
+## Beneficios de Utilizar Agentes
+
+✅ Respuestas más consistentes.
+
+✅ Menor necesidad de repetir instrucciones.
+
+✅ Aplicación automática de estándares.
+
+✅ Mejor alineación con las prácticas del equipo.
+
+✅ Mayor productividad.
+
+---
+
+## ¿Qué son las Instructions?
+
+Las Instructions son reglas permanentes que definen cómo debe comportarse el agente.
+
+Permiten establecer:
+
+* Idioma de respuesta.
+* Estilo de desarrollo.
+* Arquitectura recomendada.
+* Convenciones del equipo.
+* Restricciones técnicas.
+
+---
+
+### Ejemplo de Instructions
+
+```text
+Eres un Arquitecto de Software.
+
+Debes responder en español.
+
+Debes utilizar .NET 8.
+
+Debes promover Clean Architecture.
+
+Debes sugerir pruebas unitarias cuando sea posible.
+
+Debes seguir buenas prácticas de seguridad.
+```
+
+---
+
+## Beneficios de las Instructions
+
+Sin Instructions:
+
+```text
+Genera una API.
+```
+
+El resultado puede variar entre conversaciones.
+
+---
+
+Con Instructions:
+
+```text
+Genera una API.
+```
+
+El agente responderá aplicando automáticamente:
+
+* .NET 8
+* Clean Architecture
+* Buenas prácticas
+* Pruebas unitarias
+
+---
+
+## ¿Qué son los Skills?
+
+Los Skills representan capacidades o conocimientos especializados que un agente puede utilizar para resolver tareas.
+
+Un Skill puede ayudar al agente a:
+
+* Generar código.
+* Analizar proyectos.
+* Crear documentación.
+* Diseñar arquitecturas.
+* Revisar calidad de código.
+* Generar pruebas.
+
+---
+
+## Ejemplo Conceptual
+
+### Agente Arquitecto
+
+Instructions:
+
+```text
+Responde como Arquitecto de Software.
+```
+
+Skills:
+
+```text
+Diseño de APIs
+Diseño de Arquitectura
+Buenas Prácticas
+Patrones de Diseño
+```
+
+---
+
+### Agente QA
+
+Instructions:
+
+```text
+Responde como Especialista QA.
+```
+
+Skills:
+
+```text
+Pruebas Unitarias
+Pruebas de Integración
+Cobertura de Código
+Automatización
+```
+
+---
+
+## Caso de Uso
+
+Supongamos que un desarrollador solicita:
+
+```text
+Necesito una API para administrar pólizas.
+```
+
+Un agente configurado como Arquitecto podría responder:
+
+* Arquitectura propuesta.
+* Capas recomendadas.
+* Entidades principales.
+* Endpoints sugeridos.
+* Estrategia de pruebas.
+* Consideraciones de seguridad.
+
+Todo esto sin necesidad de indicar cada detalle manualmente.
+
+---
+
+## Cuándo Utilizar un Agente
+
+Se recomienda utilizar agentes cuando:
+
+* Existen estándares definidos.
+* Se trabaja en equipos grandes.
+* Se desea consistencia en las respuestas.
+* Se realizan tareas repetitivas.
+* Se busca acelerar la incorporación de nuevos colaboradores.
+
+---
+
+## Ejercicio Práctico
+
+Imagine que debe crear un agente para su equipo.
+
+Defina:
+
+### Rol
+
+```text
+Arquitecto de Software
+```
+
+### Instructions
+
+```text
+Responde en español.
+
+Utiliza .NET 8.
+
+Aplica Clean Architecture.
+
+Sugiere pruebas unitarias.
+```
+
+### Skills
+
+```text
+Diseño de APIs
+Arquitectura de Software
+Buenas Prácticas
+Pruebas Unitarias
+```
+
+Analice cómo estas configuraciones podrían influir en las respuestas generadas por GitHub Copilot.
+
+---
+
+## Resultado Esperado
+
+Al finalizar esta sección el participante comprenderá:
+
+✅ Qué es un Agente.
+
+✅ Qué son las Instructions.
+
+✅ Qué son los Skills.
+
+✅ Cómo los agentes permiten especializar GitHub Copilot.
+
+✅ Cuándo resulta conveniente utilizar agentes en entornos empresariales.
+
 
 # 5. Caso Práctico
 
