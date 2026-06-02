@@ -211,37 +211,25 @@ Al finalizar esta sección el participante debe contar con:
 ✅ Comprensión básica de los modos Ask, Edit y Agent
 
 
---------------------------------------------------
-
 # 2. Introducción a GitHub Copilot
 
 ...
-
---------------------------------------------------
 
 # 3. Prompts Efectivos
 
 ...
 
---------------------------------------------------
-
 # 4. Agentes, Instructions y Skills
 
 ...
-
---------------------------------------------------
 
 # 5. Caso Práctico
 
 ...
 
---------------------------------------------------
-
 # 6. Buenas Prácticas y Uso Empresarial
 
 ...
-
---------------------------------------------------
 
 # 7. Conclusiones
 
