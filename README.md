@@ -1,8 +1,6 @@
 # 🏛️ Workshop-Copilot-Agentes-INS
 Workshop práctico sobre GitHub Copilot, Agentes, Instructions y Skills aplicado al desarrollo moderno con IA.
 
-# 🏛 Workshop GitHub Copilot y Agentes
-
 ## Desarrollo Asistido por IA
 
 ### Agenda
