@@ -1058,10 +1058,215 @@ Al finalizar esta sección el participante comprenderá:
 
 ✅ Cuándo resulta conveniente utilizar agentes en entornos empresariales.
 
-
 # 5. Caso Práctico
 
-...
+## 🎯 Objetivo
+
+Demostrar cómo un Agente especializado puede ayudar a resolver una necesidad real de desarrollo de software aplicando automáticamente buenas prácticas, lineamientos y estándares definidos por el equipo.
+
+---
+
+## Escenario
+
+Un equipo de desarrollo necesita construir una nueva API para administrar pólizas de seguros.
+
+La organización ha definido los siguientes estándares:
+
+* Desarrollo en .NET 8.
+* Uso de Clean Architecture.
+* Implementación de pruebas unitarias.
+* Documentación de endpoints.
+* Aplicación de buenas prácticas de seguridad.
+
+El objetivo es evitar que cada desarrollador tenga que recordar y especificar estos requisitos manualmente en cada consulta.
+
+---
+
+## Solución Tradicional
+
+Un desarrollador podría realizar una consulta como:
+
+```text
+Genera una API para administrar pólizas.
+```
+
+Sin embargo, el resultado dependerá completamente del contexto disponible y podría no seguir los estándares definidos por la organización.
+
+---
+
+## Solución Utilizando un Agente
+
+Se crea un agente especializado llamado:
+
+```text
+Arquitecto de Software
+```
+
+---
+
+## Instructions del Agente
+
+```text
+Eres un Arquitecto de Software.
+
+Debes responder en español.
+
+Debes utilizar .NET 8.
+
+Debes promover Clean Architecture.
+
+Debes sugerir pruebas unitarias.
+
+Debes aplicar buenas prácticas de seguridad.
+
+Debes generar soluciones mantenibles y escalables.
+```
+
+---
+
+## Skills del Agente
+
+```text
+Diseño de APIs
+
+Arquitectura de Software
+
+Patrones de Diseño
+
+Buenas Prácticas
+
+Pruebas Unitarias
+
+Documentación Técnica
+```
+
+---
+
+## Consulta Realizada
+
+```text
+Necesito una API para administrar pólizas de seguros.
+```
+
+---
+
+## Resultado Esperado
+
+El agente podría responder proponiendo:
+
+### Arquitectura
+
+```text
+API
+
+Aplicación
+
+Dominio
+
+Infraestructura
+```
+
+---
+
+### Entidades
+
+```text
+Poliza
+
+Cliente
+
+Cobertura
+```
+
+---
+
+### Endpoints
+
+```http
+GET     /api/polizas
+
+GET     /api/polizas/{id}
+
+POST    /api/polizas
+
+PUT     /api/polizas/{id}
+
+DELETE  /api/polizas/{id}
+```
+
+---
+
+### Pruebas
+
+```text
+Pruebas Unitarias
+
+Pruebas de Integración
+
+Validaciones de Negocio
+```
+
+---
+
+### Seguridad
+
+```text
+Autenticación
+
+Autorización
+
+Validación de Entradas
+
+Manejo de Errores
+```
+
+---
+
+## Beneficios Obtenidos
+
+Sin agente:
+
+* Cada desarrollador realiza consultas diferentes.
+* Resultados inconsistentes.
+* Mayor riesgo de incumplir estándares.
+
+Con agente:
+
+* Respuestas alineadas con la organización.
+* Menor esfuerzo de configuración.
+* Mayor consistencia.
+* Mejor calidad técnica.
+
+---
+
+## Discusión
+
+Analice con el grupo:
+
+### ¿Qué otras especializaciones podrían implementarse?
+
+Ejemplos:
+
+* Agente QA.
+* Agente DevOps.
+* Agente Seguridad.
+* Agente Analista de Negocio.
+* Agente Documentador.
+
+---
+
+## Resultado Esperado
+
+Al finalizar este ejercicio el participante comprenderá:
+
+✅ Cómo un agente puede especializar el comportamiento de GitHub Copilot.
+
+✅ Cómo las Instructions influyen en las respuestas.
+
+✅ Cómo los Skills aportan capacidades especializadas.
+
+✅ Cómo los agentes ayudan a estandarizar el desarrollo dentro de una organización.
+
 
 # 6. Buenas Prácticas y Uso Empresarial
 
