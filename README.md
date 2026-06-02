@@ -468,7 +468,306 @@ Al finalizar esta sección el participante comprenderá:
 
 # 3. Prompts Efectivos
 
-...
+# 3. Prompts Efectivos
+
+## 🎯 Objetivo
+
+Aprender a redactar instrucciones efectivas para obtener mejores resultados de GitHub Copilot y maximizar el valor de la Inteligencia Artificial durante el desarrollo de software.
+
+---
+
+## ¿Qué es un Prompt?
+
+Un prompt es la instrucción o solicitud que se proporciona a GitHub Copilot para realizar una tarea.
+
+La calidad del resultado depende en gran medida de la calidad del prompt.
+
+```text
+Mejor Prompt
+      ↓
+Mejor Contexto
+      ↓
+Mejor Resultado
+```
+
+---
+
+## Prompt Poco Efectivo
+
+Ejemplo:
+
+```text
+Haz una API.
+```
+
+Problemas:
+
+* No indica tecnología.
+* No define arquitectura.
+* No especifica requerimientos.
+* No establece restricciones.
+
+El resultado será ambiguo y posiblemente incompleto.
+
+---
+
+## Prompt Más Específico
+
+Ejemplo:
+
+```text
+Crea una API REST en .NET 8 para administrar pólizas de seguros.
+```
+
+Ahora GitHub Copilot conoce:
+
+* Tecnología.
+* Tipo de solución.
+* Dominio del negocio.
+
+La calidad de la respuesta mejora considerablemente.
+
+---
+
+## Prompt Bien Estructurado
+
+Ejemplo:
+
+```text
+Actúa como Arquitecto de Software.
+
+Diseña una API REST en .NET 8 para administrar pólizas de seguros.
+
+Requisitos:
+- Utilizar Minimal API.
+- Aplicar Clean Architecture.
+- Incluir validaciones.
+- Generar pruebas unitarias con XUnit.
+- Documentar los endpoints.
+```
+
+Este tipo de prompt proporciona:
+
+* Rol.
+* Objetivo.
+* Restricciones.
+* Resultado esperado.
+
+---
+
+## Componentes de un Buen Prompt
+
+### 1. Rol
+
+Indicar el papel que debe asumir la IA.
+
+Ejemplos:
+
+```text
+Actúa como Arquitecto de Software.
+```
+
+```text
+Actúa como Desarrollador Senior .NET.
+```
+
+```text
+Actúa como Especialista en Seguridad.
+```
+
+---
+
+### 2. Objetivo
+
+Definir claramente qué se desea obtener.
+
+Ejemplo:
+
+```text
+Diseña una API REST para administrar pólizas.
+```
+
+---
+
+### 3. Contexto
+
+Brindar información adicional relevante.
+
+Ejemplo:
+
+```text
+La aplicación será utilizada por agentes de seguros.
+```
+
+---
+
+### 4. Restricciones
+
+Indicar límites o estándares.
+
+Ejemplo:
+
+```text
+Utiliza .NET 8.
+No utilices Entity Framework.
+Genera comentarios en español.
+```
+
+---
+
+### 5. Resultado Esperado
+
+Definir claramente la salida deseada.
+
+Ejemplo:
+
+```text
+Genera:
+- Entidades
+- Endpoints
+- Validaciones
+- Pruebas unitarias
+```
+
+---
+
+## Plantilla Recomendada
+
+```text
+Actúa como [ROL].
+
+Objetivo:
+[OBJETIVO]
+
+Contexto:
+[CONTEXTO]
+
+Restricciones:
+[RESTRICCIONES]
+
+Resultado esperado:
+[SALIDA DESEADA]
+```
+
+---
+
+## Ejemplo Real
+
+### Prompt Básico
+
+```text
+Crea una clase Cliente.
+```
+
+---
+
+### Prompt Mejorado
+
+```text
+Actúa como Desarrollador Senior .NET.
+
+Crea una clase Cliente para una aseguradora.
+
+Requisitos:
+- Utilizar C# .NET 8.
+- Incluir validaciones básicas.
+- Agregar comentarios XML.
+- Seguir buenas prácticas de Clean Code.
+```
+
+---
+
+## Ejercicio Práctico
+
+### Ejercicio 1
+
+Solicitar a Copilot:
+
+```text
+Haz una API.
+```
+
+Analizar la respuesta obtenida.
+
+---
+
+### Ejercicio 2
+
+Solicitar:
+
+```text
+Crea una API REST en .NET 8 para administrar pólizas de seguros.
+```
+
+Comparar los resultados.
+
+---
+
+### Ejercicio 3
+
+Solicitar:
+
+```text
+Actúa como Arquitecto de Software.
+
+Diseña una API REST para administrar pólizas.
+
+Requisitos:
+- .NET 8
+- Minimal API
+- XUnit
+- Clean Architecture
+- Comentarios en español
+
+Genera entidades, endpoints y pruebas unitarias.
+```
+
+Comparar nuevamente los resultados.
+
+---
+
+## Buenas Prácticas
+
+✅ Proporcionar contexto.
+
+✅ Definir claramente el objetivo.
+
+✅ Especificar tecnologías.
+
+✅ Indicar restricciones.
+
+✅ Solicitar ejemplos cuando sea necesario.
+
+✅ Dividir problemas complejos en tareas pequeñas.
+
+---
+
+## Errores Comunes
+
+❌ Prompts demasiado generales.
+
+❌ Falta de contexto.
+
+❌ No especificar tecnologías.
+
+❌ Esperar que la IA adivine requerimientos.
+
+❌ Aceptar respuestas sin validarlas.
+
+---
+
+## Resultado Esperado
+
+Al finalizar esta sección el participante será capaz de:
+
+✅ Crear prompts más efectivos.
+
+✅ Obtener respuestas más precisas.
+
+✅ Reducir iteraciones innecesarias.
+
+✅ Aprovechar mejor GitHub Copilot durante el desarrollo.
+
 
 # 4. Agentes, Instructions y Skills
 
