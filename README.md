@@ -1267,10 +1267,265 @@ Al finalizar este ejercicio el participante comprenderá:
 
 ✅ Cómo los agentes ayudan a estandarizar el desarrollo dentro de una organización.
 
-
 # 6. Buenas Prácticas y Uso Empresarial
 
-...
+## 🎯 Objetivo
+
+Conocer las principales recomendaciones para utilizar GitHub Copilot de forma segura, responsable y efectiva dentro de entornos empresariales.
+
+---
+
+## GitHub Copilot como Asistente
+
+Es importante comprender que GitHub Copilot es un asistente para el desarrollo de software.
+
+Su propósito es ayudar a los desarrolladores a:
+
+* Generar código.
+* Resolver dudas técnicas.
+* Crear documentación.
+* Generar pruebas.
+* Acelerar tareas repetitivas.
+
+Sin embargo, las decisiones finales continúan siendo responsabilidad del equipo de desarrollo.
+
+---
+
+## Principio Fundamental
+
+> GitHub Copilot asiste al desarrollador, pero no reemplaza su criterio técnico.
+
+Todo código generado debe ser revisado antes de ser incorporado a una solución.
+
+---
+
+## Seguridad de la Información
+
+Antes de utilizar GitHub Copilot, es importante considerar las políticas de seguridad de la organización.
+
+### Evitar compartir información sensible
+
+No se recomienda incluir:
+
+* Contraseñas.
+* Tokens de acceso.
+* Secretos de aplicaciones.
+* Llaves criptográficas.
+* Información confidencial de clientes.
+* Datos personales sensibles.
+
+Ejemplos:
+
+❌ Incorrecto
+
+```text id="1f8zvj"
+Mi contraseña de producción es...
+```
+
+```text id="tt57pp"
+Este es el token de acceso del sistema...
+```
+
+---
+
+### Buenas Prácticas
+
+✅ Utilizar datos ficticios para ejemplos.
+
+✅ Ocultar información sensible.
+
+✅ Revisar las políticas internas de la organización.
+
+---
+
+## Validación del Código Generado
+
+Aunque GitHub Copilot genera código funcional, siempre se recomienda validar:
+
+* Correctitud funcional.
+* Seguridad.
+* Rendimiento.
+* Cumplimiento de estándares internos.
+
+---
+
+### Revisar Siempre
+
+Antes de aceptar código generado:
+
+* Comprender la solución propuesta.
+* Verificar dependencias.
+* Revisar excepciones y validaciones.
+* Confirmar cumplimiento de reglas de negocio.
+
+---
+
+## Uso Responsable de la Inteligencia Artificial
+
+La IA puede acelerar el trabajo, pero no debe sustituir:
+
+* Análisis técnico.
+* Diseño de arquitectura.
+* Revisión de código.
+* Validación funcional.
+* Pruebas.
+
+---
+
+## Uso de Prompts Claros
+
+Prompts bien estructurados generan mejores resultados.
+
+Ejemplo:
+
+❌ Poco claro
+
+```text id="t6dz6h"
+Haz una API.
+```
+
+---
+
+✅ Más efectivo
+
+```text id="4t9vx9"
+Crea una API REST en .NET 8 para administrar pólizas utilizando Clean Architecture.
+```
+
+---
+
+## Mantener Consistencia
+
+Cuando se trabaja en equipo es recomendable:
+
+* Definir estándares.
+* Compartir instrucciones comunes.
+* Utilizar agentes especializados.
+* Documentar lineamientos.
+
+Esto ayuda a obtener resultados más consistentes entre diferentes desarrolladores.
+
+---
+
+## Revisión de Código
+
+El código generado por GitHub Copilot debe seguir el mismo proceso de revisión que cualquier otro desarrollo.
+
+Se recomienda:
+
+* Pull Requests.
+* Code Reviews.
+* Pruebas automatizadas.
+* Validaciones de seguridad.
+
+---
+
+## Medición del Valor
+
+GitHub Copilot debe considerarse una herramienta de productividad.
+
+Algunas métricas que pueden analizarse son:
+
+* Tiempo de desarrollo.
+* Reducción de tareas repetitivas.
+* Velocidad de generación de pruebas.
+* Velocidad de documentación.
+* Productividad del equipo.
+
+---
+
+## Casos de Uso Recomendados
+
+GitHub Copilot suele aportar mayor valor en:
+
+### Desarrollo
+
+* Generación de código.
+* Refactorización.
+* Creación de APIs.
+* Consultas SQL.
+
+### Calidad
+
+* Pruebas unitarias.
+* Pruebas de integración.
+* Casos de prueba.
+
+### Documentación
+
+* Comentarios XML.
+* Documentación técnica.
+* Diagramas y descripciones.
+
+### Aprendizaje
+
+* Nuevos lenguajes.
+* Nuevos frameworks.
+* Patrones de diseño.
+* Buenas prácticas.
+
+---
+
+## Casos donde se debe tener mayor cuidado
+
+Se recomienda una revisión más rigurosa cuando el código involucra:
+
+* Seguridad.
+* Autenticación.
+* Autorización.
+* Criptografía.
+* Procesamiento financiero.
+* Datos sensibles.
+* Integraciones críticas.
+
+---
+
+## Recomendaciones para Equipos
+
+### Hacer
+
+✅ Utilizar GitHub Copilot como apoyo.
+
+✅ Validar el código generado.
+
+✅ Aplicar revisiones de código.
+
+✅ Compartir buenas prácticas.
+
+✅ Utilizar prompts claros.
+
+✅ Definir estándares comunes.
+
+---
+
+### Evitar
+
+❌ Confiar ciegamente en las respuestas.
+
+❌ Compartir información sensible.
+
+❌ Omitir pruebas.
+
+❌ Omitir revisiones de seguridad.
+
+❌ Incorporar código sin comprenderlo.
+
+---
+
+## Resultado Esperado
+
+Al finalizar esta sección el participante comprenderá:
+
+✅ Cómo utilizar GitHub Copilot de forma responsable.
+
+✅ Qué información no debe compartirse.
+
+✅ La importancia de validar el código generado.
+
+✅ Cómo integrar GitHub Copilot dentro de los procesos de desarrollo existentes.
+
+✅ Buenas prácticas para el uso empresarial de la Inteligencia Artificial.
+
 
 # 7. Conclusiones
 
