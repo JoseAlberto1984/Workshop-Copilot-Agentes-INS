@@ -25,8 +25,6 @@ Desarrollo Asistido por IA
 
 # 1. Configuración de VS Code para Desarrollo Moderno
 
-# 1. Configuración de VS Code para Desarrollo Moderno
-
 ## 🎯 Objetivo
 
 Al finalizar esta sección el participante será capaz de:
