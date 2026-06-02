@@ -213,8 +213,6 @@ Al finalizar esta sección el participante debe contar con:
 
 # 2. Introducción a GitHub Copilot
 
-# 2. Introducción a GitHub Copilot
-
 ## 🎯 Objetivo
 
 Comprender cómo GitHub Copilot puede asistir a los desarrolladores durante el ciclo completo de desarrollo de software, desde la generación de código hasta la documentación y pruebas.
