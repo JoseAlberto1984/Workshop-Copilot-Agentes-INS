@@ -1526,7 +1526,190 @@ Al finalizar esta sección el participante comprenderá:
 
 ✅ Buenas prácticas para el uso empresarial de la Inteligencia Artificial.
 
-
 # 7. Conclusiones
 
-...
+## 🎯 Objetivo
+
+Recapitular los principales conceptos vistos durante el taller y establecer una ruta de adopción para comenzar a utilizar GitHub Copilot de forma efectiva en el trabajo diario.
+
+---
+
+## ¿Qué Aprendimos?
+
+Durante este taller se abordaron los principales conceptos para iniciar en el desarrollo asistido por Inteligencia Artificial utilizando GitHub Copilot.
+
+### Configuración del Entorno
+
+Se configuró Visual Studio Code para trabajar con herramientas de Inteligencia Artificial.
+
+Se instalaron y configuraron:
+
+* GitHub Copilot.
+* GitHub Copilot Chat.
+* Extensiones complementarias para desarrollo moderno.
+
+---
+
+### Uso de GitHub Copilot
+
+Se exploraron capacidades como:
+
+* Generación de código.
+* Explicación de código existente.
+* Refactorización.
+* Generación de pruebas unitarias.
+* Documentación técnica.
+
+---
+
+### Prompts Efectivos
+
+Se comprobó cómo la calidad de los resultados depende directamente de la calidad de las instrucciones proporcionadas.
+
+Se analizaron elementos como:
+
+* Rol.
+* Contexto.
+* Restricciones.
+* Resultado esperado.
+
+---
+
+### Agentes, Instructions y Skills
+
+Se comprendió cómo especializar el comportamiento de GitHub Copilot mediante:
+
+* Agentes.
+* Instructions.
+* Skills.
+
+Permitiendo respuestas más consistentes y alineadas con los estándares de una organización.
+
+---
+
+### Caso Práctico
+
+Se analizó un escenario real donde un agente especializado puede ayudar a:
+
+* Diseñar soluciones.
+* Aplicar buenas prácticas.
+* Mantener consistencia técnica.
+* Acelerar el desarrollo.
+
+---
+
+### Buenas Prácticas
+
+Se revisaron aspectos relacionados con:
+
+* Seguridad.
+* Calidad.
+* Gobierno.
+* Uso responsable de la Inteligencia Artificial.
+
+---
+
+## Principales Mensajes
+
+### GitHub Copilot es un Asistente
+
+GitHub Copilot ayuda a acelerar el trabajo del desarrollador, pero no reemplaza el análisis técnico, la experiencia ni la responsabilidad profesional.
+
+---
+
+### La Calidad del Resultado Depende del Contexto
+
+Mientras mejor sea el prompt, mejor será el resultado.
+
+La IA necesita contexto para generar respuestas más precisas y útiles.
+
+---
+
+### Los Agentes Permiten Escalar el Uso de la IA
+
+Los agentes ayudan a incorporar:
+
+* Estándares.
+* Buenas prácticas.
+* Conocimiento organizacional.
+* Consistencia entre equipos.
+
+---
+
+### La IA Debe Integrarse al Proceso de Desarrollo
+
+El uso de Inteligencia Artificial debe complementar prácticas existentes como:
+
+* Revisión de código.
+* Pruebas unitarias.
+* Pruebas de integración.
+* Seguridad.
+* Gobierno de software.
+
+---
+
+## ¿Qué Puedo Hacer Mañana?
+
+Al finalizar este taller se recomienda comenzar con pequeñas acciones:
+
+### Nivel 1
+
+Utilizar GitHub Copilot para:
+
+* Generar código repetitivo.
+* Crear pruebas unitarias.
+* Generar documentación.
+
+---
+
+### Nivel 2
+
+Utilizar prompts más estructurados.
+
+Incorporar:
+
+* Rol.
+* Contexto.
+* Restricciones.
+* Resultado esperado.
+
+---
+
+### Nivel 3
+
+Crear agentes especializados para diferentes necesidades:
+
+* Arquitectura.
+* Desarrollo.
+* Calidad.
+* Seguridad.
+* Documentación.
+
+---
+
+## Próximos Pasos
+
+Una vez dominados estos conceptos, es posible avanzar hacia escenarios más avanzados:
+
+* Agentes empresariales.
+* Automatización de procesos.
+* Integración con herramientas corporativas.
+* Inteligencia Artificial aplicada al ciclo completo de desarrollo.
+
+---
+
+## Reflexión Final
+
+> La Inteligencia Artificial no reemplaza a los desarrolladores; potencia sus capacidades.
+
+Las organizaciones que logren combinar la experiencia de sus equipos con el uso adecuado de herramientas como GitHub Copilot estarán mejor preparadas para desarrollar soluciones de mayor calidad, en menor tiempo y con mayor capacidad de adaptación a los cambios del negocio.
+
+---
+
+## ¡Gracias por Participar!
+
+### Preguntas y Respuestas
+
+Espacio abierto para consultas, comentarios y experiencias relacionadas con el uso de GitHub Copilot y Agentes.
+
+
