@@ -8,7 +8,7 @@ Desarrollo Asistido por IA
 📋 Agenda
 
 1. Configuración de VS Code para Desarrollo Moderno
-2. Introducción a GitHub Copilot
+2. Introducción a GitHub Copilot(## 1. Configuración de VS Code para Desarrollo Moderno)
 3. Prompts Efectivos
 4. Agentes, Instructions y Skills
 5. Caso Práctico
@@ -23,7 +23,7 @@ Desarrollo Asistido por IA
 
 --------------------------------------------------
 
-# 1. Configuración de VS Code para Desarrollo Moderno
+## 1. Configuración de VS Code para Desarrollo Moderno
 
 ...
 
