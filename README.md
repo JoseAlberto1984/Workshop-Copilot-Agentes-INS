@@ -213,7 +213,260 @@ Al finalizar esta sección el participante debe contar con:
 
 # 2. Introducción a GitHub Copilot
 
-...
+# 2. Introducción a GitHub Copilot
+
+## 🎯 Objetivo
+
+Comprender cómo GitHub Copilot puede asistir a los desarrolladores durante el ciclo completo de desarrollo de software, desde la generación de código hasta la documentación y pruebas.
+
+---
+
+## ¿Qué es GitHub Copilot?
+
+GitHub Copilot es un asistente de Inteligencia Artificial integrado en el entorno de desarrollo que ayuda a los desarrolladores mediante sugerencias contextuales y conversaciones en lenguaje natural.
+
+Permite acelerar tareas como:
+
+* Generación de código.
+* Explicación de código existente.
+* Refactorización.
+* Generación de pruebas unitarias.
+* Creación de documentación.
+* Resolución de errores.
+* Generación de consultas SQL.
+* Creación de scripts y automatizaciones.
+
+---
+
+## ¿Cómo funciona?
+
+GitHub Copilot analiza:
+
+* El archivo actual.
+* El proyecto abierto.
+* El contexto de la conversación.
+* Los archivos seleccionados.
+
+Y genera respuestas adaptadas al contexto del desarrollo.
+
+```text
+Desarrollador
+      │
+      ▼
+ GitHub Copilot
+      │
+      ▼
+ Sugerencias y Respuestas
+```
+
+---
+
+## Principales Capacidades
+
+### Generación de Código
+
+A partir de comentarios o instrucciones en lenguaje natural.
+
+Ejemplo:
+
+```csharp
+// Crear una clase Cliente para una aseguradora
+```
+
+Copilot generará automáticamente una propuesta de implementación.
+
+---
+
+### Explicación de Código
+
+Permite comprender código existente de forma rápida.
+
+Ejemplo:
+
+```text
+Explícame este método línea por línea.
+```
+
+Ideal para:
+
+* Onboarding de nuevos desarrolladores.
+* Comprensión de sistemas heredados.
+* Revisión de código.
+
+---
+
+### Refactorización
+
+Permite mejorar código existente.
+
+Ejemplo:
+
+```text
+Refactoriza este método aplicando principios SOLID.
+```
+
+Copilot sugerirá mejoras en:
+
+* Legibilidad.
+* Mantenibilidad.
+* Buenas prácticas.
+
+---
+
+### Generación de Pruebas Unitarias
+
+Ejemplo:
+
+```text
+Genera pruebas unitarias utilizando XUnit.
+```
+
+Puede generar:
+
+* Casos positivos.
+* Casos negativos.
+* Validaciones.
+* Escenarios de error.
+
+---
+
+### Generación de Documentación
+
+Ejemplo:
+
+```text
+Genera documentación XML para esta clase.
+```
+
+o
+
+```text
+Documenta este endpoint REST.
+```
+
+---
+
+## Uso del Contexto
+
+Una de las principales fortalezas de GitHub Copilot es su capacidad para utilizar el contexto del proyecto.
+
+### @workspace
+
+Permite consultar información sobre todo el proyecto.
+
+Ejemplos:
+
+```text
+@workspace ¿Qué hace este proyecto?
+```
+
+```text
+@workspace ¿Cómo se implementan los endpoints?
+```
+
+```text
+@workspace ¿Dónde se define la autenticación?
+```
+
+---
+
+### #file
+
+Permite referenciar un archivo específico.
+
+Ejemplo:
+
+```text
+Explica el contenido de #file:Program.cs
+```
+
+---
+
+### #selection
+
+Permite trabajar únicamente sobre el código seleccionado.
+
+Ejemplo:
+
+```text
+Refactoriza #selection aplicando Clean Code.
+```
+
+---
+
+## Demostración Práctica
+
+Realizar las siguientes consultas en GitHub Copilot Chat:
+
+### Ejercicio 1
+
+```text
+¿Qué es una API REST?
+```
+
+### Ejercicio 2
+
+```text
+Genera una clase Poliza para una aseguradora.
+```
+
+### Ejercicio 3
+
+```text
+Genera pruebas unitarias para la clase Poliza.
+```
+
+### Ejercicio 4
+
+```text
+Documenta la clase utilizando comentarios XML.
+```
+
+---
+
+## Beneficios para el Desarrollo
+
+✅ Reduce tareas repetitivas.
+
+✅ Facilita el aprendizaje de nuevas tecnologías.
+
+✅ Acelera la generación de código.
+
+✅ Mejora la calidad mediante sugerencias de buenas prácticas.
+
+✅ Ayuda en la documentación y pruebas.
+
+✅ Incrementa la productividad del equipo.
+
+---
+
+## Consideraciones Importantes
+
+GitHub Copilot es un asistente, no un reemplazo del desarrollador.
+
+Siempre se recomienda:
+
+* Revisar el código generado.
+* Validar reglas de negocio.
+* Aplicar revisiones de seguridad.
+* Ejecutar pruebas antes de desplegar.
+
+---
+
+## Resultado Esperado
+
+Al finalizar esta sección el participante comprenderá:
+
+✅ Qué es GitHub Copilot.
+
+✅ Cómo utilizar Copilot Chat.
+
+✅ Cómo aprovechar el contexto mediante @workspace.
+
+✅ Cómo generar código, pruebas y documentación.
+
+✅ Cuáles son los beneficios y limitaciones de la herramienta.
+
 
 # 3. Prompts Efectivos
 
