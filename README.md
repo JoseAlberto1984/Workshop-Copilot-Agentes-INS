@@ -5,7 +5,7 @@ Workshop práctico sobre GitHub Copilot, Agentes, Instructions y Skills aplicado
 
 Desarrollo Asistido por IA
 
-##📋 Agenda
+## 📋 Agenda
 
 1. Configuración de VS Code para Desarrollo Moderno
 2. Introducción a GitHub Copilot
