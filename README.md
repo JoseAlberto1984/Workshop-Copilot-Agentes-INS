@@ -469,94 +469,128 @@ Al finalizar esta sección el participante comprenderá:
 
 ## 🎯 Objetivo
 
-Aprender a redactar instrucciones efectivas para obtener mejores resultados de GitHub Copilot y maximizar el valor de la Inteligencia Artificial durante el desarrollo de software.
+Aprender a redactar instrucciones claras y estructuradas para obtener mejores resultados de GitHub Copilot y aprovechar al máximo la Inteligencia Artificial durante el desarrollo de software.
 
 ---
 
-## ¿Qué es un Prompt?
+# ¿Qué es un Prompt?
 
-Un prompt es la instrucción o solicitud que se proporciona a GitHub Copilot para realizar una tarea.
+Un prompt es la instrucción que se proporciona a la IA para solicitar una tarea.
 
 La calidad del resultado depende en gran medida de la calidad del prompt.
 
 ```text
 Mejor Prompt
       ↓
-Mejor Contexto
+Más Contexto
+      ↓
+Menos Ambigüedad
       ↓
 Mejor Resultado
 ```
 
+La IA no adivina requerimientos.
+
+La IA responde en función de la información que recibe.
+
 ---
 
-## Prompt Poco Efectivo
+# Los Prompts son Especificaciones
 
-Ejemplo:
+En desarrollo de software estamos acostumbrados a trabajar con requisitos.
+
+Un prompt puede verse como una pequeña especificación funcional para la IA.
+
+Mientras más claro sea el requerimiento:
+
+* Mejor será la respuesta.
+* Menos iteraciones serán necesarias.
+* Menos correcciones habrá que realizar.
+
+---
+
+# Evolución de un Prompt
+
+## Nivel 1: Prompt Deficiente
 
 ```text
 Haz una API.
 ```
 
-Problemas:
+### Problemas
 
-* No indica tecnología.
-* No define arquitectura.
-* No especifica requerimientos.
-* No establece restricciones.
+❌ No indica tecnología.
 
-El resultado será ambiguo y posiblemente incompleto.
+❌ No define arquitectura.
+
+❌ No especifica requerimientos.
+
+❌ No establece restricciones.
+
+### Resultado
+
+```text
+Respuesta ambigua e impredecible.
+```
 
 ---
 
-## Prompt Más Específico
-
-Ejemplo:
+## Nivel 2: Prompt Específico
 
 ```text
 Crea una API REST en .NET 8 para administrar pólizas de seguros.
 ```
 
-Ahora GitHub Copilot conoce:
+### Ahora GitHub Copilot conoce:
 
-* Tecnología.
-* Tipo de solución.
-* Dominio del negocio.
+✅ Tecnología.
 
-La calidad de la respuesta mejora considerablemente.
+✅ Tipo de aplicación.
+
+✅ Dominio del negocio.
+
+### Resultado
+
+```text
+Respuesta más precisa.
+```
 
 ---
 
-## Prompt Bien Estructurado
-
-Ejemplo:
+## Nivel 3: Prompt Estructurado
 
 ```text
 Actúa como Arquitecto de Software.
 
-Diseña una API REST en .NET 8 para administrar pólizas de seguros.
+Objetivo:
+Diseñar una API REST para administrar pólizas.
 
-Requisitos:
-- Utilizar Minimal API.
-- Aplicar Clean Architecture.
-- Incluir validaciones.
-- Generar pruebas unitarias con XUnit.
-- Documentar los endpoints.
+Contexto:
+La aplicación será utilizada por agentes de seguros.
+
+Restricciones:
+- .NET 8.
+- Minimal API.
+- Clean Architecture.
+- XUnit.
+
+Resultado esperado:
+Generar entidades, endpoints y pruebas unitarias.
 ```
 
-Este tipo de prompt proporciona:
+### Resultado
 
-* Rol.
-* Objetivo.
-* Restricciones.
-* Resultado esperado.
+```text
+Respuesta mucho más consistente y alineada al objetivo.
+```
 
 ---
 
-## Componentes de un Buen Prompt
+# Componentes de un Buen Prompt
 
-### 1. Rol
+## 1. Rol
 
-Indicar el papel que debe asumir la IA.
+Define la perspectiva desde la cual debe responder la IA.
 
 Ejemplos:
 
@@ -574,61 +608,64 @@ Actúa como Especialista en Seguridad.
 
 ---
 
-### 2. Objetivo
+## 2. Objetivo
 
-Definir claramente qué se desea obtener.
-
-Ejemplo:
-
-```text
-Diseña una API REST para administrar pólizas.
-```
-
----
-
-### 3. Contexto
-
-Brindar información adicional relevante.
+Indica qué se desea obtener.
 
 Ejemplo:
 
 ```text
-La aplicación será utilizada por agentes de seguros.
+Diseñar una API REST para administrar pólizas.
 ```
 
 ---
 
-### 4. Restricciones
+## 3. Contexto
 
-Indicar límites o estándares.
+Proporciona información relevante.
 
 Ejemplo:
 
 ```text
-Utiliza .NET 8.
-No utilices Entity Framework.
-Genera comentarios en español.
+La aplicación será utilizada por agentes de seguros y tendrá aproximadamente 1.000 usuarios concurrentes.
 ```
 
 ---
 
-### 5. Resultado Esperado
+## 4. Restricciones
 
-Definir claramente la salida deseada.
+Define reglas y estándares.
 
 Ejemplo:
 
 ```text
-Genera:
-- Entidades
-- Endpoints
-- Validaciones
-- Pruebas unitarias
+- Utilizar .NET 8.
+- No utilizar Entity Framework.
+- Generar comentarios en español.
+- Aplicar Clean Architecture.
 ```
 
 ---
 
-## Plantilla Recomendada
+## 5. Resultado Esperado
+
+Indica claramente qué debe producir la IA.
+
+Ejemplo:
+
+```text
+Generar:
+
+- Entidades.
+- Endpoints.
+- Validaciones.
+- Pruebas unitarias.
+- Documentación.
+```
+
+---
+
+# Plantilla Recomendada
 
 ```text
 Actúa como [ROL].
@@ -643,14 +680,14 @@ Restricciones:
 [RESTRICCIONES]
 
 Resultado esperado:
-[SALIDA DESEADA]
+[SALIDA_DESEADA]
 ```
 
 ---
 
-## Ejemplo Real
+# Ejemplo Real
 
-### Prompt Básico
+## Prompt Básico
 
 ```text
 Crea una clase Cliente.
@@ -658,27 +695,73 @@ Crea una clase Cliente.
 
 ---
 
-### Prompt Mejorado
+## Prompt Estructurado
 
 ```text
 Actúa como Desarrollador Senior .NET.
 
-Crea una clase Cliente para una aseguradora.
+Objetivo:
+Crear una clase Cliente para una aseguradora.
 
-Requisitos:
-- Utilizar C# .NET 8.
+Contexto:
+La solución está desarrollada en C# .NET 8 y sigue principios de Clean Code.
+
+Restricciones:
 - Incluir validaciones básicas.
 - Agregar comentarios XML.
-- Seguir buenas prácticas de Clean Code.
+- Mantener nombres descriptivos.
+
+Resultado esperado:
+Generar una clase Cliente lista para incorporarse a una aplicación empresarial.
 ```
 
 ---
 
-## Ejercicio Práctico
+# Ingeniería de Prompts
 
-### Ejercicio 1
+Un prompt bien construido normalmente contiene cinco elementos:
 
-Solicitar a Copilot:
+```text
+Rol
+↓
+Objetivo
+↓
+Contexto
+↓
+Restricciones
+↓
+Resultado esperado
+```
+
+No se trata de "hacer preguntas bonitas".
+
+Se trata de comunicar correctamente los requerimientos a la IA.
+
+---
+
+# Regla de Oro
+
+> La IA no reemplaza la capacidad de análisis del desarrollador.
+
+La IA genera respuestas en función del contexto recibido.
+
+Por ello:
+
+```text
+Garbage In
+     ↓
+Garbage Out
+```
+
+(Basura entra, basura sale).
+
+---
+
+# Ejercicios Prácticos
+
+## Ejercicio 1
+
+Solicitar a GitHub Copilot:
 
 ```text
 Haz una API.
@@ -688,7 +771,7 @@ Analizar la respuesta obtenida.
 
 ---
 
-### Ejercicio 2
+## Ejercicio 2
 
 Solicitar:
 
@@ -696,34 +779,39 @@ Solicitar:
 Crea una API REST en .NET 8 para administrar pólizas de seguros.
 ```
 
-Comparar los resultados.
+Comparar los resultados con el ejercicio anterior.
 
 ---
 
-### Ejercicio 3
+## Ejercicio 3
 
 Solicitar:
 
 ```text
 Actúa como Arquitecto de Software.
 
-Diseña una API REST para administrar pólizas.
+Objetivo:
+Diseñar una API REST para administrar pólizas.
 
-Requisitos:
-- .NET 8
-- Minimal API
-- XUnit
-- Clean Architecture
-- Comentarios en español
+Contexto:
+La aplicación será utilizada por agentes de seguros.
 
-Genera entidades, endpoints y pruebas unitarias.
+Restricciones:
+- .NET 8.
+- Minimal API.
+- Clean Architecture.
+- XUnit.
+- Comentarios en español.
+
+Resultado esperado:
+Generar entidades, endpoints y pruebas unitarias.
 ```
 
 Comparar nuevamente los resultados.
 
 ---
 
-## Buenas Prácticas
+# Buenas Prácticas
 
 ✅ Proporcionar contexto.
 
@@ -733,13 +821,19 @@ Comparar nuevamente los resultados.
 
 ✅ Indicar restricciones.
 
+✅ Definir el resultado esperado.
+
 ✅ Solicitar ejemplos cuando sea necesario.
 
 ✅ Dividir problemas complejos en tareas pequeñas.
 
+✅ Refinar el prompt de forma iterativa.
+
+✅ Validar siempre el resultado generado.
+
 ---
 
-## Errores Comunes
+# Errores Comunes
 
 ❌ Prompts demasiado generales.
 
@@ -749,21 +843,26 @@ Comparar nuevamente los resultados.
 
 ❌ Esperar que la IA adivine requerimientos.
 
-❌ Aceptar respuestas sin validarlas.
+❌ Pedir demasiadas cosas en una sola instrucción.
+
+❌ Aceptar respuestas sin revisarlas.
 
 ---
 
-## Resultado Esperado
+# Resultado Esperado
 
 Al finalizar esta sección el participante será capaz de:
 
-✅ Crear prompts más efectivos.
-
-✅ Obtener respuestas más precisas.
+✅ Construir prompts estructurados.
 
 ✅ Reducir iteraciones innecesarias.
 
+✅ Obtener respuestas más precisas.
+
 ✅ Aprovechar mejor GitHub Copilot durante el desarrollo.
+
+✅ Comprender que un prompt es una especificación para la IA y no simplemente una pregunta.
+
 
 # 4. Agentes, Instructions y Skills
 
