@@ -34,6 +34,21 @@ Al finalizar esta sección el participante será capaz de:
 * Instalar GitHub Copilot y GitHub Copilot Chat.
 * Comprender los modos Ask, Edit y Agent.
 * Verificar que GitHub Copilot funciona correctamente.
+* Iniciar el desarrollo de una solución relacionada con el negocio de Gastos Médicos del INS.
+
+---
+
+## Escenario del Taller
+
+Durante todo el workshop se desarrollará una solución llamada:
+
+```text
+INS.GM.API
+```
+
+Esta solución representará una API para la administración de solicitudes de Gastos Médicos.
+
+A lo largo de las diferentes secciones del taller iremos incorporando nuevos conocimientos y funcionalidades, permitiendo observar cómo GitHub Copilot puede asistir durante todo el ciclo de desarrollo.
 
 ---
 
@@ -90,21 +105,44 @@ Instalar las siguientes extensiones:
 
 ---
 
+## Creación del Proyecto del Taller
+
+Crear una nueva solución llamada:
+
+```text
+INS.GM.API
+```
+
+Esta solución servirá como ejemplo durante todo el workshop.
+
+El dominio funcional estará relacionado con la administración de solicitudes de gastos médicos.
+
+Algunas entidades que se irán construyendo durante el curso serán:
+
+* SolicitudGastoMedico
+* Asegurado
+* FacturaMedica
+* Diagnostico
+* ProveedorMedico
+* Reembolso
+
+---
+
 ## Verificando que Copilot Funciona
 
 Crear un archivo llamado:
 
 ```text
-Program.cs
+SolicitudGastoMedico.cs
 ```
 
 Escribir el siguiente comentario:
 
 ```csharp
-// Crear una clase Cliente para una aseguradora
+// Crear una entidad SolicitudGastoMedico para una aplicación de Gastos Médicos
 ```
 
-Si Copilot está funcionando correctamente, aparecerá una sugerencia en color gris.
+Si GitHub Copilot está funcionando correctamente, aparecerá una sugerencia en color gris.
 
 Aceptar la sugerencia utilizando:
 
@@ -117,6 +155,8 @@ TAB
 ## Modos de GitHub Copilot
 
 GitHub Copilot dispone de diferentes modos de interacción según la tarea que se desea realizar.
+
+---
 
 ### Modo Ask
 
@@ -143,7 +183,7 @@ Permite modificar código existente mediante instrucciones en lenguaje natural.
 Ejemplo:
 
 ```text
-Refactoriza este método aplicando principios SOLID.
+Agrega validaciones básicas a la entidad SolicitudGastoMedico.
 ```
 
 Características:
@@ -161,7 +201,7 @@ Permite ejecutar tareas más completas sobre el proyecto.
 Ejemplo:
 
 ```text
-Crea una API REST para administrar pólizas.
+Crea una API REST en .NET 8 para administrar solicitudes de gastos médicos.
 ```
 
 Características:
@@ -169,12 +209,13 @@ Características:
 * Analiza el contexto del proyecto.
 * Puede crear y modificar múltiples archivos.
 * Ayuda a implementar funcionalidades completas.
+* Comprende la estructura de la solución.
 
 ---
 
 ## Ejercicio Práctico
 
-Abrir GitHub Copilot Chat y realizar las siguientes consultas:
+Abrir GitHub Copilot Chat y realizar las siguientes consultas.
 
 ### Ejercicio 1
 
@@ -182,16 +223,38 @@ Abrir GitHub Copilot Chat y realizar las siguientes consultas:
 ¿Qué es una API REST?
 ```
 
+---
+
 ### Ejercicio 2
 
 ```text
-Explícame la diferencia entre .NET Framework y .NET 8.
+Explícame las principales diferencias entre .NET Framework y .NET 8.
 ```
+
+---
 
 ### Ejercicio 3
 
 ```text
-Genera una clase Cliente para una aseguradora.
+Genera una entidad SolicitudGastoMedico para una aplicación de seguros médicos.
+
+La entidad debe incluir:
+
+- Id
+- NumeroSolicitud
+- CedulaAsegurado
+- NombreAsegurado
+- FechaSolicitud
+- MontoSolicitado
+- Estado
+```
+
+---
+
+### Ejercicio 4
+
+```text
+Explícame cada una de las propiedades generadas y su propósito dentro de un sistema de Gastos Médicos.
 ```
 
 ---
@@ -200,22 +263,37 @@ Genera una clase Cliente para una aseguradora.
 
 Al finalizar esta sección el participante debe contar con:
 
-✅ Visual Studio Code instalado
+✅ Visual Studio Code instalado.
 
-✅ GitHub Copilot configurado
+✅ GitHub Copilot configurado.
 
-✅ GitHub Copilot Chat habilitado
+✅ GitHub Copilot Chat habilitado.
 
-✅ Primera interacción exitosa con IA
+✅ Primera interacción exitosa con IA.
 
-✅ Comprensión básica de los modos Ask, Edit y Agent
+✅ Comprensión básica de los modos Ask, Edit y Agent.
 
+✅ Creación de la solución del taller:
+
+```text
+INS.GM.API
+```
+
+✅ Primera entidad del dominio de Gastos Médicos generada con ayuda de GitHub Copilot.
 
 # 2. Introducción a GitHub Copilot
 
 ## 🎯 Objetivo
 
 Comprender cómo GitHub Copilot puede asistir a los desarrolladores durante el ciclo completo de desarrollo de software, desde la generación de código hasta la documentación y pruebas.
+
+Durante esta sección continuaremos desarrollando la solución:
+
+```text
+INS.GM.API
+```
+
+relacionada con la administración de solicitudes de Gastos Médicos.
 
 ---
 
@@ -233,6 +311,8 @@ Permite acelerar tareas como:
 * Resolución de errores.
 * Generación de consultas SQL.
 * Creación de scripts y automatizaciones.
+
+En este workshop utilizaremos GitHub Copilot para construir progresivamente una solución relacionada con Gastos Médicos del INS.
 
 ---
 
@@ -254,7 +334,10 @@ Desarrollador
  GitHub Copilot
       │
       ▼
- Sugerencias y Respuestas
+Sugerencias y Respuestas
+      │
+      ▼
+Proyecto INS.GM.API
 ```
 
 ---
@@ -268,7 +351,7 @@ A partir de comentarios o instrucciones en lenguaje natural.
 Ejemplo:
 
 ```csharp
-// Crear una clase Cliente para una aseguradora
+// Crear una entidad SolicitudGastoMedico para una aplicación de Gastos Médicos
 ```
 
 Copilot generará automáticamente una propuesta de implementación.
@@ -282,7 +365,7 @@ Permite comprender código existente de forma rápida.
 Ejemplo:
 
 ```text
-Explícame este método línea por línea.
+Explícame esta clase línea por línea.
 ```
 
 Ideal para:
@@ -290,6 +373,7 @@ Ideal para:
 * Onboarding de nuevos desarrolladores.
 * Comprensión de sistemas heredados.
 * Revisión de código.
+* Aprendizaje de nuevas tecnologías.
 
 ---
 
@@ -300,7 +384,7 @@ Permite mejorar código existente.
 Ejemplo:
 
 ```text
-Refactoriza este método aplicando principios SOLID.
+Refactoriza esta entidad aplicando principios SOLID y Clean Code.
 ```
 
 Copilot sugerirá mejoras en:
@@ -308,6 +392,7 @@ Copilot sugerirá mejoras en:
 * Legibilidad.
 * Mantenibilidad.
 * Buenas prácticas.
+* Organización del código.
 
 ---
 
@@ -316,7 +401,7 @@ Copilot sugerirá mejoras en:
 Ejemplo:
 
 ```text
-Genera pruebas unitarias utilizando XUnit.
+Genera pruebas unitarias utilizando XUnit para la entidad SolicitudGastoMedico.
 ```
 
 Puede generar:
@@ -333,7 +418,7 @@ Puede generar:
 Ejemplo:
 
 ```text
-Genera documentación XML para esta clase.
+Genera comentarios XML para esta clase.
 ```
 
 o
@@ -348,9 +433,11 @@ Documenta este endpoint REST.
 
 Una de las principales fortalezas de GitHub Copilot es su capacidad para utilizar el contexto del proyecto.
 
+---
+
 ### @workspace
 
-Permite consultar información sobre todo el proyecto.
+Permite consultar información sobre toda la solución.
 
 Ejemplos:
 
@@ -359,23 +446,33 @@ Ejemplos:
 ```
 
 ```text
-@workspace ¿Cómo se implementan los endpoints?
+@workspace ¿Cuáles son las entidades existentes?
 ```
 
 ```text
-@workspace ¿Dónde se define la autenticación?
+@workspace ¿Cómo podría estructurarse esta API utilizando Clean Architecture?
+```
+
+```text
+@workspace ¿Dónde debería ubicarse la lógica de negocio?
 ```
 
 ---
 
 ### #file
 
-Permite referenciar un archivo específico.
+Permite trabajar sobre un archivo específico.
 
 Ejemplo:
 
 ```text
-Explica el contenido de #file:Program.cs
+Explica el contenido de #file:SolicitudGastoMedico.cs
+```
+
+o
+
+```text
+Genera comentarios XML para #file:SolicitudGastoMedico.cs
 ```
 
 ---
@@ -394,30 +491,85 @@ Refactoriza #selection aplicando Clean Code.
 
 ## Demostración Práctica
 
-Realizar las siguientes consultas en GitHub Copilot Chat:
+Continuaremos ampliando la solución INS.GM.API.
+
+---
 
 ### Ejercicio 1
 
+Solicitar a GitHub Copilot:
+
 ```text
-¿Qué es una API REST?
+Genera una entidad Asegurado para una aplicación de Gastos Médicos.
+
+Debe incluir:
+
+- Id
+- Cedula
+- NombreCompleto
+- FechaNacimiento
+- Telefono
+- CorreoElectronico
 ```
+
+---
 
 ### Ejercicio 2
 
+Solicitar:
+
 ```text
-Genera una clase Poliza para una aseguradora.
+Genera una entidad FacturaMedica.
+
+Debe incluir:
+
+- Id
+- NumeroFactura
+- FechaFactura
+- NombreProveedor
+- Monto
 ```
+
+---
 
 ### Ejercicio 3
 
+Solicitar:
+
 ```text
-Genera pruebas unitarias para la clase Poliza.
+Genera una relación entre SolicitudGastoMedico y FacturaMedica.
+
+Una solicitud puede tener múltiples facturas.
 ```
+
+---
 
 ### Ejercicio 4
 
+Solicitar:
+
 ```text
-Documenta la clase utilizando comentarios XML.
+Genera pruebas unitarias utilizando XUnit para la entidad SolicitudGastoMedico.
+```
+
+---
+
+### Ejercicio 5
+
+Solicitar:
+
+```text
+Genera comentarios XML para todas las propiedades de la entidad SolicitudGastoMedico.
+```
+
+---
+
+### Ejercicio 6
+
+Solicitar:
+
+```text
+Explica la clase SolicitudGastoMedico línea por línea.
 ```
 
 ---
@@ -436,6 +588,8 @@ Documenta la clase utilizando comentarios XML.
 
 ✅ Incrementa la productividad del equipo.
 
+✅ Facilita la comprensión del código existente.
+
 ---
 
 ## Consideraciones Importantes
@@ -448,6 +602,7 @@ Siempre se recomienda:
 * Validar reglas de negocio.
 * Aplicar revisiones de seguridad.
 * Ejecutar pruebas antes de desplegar.
+* Comprender el código antes de aceptarlo.
 
 ---
 
@@ -459,17 +614,38 @@ Al finalizar esta sección el participante comprenderá:
 
 ✅ Cómo utilizar Copilot Chat.
 
-✅ Cómo aprovechar el contexto mediante @workspace.
+✅ Cómo aprovechar el contexto mediante `@workspace`.
+
+✅ Cómo utilizar `#file`.
+
+✅ Cómo utilizar `#selection`.
 
 ✅ Cómo generar código, pruebas y documentación.
 
-✅ Cuáles son los beneficios y limitaciones de la herramienta.
+✅ Cómo GitHub Copilot puede acompañar todo el ciclo de desarrollo.
+
+✅ Evolucionar la solución:
+
+```text
+INS.GM.API
+```
+
+incorporando nuevas entidades y relaciones del dominio de Gastos Médicos.
+
 
 # 3. Prompts Efectivos
 
 ## 🎯 Objetivo
 
 Aprender a redactar instrucciones claras y estructuradas para obtener mejores resultados de GitHub Copilot y aprovechar al máximo la Inteligencia Artificial durante el desarrollo de software.
+
+Durante esta sección continuaremos evolucionando la solución:
+
+```text
+INS.GM.API
+```
+
+relacionada con la administración de solicitudes de Gastos Médicos.
 
 ---
 
@@ -514,7 +690,7 @@ Mientras más claro sea el requerimiento:
 ## Nivel 1: Prompt Deficiente
 
 ```text
-Haz una API.
+Crea una API.
 ```
 
 ### Problemas
@@ -523,7 +699,7 @@ Haz una API.
 
 ❌ No define arquitectura.
 
-❌ No especifica requerimientos.
+❌ No especifica el dominio del negocio.
 
 ❌ No establece restricciones.
 
@@ -538,7 +714,7 @@ Respuesta ambigua e impredecible.
 ## Nivel 2: Prompt Específico
 
 ```text
-Crea una API REST en .NET 8 para administrar pólizas de seguros.
+Crea una API REST en .NET 8 para administrar solicitudes de gastos médicos.
 ```
 
 ### Ahora GitHub Copilot conoce:
@@ -563,16 +739,17 @@ Respuesta más precisa.
 Actúa como Arquitecto de Software.
 
 Objetivo:
-Diseñar una API REST para administrar pólizas.
+Diseñar una API REST para administrar solicitudes de Gastos Médicos.
 
 Contexto:
-La aplicación será utilizada por agentes de seguros.
+La aplicación será utilizada por colaboradores del INS.
 
 Restricciones:
 - .NET 8.
 - Minimal API.
 - Clean Architecture.
 - XUnit.
+- Comentarios en español.
 
 Resultado esperado:
 Generar entidades, endpoints y pruebas unitarias.
@@ -603,6 +780,10 @@ Actúa como Desarrollador Senior .NET.
 ```
 
 ```text
+Actúa como Especialista QA.
+```
+
+```text
 Actúa como Especialista en Seguridad.
 ```
 
@@ -615,7 +796,7 @@ Indica qué se desea obtener.
 Ejemplo:
 
 ```text
-Diseñar una API REST para administrar pólizas.
+Diseñar una API para administrar solicitudes de gastos médicos.
 ```
 
 ---
@@ -627,7 +808,7 @@ Proporciona información relevante.
 Ejemplo:
 
 ```text
-La aplicación será utilizada por agentes de seguros y tendrá aproximadamente 1.000 usuarios concurrentes.
+La aplicación será utilizada por colaboradores del INS y administrará solicitudes de gastos médicos.
 ```
 
 ---
@@ -640,9 +821,9 @@ Ejemplo:
 
 ```text
 - Utilizar .NET 8.
-- No utilizar Entity Framework.
-- Generar comentarios en español.
 - Aplicar Clean Architecture.
+- Generar comentarios en español.
+- Utilizar XUnit para las pruebas.
 ```
 
 ---
@@ -657,6 +838,7 @@ Ejemplo:
 Generar:
 
 - Entidades.
+- DTOs.
 - Endpoints.
 - Validaciones.
 - Pruebas unitarias.
@@ -690,7 +872,7 @@ Resultado esperado:
 ## Prompt Básico
 
 ```text
-Crea una clase Cliente.
+Crea una clase FacturaMedica.
 ```
 
 ---
@@ -701,18 +883,19 @@ Crea una clase Cliente.
 Actúa como Desarrollador Senior .NET.
 
 Objetivo:
-Crear una clase Cliente para una aseguradora.
+Crear una entidad FacturaMedica.
 
 Contexto:
-La solución está desarrollada en C# .NET 8 y sigue principios de Clean Code.
+La solución INS.GM.API administra solicitudes de Gastos Médicos.
 
 Restricciones:
-- Incluir validaciones básicas.
+- Utilizar C# y .NET 8.
 - Agregar comentarios XML.
 - Mantener nombres descriptivos.
+- Incluir validaciones básicas.
 
 Resultado esperado:
-Generar una clase Cliente lista para incorporarse a una aplicación empresarial.
+Generar una entidad lista para incorporarse a una aplicación empresarial.
 ```
 
 ---
@@ -759,31 +942,35 @@ Garbage Out
 
 # Ejercicios Prácticos
 
-## Ejercicio 1
+En esta sección iremos construyendo un endpoint para registrar solicitudes de gastos médicos.
+
+---
+
+## Ejercicio 1 - Prompt Deficiente
 
 Solicitar a GitHub Copilot:
 
 ```text
-Haz una API.
+Crea un endpoint.
 ```
 
 Analizar la respuesta obtenida.
 
 ---
 
-## Ejercicio 2
+## Ejercicio 2 - Prompt Específico
 
 Solicitar:
 
 ```text
-Crea una API REST en .NET 8 para administrar pólizas de seguros.
+Crea un endpoint REST en .NET 8 para registrar solicitudes de gastos médicos.
 ```
 
 Comparar los resultados con el ejercicio anterior.
 
 ---
 
-## Ejercicio 3
+## Ejercicio 3 - Prompt Estructurado
 
 Solicitar:
 
@@ -791,23 +978,73 @@ Solicitar:
 Actúa como Arquitecto de Software.
 
 Objetivo:
-Diseñar una API REST para administrar pólizas.
+Diseñar un endpoint para registrar solicitudes de gastos médicos.
 
 Contexto:
-La aplicación será utilizada por agentes de seguros.
+La solución INS.GM.API pertenece al dominio de Gastos Médicos del INS.
 
 Restricciones:
-- .NET 8.
+- Utilizar .NET 8.
 - Minimal API.
 - Clean Architecture.
 - XUnit.
 - Comentarios en español.
 
 Resultado esperado:
-Generar entidades, endpoints y pruebas unitarias.
+Generar:
+
+- Request.
+- Response.
+- Endpoint.
+- Validaciones.
+- Pruebas unitarias.
 ```
 
 Comparar nuevamente los resultados.
+
+---
+
+## Ejercicio 4 - Generación de una Entidad
+
+Solicitar:
+
+```text
+Actúa como Desarrollador Senior .NET.
+
+Objetivo:
+Crear la entidad Reembolso.
+
+Contexto:
+La solución INS.GM.API administra solicitudes de Gastos Médicos.
+
+Restricciones:
+- Utilizar C# y .NET 8.
+- Agregar comentarios XML.
+- Utilizar nombres descriptivos.
+- Incluir validaciones básicas.
+
+Resultado esperado:
+Generar una entidad empresarial lista para producción.
+```
+
+---
+
+## Ejercicio 5 - Generación de Pruebas Unitarias
+
+Solicitar:
+
+```text
+Actúa como Especialista QA.
+
+Objetivo:
+Generar pruebas unitarias para la entidad Reembolso.
+
+Contexto:
+La solución utiliza XUnit.
+
+Resultado esperado:
+Generar escenarios positivos, negativos y validaciones.
+```
 
 ---
 
@@ -863,6 +1100,10 @@ Al finalizar esta sección el participante será capaz de:
 
 ✅ Comprender que un prompt es una especificación para la IA y no simplemente una pregunta.
 
+✅ Evolucionar la solución INS.GM.API incorporando nuevas entidades, endpoints y pruebas unitarias.
+
+✅ Comprender que la calidad del resultado depende directamente de la calidad de las instrucciones proporcionadas a la IA.
+
 
 # 4. Agentes, Instructions y Skills
 
@@ -870,17 +1111,23 @@ Al finalizar esta sección el participante será capaz de:
 
 Comprender cómo personalizar GitHub Copilot mediante Agentes, Instructions y Skills, y aprender a utilizar la Inteligencia Artificial para crear y configurar estos elementos de forma más eficiente.
 
+Durante esta sección continuaremos evolucionando la solución:
+
+```text
+INS.GM.API
+```
+
+y aprenderemos cómo especializar GitHub Copilot para adaptarlo a las necesidades del equipo de desarrollo de Gastos Médicos del INS.
+
 ---
 
 # Del Prompt al Agente
 
-Hasta este momento hemos trabajado con GitHub Copilot utilizando el agente predeterminado.
+Hasta este momento hemos trabajado utilizando GitHub Copilot con el comportamiento predeterminado.
 
-Cada vez que realizamos una consulta, GitHub Copilot responde utilizando un comportamiento general.
+Sin embargo, conforme los proyectos crecen y los equipos establecen estándares, resulta conveniente especializar el comportamiento de la IA.
 
-Sin embargo, cuando los equipos crecen y aparecen estándares de desarrollo, es conveniente especializar el comportamiento de la IA.
-
-Para ello GitHub Copilot permite crear Agentes personalizados.
+En lugar de repetir constantemente las mismas instrucciones, es posible crear Agentes personalizados.
 
 ---
 
@@ -888,7 +1135,7 @@ Para ello GitHub Copilot permite crear Agentes personalizados.
 
 Un Agente es una configuración especializada que permite adaptar GitHub Copilot a un rol o escenario específico.
 
-Un agente puede verse como un miembro virtual del equipo.
+Puede verse como un miembro virtual del equipo.
 
 Ejemplos:
 
@@ -907,19 +1154,19 @@ Un agente está compuesto principalmente por:
 
 ## Agente
 
-Representa el rol o propósito principal.
+Representa el propósito principal.
 
 Ejemplo:
 
 ```text
-Arquitecto de Software .NET
+Especialista Backend Gastos Médicos INS
 ```
 
 ---
 
 ## Instructions
 
-Son las reglas o instrucciones permanentes que debe seguir el agente.
+Son las reglas permanentes que debe seguir el agente.
 
 Ejemplo:
 
@@ -928,6 +1175,7 @@ Ejemplo:
 - Utiliza .NET 8.
 - Aplica Clean Architecture.
 - Sugiere pruebas unitarias con XUnit.
+- Prioriza la mantenibilidad.
 - Sigue buenas prácticas de seguridad.
 ```
 
@@ -935,15 +1183,15 @@ Ejemplo:
 
 ## Skills
 
-Representan capacidades o conocimientos especializados que complementan al agente.
+Representan conocimientos especializados que complementan al agente.
 
 Ejemplos:
 
 * Diseño de APIs REST.
 * Patrones de diseño.
 * Pruebas unitarias.
-* Revisión de código.
 * Seguridad.
+* Revisión de código.
 * Documentación técnica.
 
 ---
@@ -988,73 +1236,106 @@ Los agentes permiten:
 
 # Utilizando la IA para Crear un Agente
 
-Al igual que aprendimos a construir prompts efectivos, también podemos utilizar la IA para ayudarnos a diseñar nuestros agentes.
+Al igual que aprendimos a construir prompts efectivos, también podemos utilizar la IA para diseñar nuestros propios agentes.
 
-Supongamos que deseamos crear un agente especializado para un Arquitecto de Software.
-
-Podemos solicitarlo mediante el siguiente prompt:
+Por ejemplo, podríamos solicitar:
 
 ```text
 Actúa como experto en GitHub Copilot.
 
 Objetivo:
-Crear un agente especializado para un Arquitecto de Software .NET.
+Crear un agente especializado para un equipo Backend .NET.
 
 Contexto:
-El equipo desarrolla APIs REST utilizando .NET 8 y Clean Architecture.
+El equipo desarrolla la solución INS.GM.API para administrar solicitudes de Gastos Médicos.
 
 Resultado esperado:
 Generar:
 
 1. Nombre del agente.
-2. Descripción del agente.
+2. Descripción.
 3. Instructions recomendadas.
 4. Skills recomendados.
 ```
 
 ---
 
-# Ejemplo de Resultado
+# Caso Práctico del Taller
 
-## Nombre del Agente
+Supongamos que el equipo de Gastos Médicos del INS desea estandarizar la forma en que se desarrollan los servicios Backend.
+
+En lugar de repetir instrucciones constantemente, se crea un agente especializado.
+
+---
+
+# Nombre del Agente
 
 ```text
-Arquitecto de Software .NET
+Especialista Backend Gastos Médicos INS
 ```
 
 ---
 
-## Descripción
+# Descripción
 
 ```text
-Agente especializado en el diseño y arquitectura de soluciones .NET utilizando Clean Architecture y buenas prácticas de desarrollo.
+Agente especializado en el desarrollo de APIs .NET para la administración de solicitudes de Gastos Médicos, siguiendo principios de Clean Architecture y buenas prácticas empresariales.
 ```
 
 ---
 
-## Instructions
+# Instructions
 
 ```text
 - Responde en español.
+
 - Utiliza .NET 8.
-- Aplica Clean Architecture.
-- Sugiere pruebas unitarias con XUnit.
-- Prioriza la mantenibilidad del código.
-- Sigue buenas prácticas de seguridad.
+
+- Aplica principios de Clean Architecture.
+
+- Sugiere pruebas unitarias utilizando XUnit.
+
+- Prioriza código mantenible y desacoplado.
+
+- Utiliza nombres descriptivos.
+
+- Genera comentarios XML cuando sea apropiado.
+
+- Aplica buenas prácticas de seguridad.
+
+- Sugiere validaciones de negocio.
+
 - Propón alternativas cuando existan varias opciones.
+
+- Sigue principios SOLID y Clean Code.
+
+- Explica las decisiones de diseño cuando sea necesario.
 ```
 
 ---
 
-## Skills
+# Skills
 
 ```text
 - Diseño de APIs REST.
-- Patrones de diseño.
+
 - Clean Architecture.
-- Pruebas unitarias.
-- Revisión de código.
+
+- C# y .NET 8.
+
+- Minimal APIs.
+
+- Pruebas Unitarias con XUnit.
+
+- Validaciones de negocio.
+
 - Documentación técnica.
+
+- Revisión de código.
+
+- Principios SOLID.
+
+- Clean Code.
 ```
 
 ---
@@ -1105,7 +1386,7 @@ Guardar el agente y comenzar a utilizarlo.
 
 ---
 
-# Ejercicio Práctico
+# Ejercicio Práctico 1
 
 Solicitar a GitHub Copilot:
 
@@ -1113,10 +1394,10 @@ Solicitar a GitHub Copilot:
 Actúa como experto en GitHub Copilot.
 
 Objetivo:
-Crear un agente especializado para un equipo de QA.
+Crear un agente especializado para QA.
 
 Contexto:
-El equipo desarrolla aplicaciones .NET y busca mejorar la calidad del software.
+La solución INS.GM.API utiliza .NET 8 y XUnit.
 
 Resultado esperado:
 Generar:
@@ -1127,13 +1408,11 @@ Generar:
 4. Skills.
 ```
 
-Analizar el resultado obtenido.
-
 ---
 
 # Posible Resultado
 
-## Nombre del Agente
+## Nombre
 
 ```text
 Especialista QA .NET
@@ -1146,7 +1425,7 @@ Especialista QA .NET
 ```text
 - Responde en español.
 - Prioriza la calidad del software.
-- Sugiere pruebas unitarias e integración.
+- Sugiere pruebas unitarias y de integración.
 - Promueve alta cobertura de código.
 - Sigue buenas prácticas de automatización.
 ```
@@ -1165,18 +1444,65 @@ Especialista QA .NET
 
 ---
 
-# Casos de Uso
+# Ejercicio Práctico 2
 
-Algunos agentes que podrían existir dentro de una organización son:
+Utilizando el agente:
 
-| Agente                    | Propósito                                          |
-| ------------------------- | -------------------------------------------------- |
-| Arquitecto de Software    | Diseño de soluciones y APIs                        |
-| Desarrollador Backend     | Implementación de servicios                        |
-| Especialista QA           | Estrategias y automatización de pruebas            |
-| Especialista en Seguridad | Buenas prácticas y revisión de vulnerabilidades    |
-| Analista de Negocio       | Generación de historias de usuario y documentación |
-| Revisor de Código         | Calidad y mantenibilidad                           |
+```text
+Especialista Backend Gastos Médicos INS
+```
+
+realizar la siguiente consulta:
+
+```text
+Necesito implementar el endpoint para registrar una solicitud de gasto médico.
+```
+
+Analizar cómo las respuestas ya incorporan automáticamente:
+
+* .NET 8.
+* Clean Architecture.
+* Buenas prácticas.
+* Validaciones.
+* XUnit.
+* Código mantenible.
+
+sin necesidad de repetir dichas instrucciones.
+
+---
+
+# Casos de Uso Empresariales
+
+Dentro de una organización podrían existir agentes especializados como:
+
+| Agente                 | Propósito                            |
+| ---------------------- | ------------------------------------ |
+| Arquitecto de Software | Diseño de soluciones                 |
+| Backend .NET           | Implementación de servicios          |
+| Especialista QA        | Calidad y automatización             |
+| Especialista Seguridad | Revisión de vulnerabilidades         |
+| Analista de Negocio    | Historias de usuario y documentación |
+| DevOps                 | Pipelines y despliegues              |
+| Revisor de Código      | Calidad y mantenibilidad             |
+
+---
+
+# Reflexión
+
+Los prompts efectivos del apartado anterior permiten obtener mejores resultados.
+
+Los Agentes permiten llevar esos prompts a otro nivel.
+
+En lugar de repetir constantemente:
+
+```text
+- Utiliza .NET 8.
+- Aplica Clean Architecture.
+- Sugiere pruebas unitarias.
+- Responde en español.
+```
+
+estas instrucciones pasan a formar parte del comportamiento permanente del agente.
 
 ---
 
@@ -1194,7 +1520,12 @@ Al finalizar esta sección el participante será capaz de:
 
 ✅ Utilizar la IA para generar y configurar agentes.
 
-✅ Adaptar GitHub Copilot a las necesidades del equipo y de la organización.
+✅ Adaptar GitHub Copilot a las necesidades del equipo.
+
+✅ Estandarizar el desarrollo de software mediante agentes especializados.
+
+✅ Comprender cómo un agente puede convertirse en un miembro virtual del equipo.
+
 
 # 5. Caso Práctico
 
@@ -1202,198 +1533,368 @@ Al finalizar esta sección el participante será capaz de:
 
 Demostrar cómo un Agente especializado puede ayudar a resolver una necesidad real de desarrollo de software aplicando automáticamente buenas prácticas, lineamientos y estándares definidos por el equipo.
 
+Durante esta sección continuaremos evolucionando la solución:
+
+```text
+INS.GM.API
+```
+
+relacionada con la administración de solicitudes de Gastos Médicos.
+
 ---
 
-## Escenario
+# Escenario
 
-Un equipo de desarrollo necesita construir una nueva API para administrar pólizas de seguros.
+El equipo de Gastos Médicos del INS necesita desarrollar una nueva funcionalidad para registrar solicitudes de gastos médicos.
 
 La organización ha definido los siguientes estándares:
 
 * Desarrollo en .NET 8.
 * Uso de Clean Architecture.
-* Implementación de pruebas unitarias.
+* Implementación de pruebas unitarias con XUnit.
 * Documentación de endpoints.
-* Aplicación de buenas prácticas de seguridad.
+* Buenas prácticas de seguridad.
+* Código mantenible y desacoplado.
 
 El objetivo es evitar que cada desarrollador tenga que recordar y especificar estos requisitos manualmente en cada consulta.
 
 ---
 
-## Solución Tradicional
+# Solución Tradicional
 
 Un desarrollador podría realizar una consulta como:
 
 ```text
-Genera una API para administrar pólizas.
+Genera una API para administrar solicitudes de gastos médicos.
 ```
 
-Sin embargo, el resultado dependerá completamente del contexto disponible y podría no seguir los estándares definidos por la organización.
+Sin embargo, el resultado dependerá completamente del contexto disponible y podría no seguir los estándares definidos por el equipo.
 
 ---
 
-## Solución Utilizando un Agente
+# Solución Utilizando un Agente
 
-Se crea un agente especializado llamado:
+Se utilizará el agente creado en la sección anterior:
 
 ```text
-Arquitecto de Software
+Especialista Backend Gastos Médicos INS
 ```
 
 ---
 
-## Instructions del Agente
+# Instructions del Agente
 
 ```text
-Eres un Arquitecto de Software.
+Eres un Especialista Backend de Gastos Médicos.
 
 Debes responder en español.
 
 Debes utilizar .NET 8.
 
-Debes promover Clean Architecture.
+Debes aplicar Clean Architecture.
 
-Debes sugerir pruebas unitarias.
+Debes sugerir pruebas unitarias utilizando XUnit.
 
 Debes aplicar buenas prácticas de seguridad.
 
 Debes generar soluciones mantenibles y escalables.
+
+Debes seguir principios SOLID y Clean Code.
 ```
 
 ---
 
-## Skills del Agente
+# Skills del Agente
 
 ```text
-Diseño de APIs
+Diseño de APIs REST
 
-Arquitectura de Software
+Clean Architecture
 
-Patrones de Diseño
+C# y .NET 8
 
-Buenas Prácticas
+Minimal APIs
 
 Pruebas Unitarias
 
-Documentación Técnica
+Validaciones de negocio
+
+Documentación técnica
+
+Seguridad
+
+Revisión de código
 ```
 
 ---
 
-## Consulta Realizada
+# Necesidad de Negocio
+
+Registrar una solicitud de gasto médico.
+
+---
+
+# Información de la Solicitud
+
+La solicitud debe almacenar:
+
+* Número de solicitud.
+* Cédula del asegurado.
+* Nombre del asegurado.
+* Fecha de la solicitud.
+* Monto solicitado.
+* Estado.
+* Observaciones.
+
+---
+
+# Consulta Realizada al Agente
 
 ```text
-Necesito una API para administrar pólizas de seguros.
+Necesito implementar la funcionalidad para registrar una solicitud de gasto médico.
+
+La solución utiliza .NET 8 y Clean Architecture.
+
+Genera:
+
+- Entidad.
+- DTOs.
+- Endpoint.
+- Validaciones.
+- Pruebas unitarias.
 ```
 
 ---
 
-## Resultado Esperado
+# Resultado Esperado
 
-El agente podría responder proponiendo:
+El agente podría proponer la siguiente arquitectura:
 
-### Arquitectura
+## Dominio
 
 ```text
-API
-
-Aplicación
-
-Dominio
-
-Infraestructura
+SolicitudGastoMedico
 ```
 
 ---
 
-### Entidades
+## Aplicación
 
 ```text
-Poliza
+CrearSolicitudGastoMedicoRequest
 
-Cliente
+CrearSolicitudGastoMedicoResponse
 
-Cobertura
+ValidadorCrearSolicitudGastoMedico
 ```
 
 ---
 
-### Endpoints
+## API
+
+```text
+CrearSolicitudGastoMedicoEndpoint
+```
+
+---
+
+## Infraestructura
+
+```text
+RepositorioSolicitudGastoMedico
+```
+
+---
+
+# Endpoint Propuesto
 
 ```http
-GET     /api/polizas
-
-GET     /api/polizas/{id}
-
-POST    /api/polizas
-
-PUT     /api/polizas/{id}
-
-DELETE  /api/polizas/{id}
+POST /api/solicitudes-gastos-medicos
 ```
 
 ---
 
-### Pruebas
+# Operaciones Futuras
 
-```text
-Pruebas Unitarias
+```http
+GET     /api/solicitudes-gastos-medicos
 
-Pruebas de Integración
+GET     /api/solicitudes-gastos-medicos/{id}
 
-Validaciones de Negocio
+POST    /api/solicitudes-gastos-medicos
+
+PUT     /api/solicitudes-gastos-medicos/{id}
+
+DELETE  /api/solicitudes-gastos-medicos/{id}
 ```
 
 ---
 
-### Seguridad
+# Validaciones de Negocio
 
-```text
-Autenticación
+El agente podría sugerir:
 
-Autorización
-
-Validación de Entradas
-
-Manejo de Errores
-```
+* Número de solicitud obligatorio.
+* Cédula obligatoria.
+* Nombre obligatorio.
+* El monto debe ser mayor que cero.
+* La fecha de solicitud no puede ser futura.
+* El estado inicial debe ser Pendiente.
 
 ---
 
-## Beneficios Obtenidos
+# Pruebas Unitarias
 
-Sin agente:
+El agente podría proponer:
+
+### Casos positivos
+
+* Crear una solicitud válida.
+
+### Casos negativos
+
+* Monto igual a cero.
+* Cédula vacía.
+* Número de solicitud vacío.
+* Fecha futura.
+
+### Validaciones
+
+* Estado inicial Pendiente.
+* Valores obligatorios.
+
+---
+
+# Seguridad
+
+El agente también podría sugerir:
+
+* Validación de entradas.
+* Manejo centralizado de excepciones.
+* Autenticación.
+* Autorización.
+* Registro de eventos mediante logs.
+* Evitar exponer información sensible.
+
+---
+
+# Documentación
+
+El agente puede generar automáticamente:
+
+* Comentarios XML.
+* Documentación de endpoints.
+* Ejemplos de requests.
+* Ejemplos de responses.
+
+---
+
+# Beneficios Obtenidos
+
+## Sin Agente
 
 * Cada desarrollador realiza consultas diferentes.
 * Resultados inconsistentes.
 * Mayor riesgo de incumplir estándares.
+* Mayor esfuerzo manual.
 
-Con agente:
+---
+
+## Con Agente
 
 * Respuestas alineadas con la organización.
 * Menor esfuerzo de configuración.
 * Mayor consistencia.
 * Mejor calidad técnica.
+* Menor curva de aprendizaje.
+* Reutilización del conocimiento del equipo.
 
 ---
 
-## Discusión
+# Discusión
 
 Analice con el grupo:
 
-### ¿Qué otras especializaciones podrían implementarse?
+## ¿Qué otros agentes podrían existir?
 
 Ejemplos:
 
-* Agente QA.
-* Agente DevOps.
-* Agente Seguridad.
-* Agente Analista de Negocio.
-* Agente Documentador.
+### Especialista QA
+
+Encargado de:
+
+* Pruebas unitarias.
+* Cobertura.
+* Casos de prueba.
 
 ---
 
-## Resultado Esperado
+### Especialista Seguridad
+
+Encargado de:
+
+* Vulnerabilidades.
+* OWASP.
+* Validaciones.
+
+---
+
+### Analista de Negocio
+
+Encargado de:
+
+* Historias de usuario.
+* Criterios de aceptación.
+* Documentación funcional.
+
+---
+
+### DevOps
+
+Encargado de:
+
+* Pipelines.
+* Docker.
+* CI/CD.
+
+---
+
+### Revisor de Código
+
+Encargado de:
+
+* Calidad.
+* Mantenibilidad.
+* Principios SOLID.
+
+---
+
+# Flujo Completo
+
+```text
+Necesidad del Negocio
+          │
+          ▼
+Especialista Backend Gastos Médicos INS
+          │
+          ▼
+GitHub Copilot
+          │
+          ▼
+Entidad
+DTOs
+Endpoints
+Validaciones
+Pruebas Unitarias
+Documentación
+          │
+          ▼
+INS.GM.API
+```
+
+---
+
+# Resultado Esperado
 
 Al finalizar este ejercicio el participante comprenderá:
 
@@ -1405,15 +1906,36 @@ Al finalizar este ejercicio el participante comprenderá:
 
 ✅ Cómo los agentes ayudan a estandarizar el desarrollo dentro de una organización.
 
+✅ Cómo GitHub Copilot puede acompañar todo el ciclo de desarrollo de una funcionalidad real.
+
+✅ Cómo reutilizar el conocimiento del equipo mediante agentes especializados.
+
+✅ Cómo evolucionar progresivamente una solución empresarial utilizando IA.
+
+
 # 6. Buenas Prácticas y Uso Empresarial
 
 ## 🎯 Objetivo
 
 Conocer las principales recomendaciones para utilizar GitHub Copilot de forma segura, responsable y efectiva dentro de entornos empresariales.
 
+Durante esta sección utilizaremos como referencia la solución:
+
+```text
+INS.GM.API
+```
+
+y el agente:
+
+```text
+Especialista Backend Gastos Médicos INS
+```
+
+desarrollados a lo largo del workshop.
+
 ---
 
-## GitHub Copilot como Asistente
+# GitHub Copilot como Asistente
 
 Es importante comprender que GitHub Copilot es un asistente para el desarrollo de software.
 
@@ -1423,25 +1945,41 @@ Su propósito es ayudar a los desarrolladores a:
 * Resolver dudas técnicas.
 * Crear documentación.
 * Generar pruebas.
+* Explicar código existente.
 * Acelerar tareas repetitivas.
 
 Sin embargo, las decisiones finales continúan siendo responsabilidad del equipo de desarrollo.
 
 ---
 
-## Principio Fundamental
+# Principio Fundamental
 
-> GitHub Copilot asiste al desarrollador, pero no reemplaza su criterio técnico.
+> GitHub Copilot y los Agentes potencian las capacidades del desarrollador, pero no reemplazan su criterio técnico.
 
 Todo código generado debe ser revisado antes de ser incorporado a una solución.
 
 ---
 
-## Seguridad de la Información
+# Uso Responsable de la Inteligencia Artificial
 
-Antes de utilizar GitHub Copilot, es importante considerar las políticas de seguridad de la organización.
+La IA puede acelerar el trabajo, pero no debe sustituir:
 
-### Evitar compartir información sensible
+* El análisis técnico.
+* El diseño de arquitectura.
+* La revisión de código.
+* La validación funcional.
+* Las pruebas.
+* El criterio profesional.
+
+---
+
+# Seguridad de la Información
+
+Antes de utilizar GitHub Copilot es importante considerar las políticas de seguridad de la organización.
+
+---
+
+## Evitar Compartir Información Sensible
 
 No se recomienda incluir:
 
@@ -1451,22 +1989,25 @@ No se recomienda incluir:
 * Llaves criptográficas.
 * Información confidencial de clientes.
 * Datos personales sensibles.
+* Información de producción.
 
-Ejemplos:
+### Incorrecto
 
-❌ Incorrecto
-
-```text id="1f8zvj"
+```text
 Mi contraseña de producción es...
 ```
 
-```text id="tt57pp"
+```text
 Este es el token de acceso del sistema...
+```
+
+```text
+La cadena de conexión de la base de datos es...
 ```
 
 ---
 
-### Buenas Prácticas
+## Buenas Prácticas
 
 ✅ Utilizar datos ficticios para ejemplos.
 
@@ -1474,20 +2015,24 @@ Este es el token de acceso del sistema...
 
 ✅ Revisar las políticas internas de la organización.
 
+✅ Utilizar variables de entorno y gestores de secretos.
+
 ---
 
-## Validación del Código Generado
+# Validación del Código Generado
 
 Aunque GitHub Copilot genera código funcional, siempre se recomienda validar:
 
 * Correctitud funcional.
 * Seguridad.
 * Rendimiento.
+* Escalabilidad.
 * Cumplimiento de estándares internos.
+* Reglas de negocio.
 
 ---
 
-### Revisar Siempre
+## Revisar Siempre
 
 Antes de aceptar código generado:
 
@@ -1495,44 +2040,43 @@ Antes de aceptar código generado:
 * Verificar dependencias.
 * Revisar excepciones y validaciones.
 * Confirmar cumplimiento de reglas de negocio.
+* Revisar el manejo de errores.
+* Analizar posibles vulnerabilidades.
 
 ---
 
-## Uso Responsable de la Inteligencia Artificial
+# Uso de Prompts Claros
 
-La IA puede acelerar el trabajo, pero no debe sustituir:
-
-* Análisis técnico.
-* Diseño de arquitectura.
-* Revisión de código.
-* Validación funcional.
-* Pruebas.
+Prompts bien estructurados producen mejores resultados.
 
 ---
 
-## Uso de Prompts Claros
+### Poco claro
 
-Prompts bien estructurados generan mejores resultados.
-
-Ejemplo:
-
-❌ Poco claro
-
-```text id="t6dz6h"
+```text
 Haz una API.
 ```
 
 ---
 
-✅ Más efectivo
+### Más efectivo
 
-```text id="4t9vx9"
-Crea una API REST en .NET 8 para administrar pólizas utilizando Clean Architecture.
+```text
+Actúa como Desarrollador Senior .NET.
+
+Objetivo:
+Implementar un endpoint para registrar solicitudes de gastos médicos.
+
+Contexto:
+La solución INS.GM.API utiliza .NET 8 y Clean Architecture.
+
+Resultado esperado:
+Generar endpoint, validaciones y pruebas unitarias.
 ```
 
 ---
 
-## Mantener Consistencia
+# Mantener Consistencia
 
 Cuando se trabaja en equipo es recomendable:
 
@@ -1540,12 +2084,36 @@ Cuando se trabaja en equipo es recomendable:
 * Compartir instrucciones comunes.
 * Utilizar agentes especializados.
 * Documentar lineamientos.
+* Promover buenas prácticas.
 
 Esto ayuda a obtener resultados más consistentes entre diferentes desarrolladores.
 
 ---
 
-## Revisión de Código
+# Agentes como Conocimiento Compartido
+
+Los agentes permiten reutilizar el conocimiento del equipo.
+
+Por ejemplo:
+
+```text
+Especialista Backend Gastos Médicos INS
+```
+
+puede incorporar automáticamente:
+
+* .NET 8.
+* Clean Architecture.
+* SOLID.
+* Clean Code.
+* XUnit.
+* Buenas prácticas de seguridad.
+
+De esta forma los desarrolladores no necesitan repetir constantemente las mismas instrucciones.
+
+---
+
+# Revisión de Código
 
 El código generado por GitHub Copilot debe seguir el mismo proceso de revisión que cualquier otro desarrollo.
 
@@ -1553,12 +2121,43 @@ Se recomienda:
 
 * Pull Requests.
 * Code Reviews.
-* Pruebas automatizadas.
+* Pruebas unitarias.
+* Pruebas de integración.
 * Validaciones de seguridad.
 
 ---
 
-## Medición del Valor
+# Integración con el Ciclo de Desarrollo
+
+La Inteligencia Artificial no reemplaza las prácticas tradicionales de ingeniería.
+
+Por el contrario, se integra con ellas.
+
+```text
+Requerimiento
+      │
+      ▼
+GitHub Copilot y Agentes
+      │
+      ▼
+Desarrollo
+      │
+      ▼
+Pruebas
+      │
+      ▼
+Pull Request
+      │
+      ▼
+Code Review
+      │
+      ▼
+Despliegue
+```
+
+---
+
+# Medición del Valor
 
 GitHub Copilot debe considerarse una herramienta de productividad.
 
@@ -1569,33 +2168,42 @@ Algunas métricas que pueden analizarse son:
 * Velocidad de generación de pruebas.
 * Velocidad de documentación.
 * Productividad del equipo.
+* Reducción del tiempo de aprendizaje.
 
 ---
 
-## Casos de Uso Recomendados
+# Casos de Uso Recomendados
 
 GitHub Copilot suele aportar mayor valor en:
 
-### Desarrollo
+## Desarrollo
 
 * Generación de código.
 * Refactorización.
 * Creación de APIs.
 * Consultas SQL.
+* Scripts.
 
-### Calidad
+---
+
+## Calidad
 
 * Pruebas unitarias.
 * Pruebas de integración.
 * Casos de prueba.
 
-### Documentación
+---
+
+## Documentación
 
 * Comentarios XML.
 * Documentación técnica.
+* Historias de usuario.
 * Diagramas y descripciones.
 
-### Aprendizaje
+---
+
+## Aprendizaje
 
 * Nuevos lenguajes.
 * Nuevos frameworks.
@@ -1604,7 +2212,7 @@ GitHub Copilot suele aportar mayor valor en:
 
 ---
 
-## Casos donde se debe tener mayor cuidado
+# Casos Donde Se Debe Tener Mayor Cuidado
 
 Se recomienda una revisión más rigurosa cuando el código involucra:
 
@@ -1615,12 +2223,13 @@ Se recomienda una revisión más rigurosa cuando el código involucra:
 * Procesamiento financiero.
 * Datos sensibles.
 * Integraciones críticas.
+* Información de clientes.
 
 ---
 
-## Recomendaciones para Equipos
+# Recomendaciones para Equipos
 
-### Hacer
+## Hacer
 
 ✅ Utilizar GitHub Copilot como apoyo.
 
@@ -1634,9 +2243,13 @@ Se recomienda una revisión más rigurosa cuando el código involucra:
 
 ✅ Definir estándares comunes.
 
+✅ Crear agentes especializados.
+
+✅ Promover la colaboración entre equipos.
+
 ---
 
-### Evitar
+## Evitar
 
 ❌ Confiar ciegamente en las respuestas.
 
@@ -1648,9 +2261,31 @@ Se recomienda una revisión más rigurosa cuando el código involucra:
 
 ❌ Incorporar código sin comprenderlo.
 
+❌ Saltarse los procesos de revisión.
+
 ---
 
-## Resultado Esperado
+# Reflexión
+
+La adopción de la Inteligencia Artificial no consiste únicamente en generar código más rápido.
+
+Su verdadero valor está en:
+
+* Compartir conocimiento.
+* Estandarizar prácticas.
+* Mejorar la calidad.
+* Reducir tareas repetitivas.
+* Incrementar la productividad del equipo.
+
+---
+
+# Idea Clave
+
+> La Inteligencia Artificial no reemplaza la ingeniería de software; la potencia.
+
+---
+
+# Resultado Esperado
 
 Al finalizar esta sección el participante comprenderá:
 
@@ -1662,33 +2297,52 @@ Al finalizar esta sección el participante comprenderá:
 
 ✅ Cómo integrar GitHub Copilot dentro de los procesos de desarrollo existentes.
 
-✅ Buenas prácticas para el uso empresarial de la Inteligencia Artificial.
+✅ Cómo aprovechar los agentes para compartir conocimiento.
+
+✅ Cómo utilizar la Inteligencia Artificial dentro de un entorno empresarial.
+
+✅ Que la IA no reemplaza las buenas prácticas de ingeniería, sino que ayuda a aplicarlas de forma más consistente.
+
 
 # 7. Conclusiones
 
 ## 🎯 Objetivo
 
-Recapitular los principales conceptos vistos durante el taller y establecer una ruta de adopción para comenzar a utilizar GitHub Copilot de forma efectiva en el trabajo diario.
+Recapitular los principales conceptos vistos durante el taller y establecer una ruta de adopción para comenzar a utilizar GitHub Copilot y los Agentes de forma efectiva en el trabajo diario.
 
 ---
 
-## ¿Qué Aprendimos?
+# El Recorrido del Taller
 
-Durante este taller se abordaron los principales conceptos para iniciar en el desarrollo asistido por Inteligencia Artificial utilizando GitHub Copilot.
+Durante este workshop no solo aprendimos conceptos aislados.
 
-### Configuración del Entorno
+A lo largo de las diferentes secciones fuimos construyendo y evolucionando una solución real:
 
-Se configuró Visual Studio Code para trabajar con herramientas de Inteligencia Artificial.
+```text id="trazvz"
+INS.GM.API
+```
+
+relacionada con la administración de solicitudes de Gastos Médicos.
+
+Esto permitió experimentar cómo GitHub Copilot puede acompañar al desarrollador durante todo el ciclo de vida del software.
+
+---
+
+# ¿Qué Aprendimos?
+
+## Configuración del Entorno
+
+Se configuró Visual Studio Code para trabajar con Inteligencia Artificial.
 
 Se instalaron y configuraron:
 
 * GitHub Copilot.
 * GitHub Copilot Chat.
-* Extensiones complementarias para desarrollo moderno.
+* Extensiones para desarrollo moderno.
 
 ---
 
-### Uso de GitHub Copilot
+## Uso de GitHub Copilot
 
 Se exploraron capacidades como:
 
@@ -1700,20 +2354,21 @@ Se exploraron capacidades como:
 
 ---
 
-### Prompts Efectivos
+## Prompts Efectivos
 
 Se comprobó cómo la calidad de los resultados depende directamente de la calidad de las instrucciones proporcionadas.
 
 Se analizaron elementos como:
 
 * Rol.
+* Objetivo.
 * Contexto.
 * Restricciones.
 * Resultado esperado.
 
 ---
 
-### Agentes, Instructions y Skills
+## Agentes, Instructions y Skills
 
 Se comprendió cómo especializar el comportamiento de GitHub Copilot mediante:
 
@@ -1721,22 +2376,25 @@ Se comprendió cómo especializar el comportamiento de GitHub Copilot mediante:
 * Instructions.
 * Skills.
 
-Permitiendo respuestas más consistentes y alineadas con los estándares de una organización.
+Permitiendo respuestas más consistentes y alineadas con los estándares del equipo.
 
 ---
 
-### Caso Práctico
+## Caso Práctico
 
-Se analizó un escenario real donde un agente especializado puede ayudar a:
+Se utilizó un agente especializado para desarrollar una funcionalidad real de la solución.
 
-* Diseñar soluciones.
-* Aplicar buenas prácticas.
-* Mantener consistencia técnica.
-* Acelerar el desarrollo.
+Esto permitió observar cómo la IA puede participar en:
+
+* Diseño.
+* Implementación.
+* Validaciones.
+* Pruebas.
+* Documentación.
 
 ---
 
-### Buenas Prácticas
+## Buenas Prácticas y Uso Empresarial
 
 Se revisaron aspectos relacionados con:
 
@@ -1747,15 +2405,20 @@ Se revisaron aspectos relacionados con:
 
 ---
 
-## Principales Mensajes
+# Principales Mensajes
 
-### GitHub Copilot es un Asistente
+## GitHub Copilot es un Asistente
 
-GitHub Copilot ayuda a acelerar el trabajo del desarrollador, pero no reemplaza el análisis técnico, la experiencia ni la responsabilidad profesional.
+GitHub Copilot ayuda a acelerar el trabajo del desarrollador, pero no reemplaza:
+
+* El análisis técnico.
+* La experiencia.
+* El criterio profesional.
+* La responsabilidad sobre el software construido.
 
 ---
 
-### La Calidad del Resultado Depende del Contexto
+## La Calidad del Resultado Depende del Contexto
 
 Mientras mejor sea el prompt, mejor será el resultado.
 
@@ -1763,9 +2426,9 @@ La IA necesita contexto para generar respuestas más precisas y útiles.
 
 ---
 
-### Los Agentes Permiten Escalar el Uso de la IA
+## Los Agentes Permiten Escalar el Uso de la IA
 
-Los agentes ayudan a incorporar:
+Los agentes permiten incorporar:
 
 * Estándares.
 * Buenas prácticas.
@@ -1774,23 +2437,39 @@ Los agentes ayudan a incorporar:
 
 ---
 
-### La IA Debe Integrarse al Proceso de Desarrollo
+## La IA Debe Integrarse al Proceso de Desarrollo
 
-El uso de Inteligencia Artificial debe complementar prácticas existentes como:
+La Inteligencia Artificial no reemplaza las prácticas tradicionales de ingeniería.
 
-* Revisión de código.
-* Pruebas unitarias.
-* Pruebas de integración.
-* Seguridad.
-* Gobierno de software.
+Por el contrario, las complementa.
+
+```text id="4axm3l"
+Requerimiento
+      │
+      ▼
+GitHub Copilot y Agentes
+      │
+      ▼
+Desarrollo
+      │
+      ▼
+Pruebas
+      │
+      ▼
+Pull Request
+      │
+      ▼
+Code Review
+      │
+      ▼
+Despliegue
+```
 
 ---
 
-## ¿Qué Puedo Hacer Mañana?
+# ¿Qué Puedo Hacer Mañana?
 
-Al finalizar este taller se recomienda comenzar con pequeñas acciones:
-
-### Nivel 1
+## Nivel 1
 
 Utilizar GitHub Copilot para:
 
@@ -1800,54 +2479,87 @@ Utilizar GitHub Copilot para:
 
 ---
 
-### Nivel 2
+## Nivel 2
 
-Utilizar prompts más estructurados.
-
-Incorporar:
+Utilizar prompts más estructurados incorporando:
 
 * Rol.
+* Objetivo.
 * Contexto.
 * Restricciones.
 * Resultado esperado.
 
 ---
 
-### Nivel 3
+## Nivel 3
 
 Crear agentes especializados para diferentes necesidades:
 
 * Arquitectura.
-* Desarrollo.
-* Calidad.
+* Backend.
+* QA.
 * Seguridad.
+* DevOps.
 * Documentación.
 
 ---
 
-## Próximos Pasos
+## Nivel 4
+
+Compartir esos agentes con el equipo y convertirlos en una forma de reutilizar conocimiento.
+
+---
+
+## Nivel 5
+
+Incorporar la Inteligencia Artificial al ciclo completo de desarrollo.
+
+---
+
+# Próximos Pasos
 
 Una vez dominados estos conceptos, es posible avanzar hacia escenarios más avanzados:
 
 * Agentes empresariales.
 * Automatización de procesos.
 * Integración con herramientas corporativas.
-* Inteligencia Artificial aplicada al ciclo completo de desarrollo.
+* Desarrollo asistido por IA.
+* Ingeniería de Software impulsada por IA.
+* Agentes especializados por dominio del negocio.
 
 ---
 
-## Reflexión Final
+# Reflexión Final
 
 > La Inteligencia Artificial no reemplaza a los desarrolladores; potencia sus capacidades.
 
-Las organizaciones que logren combinar la experiencia de sus equipos con el uso adecuado de herramientas como GitHub Copilot estarán mejor preparadas para desarrollar soluciones de mayor calidad, en menor tiempo y con mayor capacidad de adaptación a los cambios del negocio.
+Las organizaciones que logren combinar:
+
+* La experiencia de sus equipos.
+* El conocimiento del negocio.
+* Las buenas prácticas de ingeniería.
+* El uso adecuado de la Inteligencia Artificial.
+
+estarán mejor preparadas para desarrollar soluciones de mayor calidad, en menor tiempo y con mayor capacidad de adaptación.
 
 ---
 
-## ¡Gracias por Participar!
+# Idea Final
 
-### Preguntas y Respuestas
+```text id="q3rux6"
+La ventaja competitiva no está en tener IA.
 
-Espacio abierto para consultas, comentarios y experiencias relacionadas con el uso de GitHub Copilot y Agentes.
+La ventaja competitiva está en cómo las organizaciones combinan
+Personas + Conocimiento + Ingeniería + Inteligencia Artificial.
+```
+
+---
+
+# ¡Gracias por Participar!
+
+## Preguntas y Respuestas
+
+Espacio abierto para consultas, comentarios y experiencias relacionadas con GitHub Copilot, Agentes e Inteligencia Artificial aplicada al desarrollo de software.
+
 
 
