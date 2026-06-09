@@ -359,6 +359,7 @@ Al finalizar este ejercicio se habrá comprobado que:
 
 ✅ La API está lista para continuar con las siguientes secciones del workshop.
 
+
 # 2. Introducción a GitHub Copilot
 
 ## 🎯 Objetivo
