@@ -292,14 +292,14 @@ Comprender cómo GitHub Copilot puede asistir a los desarrolladores durante el c
 Durante esta sección continuaremos desarrollando la solución:
 
 ```text
-INS.GM.API
+Workshop.Seguros.API
 ```
 
-relacionada con la administración de solicitudes de Gastos Médicos.
+relacionada con la administración de solicitudes de seguros.
 
 ---
 
-## ¿Qué es GitHub Copilot?
+# ¿Qué es GitHub Copilot?
 
 GitHub Copilot es un asistente de Inteligencia Artificial integrado en el entorno de desarrollo que ayuda a los desarrolladores mediante sugerencias contextuales y conversaciones en lenguaje natural.
 
@@ -314,11 +314,11 @@ Permite acelerar tareas como:
 * Generación de consultas SQL.
 * Creación de scripts y automatizaciones.
 
-En este workshop utilizaremos GitHub Copilot para construir progresivamente una solución relacionada con Gastos Médicos del INS.
+En este workshop utilizaremos GitHub Copilot para construir progresivamente una solución empresarial relacionada con seguros.
 
 ---
 
-## ¿Cómo funciona?
+# ¿Cómo funciona?
 
 GitHub Copilot analiza:
 
@@ -339,28 +339,28 @@ Desarrollador
 Sugerencias y Respuestas
       │
       ▼
-Proyecto INS.GM.API
+Proyecto Workshop.Seguros.API
 ```
 
 ---
 
-## Principales Capacidades
+# Principales Capacidades
 
-### Generación de Código
+## Generación de Código
 
 A partir de comentarios o instrucciones en lenguaje natural.
 
 Ejemplo:
 
 ```csharp
-// Crear una entidad SolicitudGastoMedico para una aplicación de Gastos Médicos
+// Crear una entidad SolicitudSeguro para una aplicación relacionada con seguros
 ```
 
 Copilot generará automáticamente una propuesta de implementación.
 
 ---
 
-### Explicación de Código
+## Explicación de Código
 
 Permite comprender código existente de forma rápida.
 
@@ -379,7 +379,7 @@ Ideal para:
 
 ---
 
-### Refactorización
+## Refactorización
 
 Permite mejorar código existente.
 
@@ -398,12 +398,12 @@ Copilot sugerirá mejoras en:
 
 ---
 
-### Generación de Pruebas Unitarias
+## Generación de Pruebas Unitarias
 
 Ejemplo:
 
 ```text
-Genera pruebas unitarias utilizando XUnit para la entidad SolicitudGastoMedico.
+Genera pruebas unitarias utilizando XUnit para la entidad SolicitudSeguro.
 ```
 
 Puede generar:
@@ -415,7 +415,7 @@ Puede generar:
 
 ---
 
-### Generación de Documentación
+## Generación de Documentación
 
 Ejemplo:
 
@@ -431,13 +431,13 @@ Documenta este endpoint REST.
 
 ---
 
-## Uso del Contexto
+# Uso del Contexto
 
 Una de las principales fortalezas de GitHub Copilot es su capacidad para utilizar el contexto del proyecto.
 
 ---
 
-### @workspace
+## @workspace
 
 Permite consultar información sobre toda la solución.
 
@@ -461,25 +461,25 @@ Ejemplos:
 
 ---
 
-### #file
+## #file
 
 Permite trabajar sobre un archivo específico.
 
 Ejemplo:
 
 ```text
-Explica el contenido de #file:SolicitudGastoMedico.cs
+Explica el contenido de #file:SolicitudSeguro.cs
 ```
 
 o
 
 ```text
-Genera comentarios XML para #file:SolicitudGastoMedico.cs
+Genera comentarios XML para #file:SolicitudSeguro.cs
 ```
 
 ---
 
-### #selection
+## #selection
 
 Permite trabajar únicamente sobre el código seleccionado.
 
@@ -491,23 +491,23 @@ Refactoriza #selection aplicando Clean Code.
 
 ---
 
-## Demostración Práctica
+# Demostración Práctica
 
-Continuaremos ampliando la solución INS.GM.API.
+Continuaremos ampliando la solución Workshop.Seguros.API.
 
 ---
 
-### Ejercicio 1
+## Ejercicio 1
 
 Solicitar a GitHub Copilot:
 
 ```text
-Genera una entidad Asegurado para una aplicación de Gastos Médicos.
+Genera una entidad Cliente para una aplicación relacionada con seguros.
 
 Debe incluir:
 
 - Id
-- Cedula
+- Identificacion
 - NombreCompleto
 - FechaNacimiento
 - Telefono
@@ -516,67 +516,85 @@ Debe incluir:
 
 ---
 
-### Ejercicio 2
+## Ejercicio 2
 
 Solicitar:
 
 ```text
-Genera una entidad FacturaMedica.
+Genera una entidad Cobertura.
 
 Debe incluir:
 
 - Id
-- NumeroFactura
-- FechaFactura
-- NombreProveedor
-- Monto
+- Nombre
+- Descripcion
+- MontoMaximo
+- Activa
 ```
 
 ---
 
-### Ejercicio 3
+## Ejercicio 3
 
 Solicitar:
 
 ```text
-Genera una relación entre SolicitudGastoMedico y FacturaMedica.
+Genera una entidad DocumentoAdjunto.
 
-Una solicitud puede tener múltiples facturas.
+Debe incluir:
+
+- Id
+- NombreArchivo
+- TipoContenido
+- TamanoBytes
+- FechaCarga
 ```
 
 ---
 
-### Ejercicio 4
+## Ejercicio 4
 
 Solicitar:
 
 ```text
-Genera pruebas unitarias utilizando XUnit para la entidad SolicitudGastoMedico.
+Genera una relación entre SolicitudSeguro y DocumentoAdjunto.
+
+Una solicitud puede tener múltiples documentos adjuntos.
 ```
 
 ---
 
-### Ejercicio 5
+## Ejercicio 5
 
 Solicitar:
 
 ```text
-Genera comentarios XML para todas las propiedades de la entidad SolicitudGastoMedico.
+Genera pruebas unitarias utilizando XUnit para la entidad SolicitudSeguro.
 ```
 
 ---
 
-### Ejercicio 6
+## Ejercicio 6
 
 Solicitar:
 
 ```text
-Explica la clase SolicitudGastoMedico línea por línea.
+Genera comentarios XML para todas las propiedades de la entidad SolicitudSeguro.
 ```
 
 ---
 
-## Beneficios para el Desarrollo
+## Ejercicio 7
+
+Solicitar:
+
+```text
+Explica la clase SolicitudSeguro línea por línea.
+```
+
+---
+
+# Beneficios para el Desarrollo
 
 ✅ Reduce tareas repetitivas.
 
@@ -594,7 +612,7 @@ Explica la clase SolicitudGastoMedico línea por línea.
 
 ---
 
-## Consideraciones Importantes
+# Consideraciones Importantes
 
 GitHub Copilot es un asistente, no un reemplazo del desarrollador.
 
@@ -608,7 +626,7 @@ Siempre se recomienda:
 
 ---
 
-## Resultado Esperado
+# Resultado Esperado
 
 Al finalizar esta sección el participante comprenderá:
 
@@ -629,11 +647,21 @@ Al finalizar esta sección el participante comprenderá:
 ✅ Evolucionar la solución:
 
 ```text
-INS.GM.API
+Workshop.Seguros.API
 ```
 
-incorporando nuevas entidades y relaciones del dominio de Gastos Médicos.
+incorporando nuevas entidades y relaciones del dominio de seguros.
 
+Al finalizar esta sección, la solución podría tener una estructura similar a:
+
+```text
+Workshop.Seguros.API
+│
+├── SolicitudSeguro
+├── Cliente
+├── Cobertura
+└── DocumentoAdjunto
+```
 
 # 3. Prompts Efectivos
 
@@ -644,10 +672,10 @@ Aprender a redactar instrucciones claras y estructuradas para obtener mejores re
 Durante esta sección continuaremos evolucionando la solución:
 
 ```text
-INS.GM.API
+Workshop.Seguros.API
 ```
 
-relacionada con la administración de solicitudes de Gastos Médicos.
+relacionada con la administración de solicitudes de seguros.
 
 ---
 
@@ -716,7 +744,7 @@ Respuesta ambigua e impredecible.
 ## Nivel 2: Prompt Específico
 
 ```text
-Crea una API REST en .NET 8 para administrar solicitudes de gastos médicos.
+Crea una API REST en .NET 8 para administrar solicitudes relacionadas con seguros.
 ```
 
 ### Ahora GitHub Copilot conoce:
@@ -741,12 +769,13 @@ Respuesta más precisa.
 Actúa como Arquitecto de Software.
 
 Objetivo:
-Diseñar una API REST para administrar solicitudes de Gastos Médicos.
+Diseñar una API REST para administrar solicitudes relacionadas con seguros.
 
 Contexto:
-La aplicación será utilizada por colaboradores del INS.
+La aplicación será utilizada por colaboradores de una organización.
 
 Restricciones:
+
 - .NET 8.
 - Minimal API.
 - Clean Architecture.
@@ -754,6 +783,7 @@ Restricciones:
 - Comentarios en español.
 
 Resultado esperado:
+
 Generar entidades, endpoints y pruebas unitarias.
 ```
 
@@ -768,8 +798,6 @@ Respuesta mucho más consistente y alineada al objetivo.
 # Componentes de un Buen Prompt
 
 ## 1. Rol
-
-Define la perspectiva desde la cual debe responder la IA.
 
 Ejemplos:
 
@@ -793,31 +821,25 @@ Actúa como Especialista en Seguridad.
 
 ## 2. Objetivo
 
-Indica qué se desea obtener.
-
 Ejemplo:
 
 ```text
-Diseñar una API para administrar solicitudes de gastos médicos.
+Diseñar una API para administrar solicitudes de seguros.
 ```
 
 ---
 
 ## 3. Contexto
 
-Proporciona información relevante.
-
 Ejemplo:
 
 ```text
-La aplicación será utilizada por colaboradores del INS y administrará solicitudes de gastos médicos.
+La aplicación será utilizada por colaboradores de una organización y administrará solicitudes de seguros.
 ```
 
 ---
 
 ## 4. Restricciones
-
-Define reglas y estándares.
 
 Ejemplo:
 
@@ -831,8 +853,6 @@ Ejemplo:
 ---
 
 ## 5. Resultado Esperado
-
-Indica claramente qué debe producir la IA.
 
 Ejemplo:
 
@@ -869,39 +889,6 @@ Resultado esperado:
 
 ---
 
-# Ejemplo Real
-
-## Prompt Básico
-
-```text
-Crea una clase FacturaMedica.
-```
-
----
-
-## Prompt Estructurado
-
-```text
-Actúa como Desarrollador Senior .NET.
-
-Objetivo:
-Crear una entidad FacturaMedica.
-
-Contexto:
-La solución INS.GM.API administra solicitudes de Gastos Médicos.
-
-Restricciones:
-- Utilizar C# y .NET 8.
-- Agregar comentarios XML.
-- Mantener nombres descriptivos.
-- Incluir validaciones básicas.
-
-Resultado esperado:
-Generar una entidad lista para incorporarse a una aplicación empresarial.
-```
-
----
-
 # Ingeniería de Prompts
 
 Un prompt bien construido normalmente contiene cinco elementos:
@@ -928,10 +915,6 @@ Se trata de comunicar correctamente los requerimientos a la IA.
 
 > La IA no reemplaza la capacidad de análisis del desarrollador.
 
-La IA genera respuestas en función del contexto recibido.
-
-Por ello:
-
 ```text
 Garbage In
      ↓
@@ -944,7 +927,11 @@ Garbage Out
 
 # Ejercicios Prácticos
 
-En esta sección iremos construyendo un endpoint para registrar solicitudes de gastos médicos.
+En esta sección construiremos la primera funcionalidad completa de la solución:
+
+```text
+Registrar una Solicitud de Seguro
+```
 
 ---
 
@@ -965,7 +952,7 @@ Analizar la respuesta obtenida.
 Solicitar:
 
 ```text
-Crea un endpoint REST en .NET 8 para registrar solicitudes de gastos médicos.
+Crea un endpoint REST en .NET 8 para registrar una solicitud de seguro.
 ```
 
 Comparar los resultados con el ejercicio anterior.
@@ -980,12 +967,13 @@ Solicitar:
 Actúa como Arquitecto de Software.
 
 Objetivo:
-Diseñar un endpoint para registrar solicitudes de gastos médicos.
+Diseñar un endpoint para registrar una solicitud de seguro.
 
 Contexto:
-La solución INS.GM.API pertenece al dominio de Gastos Médicos del INS.
+La solución Workshop.Seguros.API pertenece a un dominio empresarial.
 
 Restricciones:
+
 - Utilizar .NET 8.
 - Minimal API.
 - Clean Architecture.
@@ -993,6 +981,7 @@ Restricciones:
 - Comentarios en español.
 
 Resultado esperado:
+
 Generar:
 
 - Request.
@@ -1014,18 +1003,20 @@ Solicitar:
 Actúa como Desarrollador Senior .NET.
 
 Objetivo:
-Crear la entidad Reembolso.
+Crear la entidad Beneficiario.
 
 Contexto:
-La solución INS.GM.API administra solicitudes de Gastos Médicos.
+La solución Workshop.Seguros.API administra solicitudes de seguros.
 
 Restricciones:
+
 - Utilizar C# y .NET 8.
 - Agregar comentarios XML.
 - Utilizar nombres descriptivos.
 - Incluir validaciones básicas.
 
 Resultado esperado:
+
 Generar una entidad empresarial lista para producción.
 ```
 
@@ -1039,12 +1030,13 @@ Solicitar:
 Actúa como Especialista QA.
 
 Objetivo:
-Generar pruebas unitarias para la entidad Reembolso.
+Generar pruebas unitarias para la entidad Beneficiario.
 
 Contexto:
 La solución utiliza XUnit.
 
 Resultado esperado:
+
 Generar escenarios positivos, negativos y validaciones.
 ```
 
@@ -1061,8 +1053,6 @@ Generar escenarios positivos, negativos y validaciones.
 ✅ Indicar restricciones.
 
 ✅ Definir el resultado esperado.
-
-✅ Solicitar ejemplos cuando sea necesario.
 
 ✅ Dividir problemas complejos en tareas pequeñas.
 
@@ -1102,7 +1092,7 @@ Al finalizar esta sección el participante será capaz de:
 
 ✅ Comprender que un prompt es una especificación para la IA y no simplemente una pregunta.
 
-✅ Evolucionar la solución INS.GM.API incorporando nuevas entidades, endpoints y pruebas unitarias.
+✅ Evolucionar la solución Workshop.Seguros.API incorporando nuevas funcionalidades.
 
 ✅ Comprender que la calidad del resultado depende directamente de la calidad de las instrucciones proporcionadas a la IA.
 
@@ -1116,10 +1106,10 @@ Comprender cómo personalizar GitHub Copilot mediante Agentes, Instructions y Sk
 Durante esta sección continuaremos evolucionando la solución:
 
 ```text
-INS.GM.API
+Workshop.Seguros.API
 ```
 
-y aprenderemos cómo especializar GitHub Copilot para adaptarlo a las necesidades del equipo de desarrollo de Gastos Médicos del INS.
+y aprenderemos cómo especializar GitHub Copilot para adaptarlo a las necesidades de un equipo de desarrollo moderno.
 
 ---
 
@@ -1147,6 +1137,7 @@ Ejemplos:
 * Analista de Negocio.
 * Especialista en Seguridad.
 * Revisor de Código.
+* Especialista DevOps.
 
 ---
 
@@ -1161,7 +1152,7 @@ Representa el propósito principal.
 Ejemplo:
 
 ```text
-Especialista Backend Gastos Médicos INS
+Especialista Backend .NET
 ```
 
 ---
@@ -1249,9 +1240,10 @@ Objetivo:
 Crear un agente especializado para un equipo Backend .NET.
 
 Contexto:
-El equipo desarrolla la solución INS.GM.API para administrar solicitudes de Gastos Médicos.
+El equipo desarrolla APIs empresariales utilizando .NET.
 
 Resultado esperado:
+
 Generar:
 
 1. Nombre del agente.
@@ -1264,7 +1256,7 @@ Generar:
 
 # Caso Práctico del Taller
 
-Supongamos que el equipo de Gastos Médicos del INS desea estandarizar la forma en que se desarrollan los servicios Backend.
+Supongamos que el equipo desea estandarizar la forma en que se desarrollan los servicios Backend.
 
 En lugar de repetir instrucciones constantemente, se crea un agente especializado.
 
@@ -1273,7 +1265,7 @@ En lugar de repetir instrucciones constantemente, se crea un agente especializad
 # Nombre del Agente
 
 ```text
-Especialista Backend Gastos Médicos INS
+Especialista Backend .NET
 ```
 
 ---
@@ -1281,7 +1273,7 @@ Especialista Backend Gastos Médicos INS
 # Descripción
 
 ```text
-Agente especializado en el desarrollo de APIs .NET para la administración de solicitudes de Gastos Médicos, siguiendo principios de Clean Architecture y buenas prácticas empresariales.
+Agente especializado en el desarrollo de APIs empresariales utilizando .NET y aplicando principios de Clean Architecture y buenas prácticas de ingeniería de software.
 ```
 
 ---
@@ -1399,9 +1391,10 @@ Objetivo:
 Crear un agente especializado para QA.
 
 Contexto:
-La solución INS.GM.API utiliza .NET 8 y XUnit.
+La solución Workshop.Seguros.API utiliza .NET 8 y XUnit.
 
 Resultado esperado:
+
 Generar:
 
 1. Nombre del agente.
@@ -1451,13 +1444,13 @@ Especialista QA .NET
 Utilizando el agente:
 
 ```text
-Especialista Backend Gastos Médicos INS
+Especialista Backend .NET
 ```
 
 realizar la siguiente consulta:
 
 ```text
-Necesito implementar el endpoint para registrar una solicitud de gasto médico.
+Necesito implementar la funcionalidad para registrar una solicitud de seguro.
 ```
 
 Analizar cómo las respuestas ya incorporan automáticamente:
@@ -1538,16 +1531,16 @@ Demostrar cómo un Agente especializado puede ayudar a resolver una necesidad re
 Durante esta sección continuaremos evolucionando la solución:
 
 ```text
-INS.GM.API
+Workshop.Seguros.API
 ```
 
-relacionada con la administración de solicitudes de Gastos Médicos.
+relacionada con la administración de solicitudes de seguros.
 
 ---
 
 # Escenario
 
-El equipo de Gastos Médicos del INS necesita desarrollar una nueva funcionalidad para registrar solicitudes de gastos médicos.
+La organización necesita desarrollar una nueva funcionalidad para registrar solicitudes de seguros.
 
 La organización ha definido los siguientes estándares:
 
@@ -1567,7 +1560,7 @@ El objetivo es evitar que cada desarrollador tenga que recordar y especificar es
 Un desarrollador podría realizar una consulta como:
 
 ```text
-Genera una API para administrar solicitudes de gastos médicos.
+Genera una API para registrar solicitudes de seguros.
 ```
 
 Sin embargo, el resultado dependerá completamente del contexto disponible y podría no seguir los estándares definidos por el equipo.
@@ -1579,7 +1572,7 @@ Sin embargo, el resultado dependerá completamente del contexto disponible y pod
 Se utilizará el agente creado en la sección anterior:
 
 ```text
-Especialista Backend Gastos Médicos INS
+Especialista Backend .NET
 ```
 
 ---
@@ -1587,7 +1580,7 @@ Especialista Backend Gastos Médicos INS
 # Instructions del Agente
 
 ```text
-Eres un Especialista Backend de Gastos Médicos.
+Eres un Especialista Backend .NET.
 
 Debes responder en español.
 
@@ -1632,7 +1625,7 @@ Revisión de código
 
 # Necesidad de Negocio
 
-Registrar una solicitud de gasto médico.
+Registrar una solicitud de seguro.
 
 ---
 
@@ -1641,10 +1634,10 @@ Registrar una solicitud de gasto médico.
 La solicitud debe almacenar:
 
 * Número de solicitud.
-* Cédula del asegurado.
-* Nombre del asegurado.
-* Fecha de la solicitud.
-* Monto solicitado.
+* Identificación del cliente.
+* Nombre del cliente.
+* Fecha de creación.
+* Tipo de seguro.
 * Estado.
 * Observaciones.
 
@@ -1653,9 +1646,7 @@ La solicitud debe almacenar:
 # Consulta Realizada al Agente
 
 ```text
-Necesito implementar la funcionalidad para registrar una solicitud de gasto médico.
-
-La solución utiliza .NET 8 y Clean Architecture.
+Necesito implementar la funcionalidad para registrar una solicitud de seguro.
 
 Genera:
 
@@ -1675,7 +1666,7 @@ El agente podría proponer la siguiente arquitectura:
 ## Dominio
 
 ```text
-SolicitudGastoMedico
+SolicitudSeguro
 ```
 
 ---
@@ -1683,11 +1674,11 @@ SolicitudGastoMedico
 ## Aplicación
 
 ```text
-CrearSolicitudGastoMedicoRequest
+CrearSolicitudSeguroRequest
 
-CrearSolicitudGastoMedicoResponse
+CrearSolicitudSeguroResponse
 
-ValidadorCrearSolicitudGastoMedico
+ValidadorCrearSolicitudSeguro
 ```
 
 ---
@@ -1695,7 +1686,7 @@ ValidadorCrearSolicitudGastoMedico
 ## API
 
 ```text
-CrearSolicitudGastoMedicoEndpoint
+CrearSolicitudSeguroEndpoint
 ```
 
 ---
@@ -1703,7 +1694,7 @@ CrearSolicitudGastoMedicoEndpoint
 ## Infraestructura
 
 ```text
-RepositorioSolicitudGastoMedico
+RepositorioSolicitudSeguro
 ```
 
 ---
@@ -1711,7 +1702,7 @@ RepositorioSolicitudGastoMedico
 # Endpoint Propuesto
 
 ```http
-POST /api/solicitudes-gastos-medicos
+POST /api/solicitudes-seguro
 ```
 
 ---
@@ -1719,15 +1710,15 @@ POST /api/solicitudes-gastos-medicos
 # Operaciones Futuras
 
 ```http
-GET     /api/solicitudes-gastos-medicos
+GET     /api/solicitudes-seguro
 
-GET     /api/solicitudes-gastos-medicos/{id}
+GET     /api/solicitudes-seguro/{id}
 
-POST    /api/solicitudes-gastos-medicos
+POST    /api/solicitudes-seguro
 
-PUT     /api/solicitudes-gastos-medicos/{id}
+PUT     /api/solicitudes-seguro/{id}
 
-DELETE  /api/solicitudes-gastos-medicos/{id}
+DELETE  /api/solicitudes-seguro/{id}
 ```
 
 ---
@@ -1737,10 +1728,10 @@ DELETE  /api/solicitudes-gastos-medicos/{id}
 El agente podría sugerir:
 
 * Número de solicitud obligatorio.
-* Cédula obligatoria.
-* Nombre obligatorio.
-* El monto debe ser mayor que cero.
-* La fecha de solicitud no puede ser futura.
+* Identificación del cliente obligatoria.
+* Nombre del cliente obligatorio.
+* El tipo de seguro es obligatorio.
+* La fecha de creación no puede ser futura.
 * El estado inicial debe ser Pendiente.
 
 ---
@@ -1749,18 +1740,19 @@ El agente podría sugerir:
 
 El agente podría proponer:
 
-### Casos positivos
+## Casos positivos
 
 * Crear una solicitud válida.
 
-### Casos negativos
+## Casos negativos
 
-* Monto igual a cero.
-* Cédula vacía.
 * Número de solicitud vacío.
+* Identificación vacía.
+* Nombre vacío.
+* Tipo de seguro vacío.
 * Fecha futura.
 
-### Validaciones
+## Validaciones
 
 * Estado inicial Pendiente.
 * Valores obligatorios.
@@ -1819,7 +1811,15 @@ Analice con el grupo:
 
 ## ¿Qué otros agentes podrían existir?
 
-Ejemplos:
+### Arquitecto de Software
+
+Encargado de:
+
+* Diseño de soluciones.
+* Patrones de diseño.
+* Decisiones arquitectónicas.
+
+---
 
 ### Especialista QA
 
@@ -1877,7 +1877,7 @@ Encargado de:
 Necesidad del Negocio
           │
           ▼
-Especialista Backend Gastos Médicos INS
+Especialista Backend .NET
           │
           ▼
 GitHub Copilot
@@ -1891,7 +1891,7 @@ Pruebas Unitarias
 Documentación
           │
           ▼
-INS.GM.API
+Workshop.Seguros.API
 ```
 
 ---
@@ -1924,13 +1924,13 @@ Conocer las principales recomendaciones para utilizar GitHub Copilot de forma se
 Durante esta sección utilizaremos como referencia la solución:
 
 ```text
-INS.GM.API
+Workshop.Seguros.API
 ```
 
 y el agente:
 
 ```text
-Especialista Backend Gastos Médicos INS
+Especialista Backend .NET
 ```
 
 desarrollados a lo largo del workshop.
@@ -2067,10 +2067,10 @@ Haz una API.
 Actúa como Desarrollador Senior .NET.
 
 Objetivo:
-Implementar un endpoint para registrar solicitudes de gastos médicos.
+Implementar un endpoint para registrar una solicitud de seguro.
 
 Contexto:
-La solución INS.GM.API utiliza .NET 8 y Clean Architecture.
+La solución Workshop.Seguros.API utiliza .NET 8 y Clean Architecture.
 
 Resultado esperado:
 Generar endpoint, validaciones y pruebas unitarias.
@@ -2099,7 +2099,7 @@ Los agentes permiten reutilizar el conocimiento del equipo.
 Por ejemplo:
 
 ```text
-Especialista Backend Gastos Médicos INS
+Especialista Backend .NET
 ```
 
 puede incorporar automáticamente:
@@ -2318,13 +2318,11 @@ Recapitular los principales conceptos vistos durante el taller y establecer una 
 
 Durante este workshop no solo aprendimos conceptos aislados.
 
-A lo largo de las diferentes secciones fuimos construyendo y evolucionando una solución real:
+A lo largo de las diferentes secciones fuimos construyendo y evolucionando una solución empresarial:
 
-```text id="trazvz"
-INS.GM.API
+```text id="lhx6h5"
+Workshop.Seguros.API
 ```
-
-relacionada con la administración de solicitudes de Gastos Médicos.
 
 Esto permitió experimentar cómo GitHub Copilot puede acompañar al desarrollador durante todo el ciclo de vida del software.
 
@@ -2407,6 +2405,57 @@ Se revisaron aspectos relacionados con:
 
 ---
 
+# Evolución de la Solución
+
+A lo largo del taller, la solución fue creciendo progresivamente:
+
+## Sección 1
+
+```text id="v7g84q"
+Workshop.Seguros.API
+```
+
+Se configuró el entorno de trabajo.
+
+---
+
+## Sección 2
+
+Se incorporaron las primeras entidades:
+
+```text id="f38k2j"
+SolicitudSeguro
+Cliente
+Cobertura
+DocumentoAdjunto
+```
+
+---
+
+## Sección 3
+
+Se aprendió a construir mejores prompts y a obtener resultados más precisos.
+
+---
+
+## Sección 4
+
+Se crearon agentes especializados para incorporar conocimiento y estándares del equipo.
+
+---
+
+## Sección 5
+
+Se desarrolló una funcionalidad real utilizando un agente especializado.
+
+---
+
+## Sección 6
+
+Se analizaron buenas prácticas para el uso empresarial de la Inteligencia Artificial.
+
+---
+
 # Principales Mensajes
 
 ## GitHub Copilot es un Asistente
@@ -2445,7 +2494,7 @@ La Inteligencia Artificial no reemplaza las prácticas tradicionales de ingenier
 
 Por el contrario, las complementa.
 
-```text id="4axm3l"
+```text id="h7rxli"
 Requerimiento
       │
       ▼
@@ -2548,11 +2597,12 @@ estarán mejor preparadas para desarrollar soluciones de mayor calidad, en menor
 
 # Idea Final
 
-```text id="q3rux6"
+```text id="7q6v6m"
 La ventaja competitiva no está en tener IA.
 
-La ventaja competitiva está en cómo las organizaciones combinan
-Personas + Conocimiento + Ingeniería + Inteligencia Artificial.
+La ventaja competitiva está en cómo las organizaciones combinan:
+
+Personas + Conocimiento + Ingeniería + Inteligencia Artificial
 ```
 
 ---
@@ -2562,6 +2612,3 @@ Personas + Conocimiento + Ingeniería + Inteligencia Artificial.
 ## Preguntas y Respuestas
 
 Espacio abierto para consultas, comentarios y experiencias relacionadas con GitHub Copilot, Agentes e Inteligencia Artificial aplicada al desarrollo de software.
-
-
-
