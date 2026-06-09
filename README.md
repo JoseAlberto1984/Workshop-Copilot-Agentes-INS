@@ -34,7 +34,7 @@ Al finalizar esta sección el participante será capaz de:
 * Instalar GitHub Copilot y GitHub Copilot Chat.
 * Comprender los modos Ask, Edit y Agent.
 * Verificar que GitHub Copilot funciona correctamente.
-* Iniciar el desarrollo de una solución relacionada con el negocio de Gastos Médicos del INS.
+* Iniciar el desarrollo de una solución empresarial relacionada con seguros.
 
 ---
 
@@ -43,12 +43,14 @@ Al finalizar esta sección el participante será capaz de:
 Durante todo el workshop se desarrollará una solución llamada:
 
 ```text
-INS.GM.API
+Workshop.Seguros.API
 ```
 
-Esta solución representará una API para la administración de solicitudes de Gastos Médicos.
+Esta solución representará una API empresarial para la administración de solicitudes relacionadas con seguros.
 
-A lo largo de las diferentes secciones del taller iremos incorporando nuevos conocimientos y funcionalidades, permitiendo observar cómo GitHub Copilot puede asistir durante todo el ciclo de desarrollo.
+A lo largo de las diferentes secciones del taller iremos incorporando nuevos conocimientos y funcionalidades, permitiendo observar cómo GitHub Copilot puede asistir durante todo el ciclo de desarrollo de software.
+
+La solución evolucionará progresivamente conforme se introduzcan nuevos conceptos y capacidades.
 
 ---
 
@@ -110,21 +112,21 @@ Instalar las siguientes extensiones:
 Crear una nueva solución llamada:
 
 ```text
-INS.GM.API
+Workshop.Seguros.API
 ```
 
 Esta solución servirá como ejemplo durante todo el workshop.
 
-El dominio funcional estará relacionado con la administración de solicitudes de gastos médicos.
+El dominio funcional estará relacionado con la administración de solicitudes de seguros.
 
 Algunas entidades que se irán construyendo durante el curso serán:
 
-* SolicitudGastoMedico
-* Asegurado
-* FacturaMedica
-* Diagnostico
-* ProveedorMedico
-* Reembolso
+* SolicitudSeguro
+* Cliente
+* DocumentoAdjunto
+* Cobertura
+* Beneficiario
+* ComentarioSolicitud
 
 ---
 
@@ -133,13 +135,13 @@ Algunas entidades que se irán construyendo durante el curso serán:
 Crear un archivo llamado:
 
 ```text
-SolicitudGastoMedico.cs
+SolicitudSeguro.cs
 ```
 
 Escribir el siguiente comentario:
 
 ```csharp
-// Crear una entidad SolicitudGastoMedico para una aplicación de Gastos Médicos
+// Crear una entidad SolicitudSeguro para una aplicación relacionada con seguros
 ```
 
 Si GitHub Copilot está funcionando correctamente, aparecerá una sugerencia en color gris.
@@ -183,7 +185,7 @@ Permite modificar código existente mediante instrucciones en lenguaje natural.
 Ejemplo:
 
 ```text
-Agrega validaciones básicas a la entidad SolicitudGastoMedico.
+Agrega validaciones básicas a la entidad SolicitudSeguro.
 ```
 
 Características:
@@ -201,7 +203,7 @@ Permite ejecutar tareas más completas sobre el proyecto.
 Ejemplo:
 
 ```text
-Crea una API REST en .NET 8 para administrar solicitudes de gastos médicos.
+Crea una API REST en .NET 8 para administrar solicitudes relacionadas con seguros.
 ```
 
 Características:
@@ -236,16 +238,16 @@ Explícame las principales diferencias entre .NET Framework y .NET 8.
 ### Ejercicio 3
 
 ```text
-Genera una entidad SolicitudGastoMedico para una aplicación de seguros médicos.
+Genera una entidad SolicitudSeguro.
 
 La entidad debe incluir:
 
 - Id
 - NumeroSolicitud
-- CedulaAsegurado
-- NombreAsegurado
+- IdentificacionCliente
+- NombreCliente
 - FechaSolicitud
-- MontoSolicitado
+- TipoSeguro
 - Estado
 ```
 
@@ -254,7 +256,7 @@ La entidad debe incluir:
 ### Ejercicio 4
 
 ```text
-Explícame cada una de las propiedades generadas y su propósito dentro de un sistema de Gastos Médicos.
+Explícame cada una de las propiedades generadas y su propósito dentro de un sistema relacionado con seguros.
 ```
 
 ---
@@ -276,10 +278,10 @@ Al finalizar esta sección el participante debe contar con:
 ✅ Creación de la solución del taller:
 
 ```text
-INS.GM.API
+Workshop.Seguros.API
 ```
 
-✅ Primera entidad del dominio de Gastos Médicos generada con ayuda de GitHub Copilot.
+✅ Primera entidad del dominio generada con ayuda de GitHub Copilot.
 
 # 2. Introducción a GitHub Copilot
 
