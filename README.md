@@ -240,6 +240,116 @@ Workshop.Seguros.API
 
 ---
 
+## Compilando y Ejecutando la Aplicación
+
+Una vez creada la solución, es recomendable verificar que todo se haya generado correctamente.
+
+### Paso 1
+
+Abrir una terminal en Visual Studio Code mediante:
+
+```text
+Terminal → New Terminal
+```
+
+o utilizando:
+
+```text
+Ctrl + Shift + `
+```
+
+---
+
+### Paso 2
+
+Asegurarse de estar ubicado dentro del proyecto Web API.
+
+La carpeta del proyecto debe contener archivos similares a:
+
+```text
+Program.cs
+appsettings.json
+appsettings.Development.json
+```
+
+Si es necesario, cambiarse al directorio correspondiente.
+
+Por ejemplo:
+
+```bash
+cd Workshop.Seguros.API
+```
+
+---
+
+### Paso 3
+
+Compilar la aplicación ejecutando:
+
+```bash
+dotnet build
+```
+
+Verificar que la compilación finalice correctamente y que no existan errores.
+
+---
+
+### Paso 4
+
+Ejecutar la aplicación mediante:
+
+```bash
+dotnet run
+```
+
+La consola mostrará una salida similar a:
+
+```text
+Now listening on: https://localhost:7147
+Now listening on: http://localhost:5147
+```
+
+---
+
+### Paso 5
+
+Copiar la dirección HTTPS mostrada en la consola y agregar:
+
+```text
+/swagger/index.html
+```
+
+Por ejemplo:
+
+```text
+https://localhost:7147/swagger/index.html
+```
+
+---
+
+### Paso 6
+
+Verificar que se despliegue la interfaz de Swagger.
+
+Si todo se encuentra correcto, se visualizarán los endpoints expuestos por la API.
+
+---
+
+## Resultado Esperado
+
+Al finalizar este ejercicio se habrá comprobado que:
+
+✅ La solución fue creada correctamente.
+
+✅ El proyecto compila sin errores.
+
+✅ La aplicación puede ejecutarse localmente.
+
+✅ Swagger se encuentra habilitado.
+
+✅ La API está lista para continuar con las siguientes secciones del workshop.
+
+
 ## Modos de GitHub Copilot
 
 GitHub Copilot dispone de diferentes modos de interacción según la tarea que se desea realizar.
@@ -374,6 +484,8 @@ Explícame cada una de las propiedades generadas y su propósito dentro de un si
 ```
 
 ---
+
+
 
 ## Reflexión
 
