@@ -165,7 +165,7 @@ Aceptar los cambios sugeridos.
 
 ---
 
-## Primera Interacción con Agent Mode
+## Primera Interacción con GitHub Copilot
 
 Una vez creada la solución, solicitar:
 
@@ -238,6 +238,7 @@ Workshop.Seguros.API
 └── Properties
 ```
 
+---
 
 ## Modos de GitHub Copilot
 
@@ -271,6 +272,16 @@ Ejemplo:
 
 ```text
 Necesito agregar validaciones a la entidad SolicitudSeguro.
+```
+
+Características:
+
+* Propone una solución antes de aplicarla.
+* Permite revisar los cambios sugeridos.
+* Ayuda a dividir problemas complejos en tareas pequeñas.
+* Facilita comprender el impacto de las modificaciones.
+
+---
 
 ### Modo Agent
 
@@ -288,6 +299,34 @@ Características:
 * Puede crear y modificar múltiples archivos.
 * Ayuda a implementar funcionalidades completas.
 * Comprende la estructura de la solución.
+
+---
+
+## ¿Cuándo utilizar cada modo?
+
+| Modo  | Uso Principal                                            |
+| ----- | -------------------------------------------------------- |
+| Ask   | Resolver dudas y obtener explicaciones                   |
+| Plan  | Analizar una necesidad y proponer una estrategia         |
+| Agent | Implementar funcionalidades y trabajar sobre el proyecto |
+
+### Recomendación
+
+```text
+Aprender
+   ↓
+Ask
+
+Analizar
+   ↓
+Plan
+
+Construir
+   ↓
+Agent
+```
+
+A lo largo de este workshop utilizaremos los tres modos para aprovechar al máximo las capacidades de GitHub Copilot.
 
 ---
 
@@ -314,17 +353,16 @@ Explícame las principales diferencias entre .NET Framework y .NET 8.
 ### Ejercicio 3
 
 ```text
-Genera una entidad SolicitudSeguro.
+Genera una entidad Cliente.
 
 La entidad debe incluir:
 
 - Id
-- NumeroSolicitud
-- IdentificacionCliente
-- NombreCliente
-- FechaSolicitud
-- TipoSeguro
-- Estado
+- Identificacion
+- NombreCompleto
+- FechaNacimiento
+- Telefono
+- CorreoElectronico
 ```
 
 ---
@@ -334,6 +372,14 @@ La entidad debe incluir:
 ```text
 Explícame cada una de las propiedades generadas y su propósito dentro de un sistema relacionado con seguros.
 ```
+
+---
+
+## Reflexión
+
+En esta primera sección utilizamos GitHub Copilot para crear la solución del taller y generar las primeras entidades del dominio.
+
+Esto demuestra que la Inteligencia Artificial puede acompañar al desarrollador desde las primeras etapas del proyecto, facilitando tareas repetitivas y permitiendo concentrarse en aspectos de mayor valor.
 
 ---
 
@@ -357,7 +403,8 @@ Al finalizar esta sección el participante debe contar con:
 Workshop.Seguros.API
 ```
 
-✅ Primera entidad del dominio generada con ayuda de GitHub Copilot.
+✅ Primeras entidades del dominio generadas con ayuda de GitHub Copilot.
+
 
 
 # 2. Introducción a GitHub Copilot
