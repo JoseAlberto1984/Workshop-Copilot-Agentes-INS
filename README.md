@@ -32,7 +32,7 @@ Al finalizar esta sección el participante será capaz de:
 
 * Configurar Visual Studio Code para trabajar con Inteligencia Artificial.
 * Instalar GitHub Copilot y GitHub Copilot Chat.
-* Comprender los modos Ask, Edit y Agent.
+* Comprender los modos Ask, Plan y Agent.
 * Verificar que GitHub Copilot funciona correctamente.
 * Iniciar el desarrollo de una solución empresarial relacionada con seguros.
 
@@ -263,23 +263,14 @@ Características:
 
 ---
 
-### Modo Edit
+### Modo Plan
 
-Permite modificar código existente mediante instrucciones en lenguaje natural.
+Permite analizar una necesidad y proponer una estrategia antes de realizar cambios.
 
 Ejemplo:
 
 ```text
-Agrega validaciones básicas a la entidad SolicitudSeguro.
-```
-
-Características:
-
-* Sugiere cambios.
-* Solicita aprobación antes de aplicar modificaciones.
-* Trabaja sobre archivos existentes.
-
----
+Necesito agregar validaciones a la entidad SolicitudSeguro.
 
 ### Modo Agent
 
@@ -358,7 +349,7 @@ Al finalizar esta sección el participante debe contar con:
 
 ✅ Primera interacción exitosa con IA.
 
-✅ Comprensión básica de los modos Ask, Edit y Agent.
+✅ Comprensión básica de los modos Ask, Plan y Agent.
 
 ✅ Creación de la solución del taller:
 
@@ -2430,13 +2421,11 @@ Se instalaron y configuraron:
 
 ## Uso de GitHub Copilot
 
-Se exploraron capacidades como:
+Se exploraron los diferentes modos de interacción disponibles:
 
-* Generación de código.
-* Explicación de código existente.
-* Refactorización.
-* Generación de pruebas unitarias.
-* Documentación técnica.
+* Ask.
+* Plan.
+* Agent.
 
 ---
 
