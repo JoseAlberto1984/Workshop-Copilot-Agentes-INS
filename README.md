@@ -368,6 +368,7 @@ Workshop.Seguros.API
 
 ✅ Primera entidad del dominio generada con ayuda de GitHub Copilot.
 
+
 # 2. Introducción a GitHub Copilot
 
 ## 🎯 Objetivo
