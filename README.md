@@ -107,52 +107,137 @@ Instalar las siguientes extensiones:
 
 ---
 
-## Creación del Proyecto del Taller
+## Creación del Workspace del Taller
 
-Crear una nueva solución llamada:
+Durante todo el workshop trabajaremos sobre un único workspace llamado:
 
 ```text
 Workshop.Seguros.API
 ```
 
-Esta solución servirá como ejemplo durante todo el workshop.
+Crear una carpeta con el nombre:
 
-El dominio funcional estará relacionado con la administración de solicitudes de seguros.
+```text
+Workshop.Seguros.API
+```
 
-Algunas entidades que se irán construyendo durante el curso serán:
+Abrir la carpeta en Visual Studio Code mediante:
 
-* SolicitudSeguro
-* Cliente
-* DocumentoAdjunto
-* Cobertura
-* Beneficiario
-* ComentarioSolicitud
+```text
+File → Open Folder
+```
+
+o utilizando:
+
+```text
+Ctrl + K Ctrl + O
+```
+
+Esta carpeta representará el workspace del proyecto y será utilizada durante todas las secciones del taller.
 
 ---
 
-## Verificando que Copilot Funciona
+## Creación de la Solución con GitHub Copilot
 
-Crear un archivo llamado:
+En lugar de crear manualmente la solución, utilizaremos GitHub Copilot en modo Agent.
+
+Abrir GitHub Copilot Chat y seleccionar:
+
+```text
+Agent
+```
+
+Realizar la siguiente solicitud:
+
+```text
+Crea una solución .NET 8 llamada Workshop.Seguros.API.
+
+La solución debe contener un proyecto Web API con el mismo nombre.
+
+Genera la estructura básica del proyecto utilizando la plantilla estándar de ASP.NET Core.
+
+No agregues entidades ni lógica de negocio todavía.
+```
+
+Copilot analizará el workspace y propondrá la creación de los archivos necesarios.
+
+Aceptar los cambios sugeridos.
+
+---
+
+## Primera Interacción con Agent Mode
+
+Una vez creada la solución, solicitar:
+
+```text
+Crea una carpeta llamada Entidades.
+
+Dentro de ella genera una clase llamada SolicitudSeguro.
+
+La entidad debe incluir:
+
+- Id
+- NumeroSolicitud
+- IdentificacionCliente
+- NombreCliente
+- FechaSolicitud
+- TipoSeguro
+- Estado
+```
+
+Copilot propondrá la creación de la carpeta y del archivo:
+
+```text
+Entidades
+└── SolicitudSeguro.cs
+```
+
+Aceptar los cambios sugeridos.
+
+---
+
+## Verificando que GitHub Copilot Funciona
+
+Abrir el archivo:
 
 ```text
 SolicitudSeguro.cs
 ```
 
-Escribir el siguiente comentario:
-
-```csharp
-// Crear una entidad SolicitudSeguro para una aplicación relacionada con seguros
-```
-
-Si GitHub Copilot está funcionando correctamente, aparecerá una sugerencia en color gris.
-
-Aceptar la sugerencia utilizando:
+y solicitar:
 
 ```text
-TAB
+Explica esta clase línea por línea.
 ```
 
+Posteriormente solicitar:
+
+```text
+Agrega comentarios XML a todas las propiedades.
+```
+
+Si GitHub Copilot responde correctamente y propone cambios sobre el archivo, significa que la integración se encuentra funcionando adecuadamente.
+
 ---
+
+## Estructura Esperada
+
+Al finalizar esta sección, la solución podría tener una estructura similar a:
+
+```text
+Workshop.Seguros.API
+│
+├── Workshop.Seguros.API.sln
+│
+├── Workshop.Seguros.API
+│   ├── Program.cs
+│   ├── appsettings.json
+│   └── Entidades
+│       └── SolicitudSeguro.cs
+│
+└── Properties
+```
+
 
 ## Modos de GitHub Copilot
 
