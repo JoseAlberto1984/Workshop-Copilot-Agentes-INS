@@ -280,6 +280,12 @@ Por ejemplo:
 cd Workshop.Seguros.API
 ```
 
+o al directorio que contenga el archivo:
+
+```text
+Program.cs
+```
+
 ---
 
 ### Paso 3
@@ -329,13 +335,15 @@ https://localhost:7147/swagger/index.html
 
 ### Paso 6
 
-Verificar que se despliegue la interfaz de Swagger.
+Verificar que se despliegue correctamente la interfaz de Swagger.
 
-Si todo se encuentra correcto, se visualizarán los endpoints expuestos por la API.
+Si todo se encuentra correcto, se visualizarán los endpoints expuestos por la API y será posible realizar pruebas directamente desde el navegador.
+
+Este será el mecanismo que utilizaremos durante el resto del workshop para validar las funcionalidades desarrolladas.
 
 ---
 
-## Resultado Esperado
+## Verificación de la Aplicación
 
 Al finalizar este ejercicio se habrá comprobado que:
 
@@ -347,177 +355,9 @@ Al finalizar este ejercicio se habrá comprobado que:
 
 ✅ Swagger se encuentra habilitado.
 
+✅ Es posible probar los endpoints desde el navegador.
+
 ✅ La API está lista para continuar con las siguientes secciones del workshop.
-
-
-## Modos de GitHub Copilot
-
-GitHub Copilot dispone de diferentes modos de interacción según la tarea que se desea realizar.
-
----
-
-### Modo Ask
-
-Permite realizar consultas y obtener explicaciones.
-
-Ejemplo:
-
-```text
-¿Qué es Clean Architecture?
-```
-
-Características:
-
-* No modifica archivos.
-* Responde preguntas.
-* Ideal para aprendizaje y exploración.
-
----
-
-### Modo Plan
-
-Permite analizar una necesidad y proponer una estrategia antes de realizar cambios.
-
-Ejemplo:
-
-```text
-Necesito agregar validaciones a la entidad SolicitudSeguro.
-```
-
-Características:
-
-* Propone una solución antes de aplicarla.
-* Permite revisar los cambios sugeridos.
-* Ayuda a dividir problemas complejos en tareas pequeñas.
-* Facilita comprender el impacto de las modificaciones.
-
----
-
-### Modo Agent
-
-Permite ejecutar tareas más completas sobre el proyecto.
-
-Ejemplo:
-
-```text
-Crea una API REST en .NET 8 para administrar solicitudes relacionadas con seguros.
-```
-
-Características:
-
-* Analiza el contexto del proyecto.
-* Puede crear y modificar múltiples archivos.
-* Ayuda a implementar funcionalidades completas.
-* Comprende la estructura de la solución.
-
----
-
-## ¿Cuándo utilizar cada modo?
-
-| Modo  | Uso Principal                                            |
-| ----- | -------------------------------------------------------- |
-| Ask   | Resolver dudas y obtener explicaciones                   |
-| Plan  | Analizar una necesidad y proponer una estrategia         |
-| Agent | Implementar funcionalidades y trabajar sobre el proyecto |
-
-### Recomendación
-
-```text
-Aprender
-   ↓
-Ask
-
-Analizar
-   ↓
-Plan
-
-Construir
-   ↓
-Agent
-```
-
-A lo largo de este workshop utilizaremos los tres modos para aprovechar al máximo las capacidades de GitHub Copilot.
-
----
-
-## Ejercicio Práctico
-
-Abrir GitHub Copilot Chat y realizar las siguientes consultas.
-
-### Ejercicio 1
-
-```text
-¿Qué es una API REST?
-```
-
----
-
-### Ejercicio 2
-
-```text
-Explícame las principales diferencias entre .NET Framework y .NET 8.
-```
-
----
-
-### Ejercicio 3
-
-```text
-Genera una entidad Cliente.
-
-La entidad debe incluir:
-
-- Id
-- Identificacion
-- NombreCompleto
-- FechaNacimiento
-- Telefono
-- CorreoElectronico
-```
-
----
-
-### Ejercicio 4
-
-```text
-Explícame cada una de las propiedades generadas y su propósito dentro de un sistema relacionado con seguros.
-```
-
----
-
-
-
-## Reflexión
-
-En esta primera sección utilizamos GitHub Copilot para crear la solución del taller y generar las primeras entidades del dominio.
-
-Esto demuestra que la Inteligencia Artificial puede acompañar al desarrollador desde las primeras etapas del proyecto, facilitando tareas repetitivas y permitiendo concentrarse en aspectos de mayor valor.
-
----
-
-## Resultado Esperado
-
-Al finalizar esta sección el participante debe contar con:
-
-✅ Visual Studio Code instalado.
-
-✅ GitHub Copilot configurado.
-
-✅ GitHub Copilot Chat habilitado.
-
-✅ Primera interacción exitosa con IA.
-
-✅ Comprensión básica de los modos Ask, Plan y Agent.
-
-✅ Creación de la solución del taller:
-
-```text
-Workshop.Seguros.API
-```
-
-✅ Primeras entidades del dominio generadas con ayuda de GitHub Copilot.
-
-
 
 # 2. Introducción a GitHub Copilot
 
