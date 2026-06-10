@@ -176,6 +176,8 @@ Crea una carpeta llamada Entidades.
 
 Dentro de ella genera una clase llamada SolicitudSeguro.
 
+Utiliza Guid como identificador único.
+
 La entidad debe incluir:
 
 - Id
@@ -185,6 +187,8 @@ La entidad debe incluir:
 - FechaSolicitud
 - TipoSeguro
 - Estado
+
+Inicializa las colecciones necesarias y utiliza tipos apropiados para una aplicación empresarial.
 ```
 
 Copilot propondrá la creación de la carpeta y del archivo:
