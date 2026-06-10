@@ -671,6 +671,161 @@ Explica la clase SolicitudSeguro línea por línea.
 
 ---
 
+# Construcción del Primer CRUD
+
+Hasta este momento hemos utilizado GitHub Copilot para generar entidades y comprender mejor la estructura del proyecto.
+
+A continuación, aprovecharemos sus capacidades para construir el primer CRUD de la solución.
+
+Los endpoints que implementaremos serán:
+
+```http
+GET     /api/solicitudes-seguro
+
+GET     /api/solicitudes-seguro/{id}
+
+POST    /api/solicitudes-seguro
+
+PUT     /api/solicitudes-seguro/{id}
+
+DELETE  /api/solicitudes-seguro/{id}
+```
+
+Este ejercicio permitirá observar cómo GitHub Copilot puede asistir en la implementación de funcionalidades reales de una API.
+
+---
+
+## Ejercicio 8
+
+Solicitar:
+
+```text
+Genera un endpoint REST en .NET 8 para obtener todas las solicitudes de seguro.
+
+Debe devolver una lista de SolicitudSeguro.
+
+Agrega comentarios XML.
+```
+
+Revisar la propuesta generada y aceptar los cambios sugeridos.
+
+---
+
+## Ejercicio 9
+
+Solicitar:
+
+```text
+Genera un endpoint REST para obtener una solicitud de seguro por Id.
+
+Utiliza la entidad SolicitudSeguro existente.
+```
+
+Aceptar los cambios sugeridos.
+
+---
+
+## Ejercicio 10
+
+Solicitar:
+
+```text
+Genera un endpoint REST para registrar una solicitud de seguro.
+
+Utiliza la entidad SolicitudSeguro existente.
+```
+
+Aceptar los cambios sugeridos.
+
+---
+
+## Ejercicio 11
+
+Solicitar:
+
+```text
+Genera un endpoint REST para actualizar una solicitud de seguro existente.
+
+Utiliza la entidad SolicitudSeguro existente.
+```
+
+Aceptar los cambios sugeridos.
+
+---
+
+## Ejercicio 12
+
+Solicitar:
+
+```text
+Genera un endpoint REST para eliminar una solicitud de seguro por Id.
+
+Utiliza la entidad SolicitudSeguro existente.
+```
+
+Aceptar los cambios sugeridos.
+
+---
+
+## Verificando el CRUD con Swagger
+
+Ejecutar nuevamente la aplicación:
+
+```bash
+dotnet run
+```
+
+Abrir Swagger desde el navegador:
+
+```text
+https://localhost:xxxx/swagger/index.html
+```
+
+Verificar que se encuentren disponibles los siguientes endpoints:
+
+```http
+GET     /api/solicitudes-seguro
+
+GET     /api/solicitudes-seguro/{id}
+
+POST    /api/solicitudes-seguro
+
+PUT     /api/solicitudes-seguro/{id}
+
+DELETE  /api/solicitudes-seguro/{id}
+```
+
+---
+
+## Resultado Esperado
+
+Al finalizar este ejercicio, la solución podría tener una estructura similar a:
+
+```text
+Workshop.Seguros.API
+│
+├── Entidades
+│   ├── SolicitudSeguro.cs
+│   ├── Cliente.cs
+│   ├── Cobertura.cs
+│   └── DocumentoAdjunto.cs
+│
+├── Endpoints
+│   ├── ObtenerSolicitudesSeguro.cs
+│   ├── ObtenerSolicitudSeguroPorId.cs
+│   ├── CrearSolicitudSeguro.cs
+│   ├── ActualizarSolicitudSeguro.cs
+│   └── EliminarSolicitudSeguro.cs
+│
+├── Program.cs
+└── appsettings.json
+```
+
+En este punto, la solución ya contará con un CRUD funcional generado con ayuda de GitHub Copilot y validado mediante Swagger.
+
+En las siguientes secciones veremos cómo obtener mejores resultados utilizando prompts más efectivos y cómo extender las capacidades de GitHub Copilot mediante Agentes, Instructions y Skills.
+
+
 # Beneficios para el Desarrollo
 
 ✅ Reduce tareas repetitivas.
@@ -734,10 +889,23 @@ Al finalizar esta sección, la solución podría tener una estructura similar a:
 ```text
 Workshop.Seguros.API
 │
-├── SolicitudSeguro
-├── Cliente
-├── Cobertura
-└── DocumentoAdjunto
+├── Program.cs
+├── appsettings.json
+│
+├── Entidades
+│   ├── SolicitudSeguro.cs
+│   ├── Cliente.cs
+│   ├── Cobertura.cs
+│   └── DocumentoAdjunto.cs
+│
+├── Endpoints
+│   ├── ObtenerSolicitudesSeguro.cs
+│   ├── ObtenerSolicitudSeguroPorId.cs
+│   ├── CrearSolicitudSeguro.cs
+│   ├── ActualizarSolicitudSeguro.cs
+│   └── EliminarSolicitudSeguro.cs
+│
+└── Properties
 ```
 
 # 3. Prompts Efectivos
