@@ -178,7 +178,7 @@ Dentro de ella genera una clase llamada SolicitudSeguro.
 
 Utiliza Guid como identificador único.
 
-El Id debe ser opcional. Si no se proporciona al registrar una solicitud, podrá ser generado automáticamente por la aplicación.
+El identificador podrá ser proporcionado por el consumidor de la API. En caso de no ser enviado, la aplicación deberá generar automáticamente un nuevo Guid al momento de registrar la solicitud.
 
 La entidad debe incluir:
 
