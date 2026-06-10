@@ -741,17 +741,17 @@ Solicitar:
 ```text
 Genera un endpoint REST en .NET 8 para obtener todas las solicitudes de seguro.
 
-No agregues la implementación en Program.cs.
+No agregues código directamente en Program.cs.
 
 Crea una carpeta llamada Endpoints.
 
-Dentro de ella crea un archivo llamado ObtenerSolicitudesSeguro.cs.
+Dentro de ella crea el archivo ObtenerSolicitudesSeguro.cs.
 
-Utiliza Minimal APIs y encapsula la configuración del endpoint en una clase estática con un método de extensión.
+Utiliza una clase estática y un método de extensión llamado MapObtenerSolicitudesSeguro.
 
-Program.cs únicamente debe invocar el método de extensión correspondiente.
+Program.cs debe permanecer limpio y únicamente invocar los métodos de extensión de los endpoints.
 
-Agrega comentarios XML.
+Agrega comentarios XML y utiliza Minimal APIs.
 ```
 
 Revisar la propuesta generada y aceptar los cambios sugeridos.
@@ -763,17 +763,17 @@ Revisar la propuesta generada y aceptar los cambios sugeridos.
 Solicitar:
 
 ```text
-Genera un endpoint REST en .NET 8 para obtener todas las solicitudes de seguro.
+Genera un endpoint REST para obtener una solicitud de seguro por Id.
 
 No agregues código directamente en Program.cs.
 
-Crea una carpeta llamada Endpoints.
+Utiliza la carpeta Endpoints.
 
-Dentro de ella crea el archivo ObtenerSolicitudesSeguro.cs.
+Crea el archivo ObtenerSolicitudSeguroPorId.cs.
 
-Utiliza una clase estática y un método de extensión llamado MapObtenerSolicitudesSeguro.
+Utiliza una clase estática y un método de extensión llamado MapObtenerSolicitudSeguroPorId.
 
-Program.cs debe permanecer limpio y únicamente invocar los métodos de extensión de los endpoints.
+Utiliza la entidad SolicitudSeguro existente.
 
 Agrega comentarios XML y utiliza Minimal APIs.
 ```
@@ -789,7 +789,17 @@ Solicitar:
 ```text
 Genera un endpoint REST para registrar una solicitud de seguro.
 
+No agregues código directamente en Program.cs.
+
+Utiliza la carpeta Endpoints.
+
+Crea el archivo CrearSolicitudSeguro.cs.
+
+Utiliza una clase estática y un método de extensión llamado MapCrearSolicitudSeguro.
+
 Utiliza la entidad SolicitudSeguro existente.
+
+Agrega comentarios XML y utiliza Minimal APIs.
 ```
 
 Aceptar los cambios sugeridos.
@@ -803,7 +813,17 @@ Solicitar:
 ```text
 Genera un endpoint REST para actualizar una solicitud de seguro existente.
 
+No agregues código directamente en Program.cs.
+
+Utiliza la carpeta Endpoints.
+
+Crea el archivo ActualizarSolicitudSeguro.cs.
+
+Utiliza una clase estática y un método de extensión llamado MapActualizarSolicitudSeguro.
+
 Utiliza la entidad SolicitudSeguro existente.
+
+Agrega comentarios XML y utiliza Minimal APIs.
 ```
 
 Aceptar los cambios sugeridos.
@@ -817,7 +837,17 @@ Solicitar:
 ```text
 Genera un endpoint REST para eliminar una solicitud de seguro por Id.
 
+No agregues código directamente en Program.cs.
+
+Utiliza la carpeta Endpoints.
+
+Crea el archivo EliminarSolicitudSeguro.cs.
+
+Utiliza una clase estática y un método de extensión llamado MapEliminarSolicitudSeguro.
+
 Utiliza la entidad SolicitudSeguro existente.
+
+Agrega comentarios XML y utiliza Minimal APIs.
 ```
 
 Aceptar los cambios sugeridos.
