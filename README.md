@@ -741,7 +741,15 @@ Solicitar:
 ```text
 Genera un endpoint REST en .NET 8 para obtener todas las solicitudes de seguro.
 
-Debe devolver una lista de SolicitudSeguro.
+No agregues la implementación en Program.cs.
+
+Crea una carpeta llamada Endpoints.
+
+Dentro de ella crea un archivo llamado ObtenerSolicitudesSeguro.cs.
+
+Utiliza Minimal APIs y encapsula la configuración del endpoint en una clase estática con un método de extensión.
+
+Program.cs únicamente debe invocar el método de extensión correspondiente.
 
 Agrega comentarios XML.
 ```
@@ -755,9 +763,19 @@ Revisar la propuesta generada y aceptar los cambios sugeridos.
 Solicitar:
 
 ```text
-Genera un endpoint REST para obtener una solicitud de seguro por Id.
+Genera un endpoint REST en .NET 8 para obtener todas las solicitudes de seguro.
 
-Utiliza la entidad SolicitudSeguro existente.
+No agregues código directamente en Program.cs.
+
+Crea una carpeta llamada Endpoints.
+
+Dentro de ella crea el archivo ObtenerSolicitudesSeguro.cs.
+
+Utiliza una clase estática y un método de extensión llamado MapObtenerSolicitudesSeguro.
+
+Program.cs debe permanecer limpio y únicamente invocar los métodos de extensión de los endpoints.
+
+Agrega comentarios XML y utiliza Minimal APIs.
 ```
 
 Aceptar los cambios sugeridos.
