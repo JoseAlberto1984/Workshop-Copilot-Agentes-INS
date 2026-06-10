@@ -178,6 +178,8 @@ Dentro de ella genera una clase llamada SolicitudSeguro.
 
 Utiliza Guid como identificador único.
 
+El Id debe ser opcional. Si no se proporciona al registrar una solicitud, podrá ser generado automáticamente por la aplicación.
+
 La entidad debe incluir:
 
 - Id
@@ -189,6 +191,8 @@ La entidad debe incluir:
 - Estado
 
 Inicializa las colecciones necesarias y utiliza tipos apropiados para una aplicación empresarial.
+
+Agrega comentarios XML a todas las propiedades.
 ```
 
 Copilot propondrá la creación de la carpeta y del archivo:
