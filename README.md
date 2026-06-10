@@ -154,14 +154,16 @@ Crea una solución .NET 8 llamada Workshop.Seguros.API.
 
 La solución debe contener un proyecto Web API con el mismo nombre.
 
-Genera la estructura básica del proyecto utilizando la plantilla estándar de ASP.NET Core.
+Genera la estructura básica del proyecto utilizando ASP.NET Core Minimal APIs.
+
+Mantén Swagger habilitado.
 
 No agregues entidades ni lógica de negocio todavía.
+
+Elimina el endpoint WeatherForecast y cualquier clase asociada.
+
+Deja la aplicación lista para comenzar a construir endpoints relacionados con solicitudes de seguro.
 ```
-
-Copilot analizará el workspace y propondrá la creación de los archivos necesarios.
-
-Aceptar los cambios sugeridos.
 
 ---
 
@@ -708,58 +710,6 @@ Explica la clase SolicitudSeguro línea por línea.
 
 ---
 
-# Reemplazando el Endpoint de Ejemplo
-
-La plantilla inicial de ASP.NET Core genera automáticamente un endpoint de ejemplo llamado:
-
-```http
-GET /weatherforecast
-```
-
-Este endpoint tiene como propósito verificar que la API funciona correctamente, pero no forma parte del dominio funcional del workshop.
-
-Antes de construir el primer CRUD de la solución, reemplazaremos este endpoint por endpoints propios relacionados con las solicitudes de seguro.
-
----
-
-## Ejercicio 8
-
-Solicitar:
-
-```text
-Elimina el endpoint WeatherForecast y cualquier clase o modelo asociado.
-
-Mantén la configuración de Swagger y deja la aplicación lista para agregar endpoints propios relacionados con las solicitudes de seguro.
-```
-
-Aceptar los cambios sugeridos.
-
----
-
-## Verificación
-
-Ejecutar nuevamente la aplicación:
-
-```bash
-dotnet run
-```
-
-Abrir Swagger desde el navegador:
-
-```text
-https://localhost:xxxx/swagger/index.html
-```
-
-Verificar que el siguiente endpoint ya no se encuentre disponible:
-
-```http
-GET /weatherforecast
-```
-
-En este punto, la solución estará preparada para comenzar la construcción del primer CRUD relacionado con las solicitudes de seguro.
-
----
-
 # Construcción del Primer CRUD
 
 Hasta este momento hemos utilizado GitHub Copilot para generar entidades y comprender mejor la estructura del proyecto.
@@ -784,7 +734,7 @@ Este ejercicio permitirá observar cómo GitHub Copilot puede asistir en la impl
 
 ---
 
-## Ejercicio 9
+## Ejercicio 8
 
 Solicitar:
 
@@ -800,7 +750,7 @@ Revisar la propuesta generada y aceptar los cambios sugeridos.
 
 ---
 
-## Ejercicio 10
+## Ejercicio 9
 
 Solicitar:
 
@@ -814,7 +764,7 @@ Aceptar los cambios sugeridos.
 
 ---
 
-## Ejercicio 11
+## Ejercicio 10
 
 Solicitar:
 
@@ -828,7 +778,7 @@ Aceptar los cambios sugeridos.
 
 ---
 
-## Ejercicio 12
+## Ejercicio 11
 
 Solicitar:
 
@@ -842,7 +792,7 @@ Aceptar los cambios sugeridos.
 
 ---
 
-## Ejercicio 13
+## Ejercicio 12
 
 Solicitar:
 
