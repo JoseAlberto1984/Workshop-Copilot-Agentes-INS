@@ -739,7 +739,36 @@ Este ejercicio permitirá observar cómo GitHub Copilot puede asistir en la impl
 ---
 
 ## Ejercicio 8
+Solicitar:
 
+```text
+Crea una carpeta llamada Repositorios.
+
+Dentro de ella crea una interfaz llamada ISolicitudSeguroRepository.
+
+Crea también una clase llamada SolicitudSeguroRepository.
+
+La implementación debe utilizar una colección en memoria para almacenar objetos SolicitudSeguro.
+
+Implementa los siguientes métodos:
+
+- ObtenerTodos
+- ObtenerPorId
+- Crear
+- Actualizar
+- Eliminar
+
+Utiliza Guid como identificador.
+
+Inicializa algunos datos de ejemplo.
+
+Registra el repositorio como Singleton en Program.cs utilizando la interfaz.
+
+Agrega comentarios XML.
+```
+---
+
+## Ejercicio 9
 Solicitar:
 
 ```text
@@ -753,6 +782,8 @@ Dentro de ella crea el archivo ObtenerSolicitudesSeguro.cs.
 
 Utiliza una clase estática y un método de extensión llamado MapObtenerSolicitudesSeguro.
 
+Obtén los datos utilizando ISolicitudSeguroRepository mediante inyección de dependencias.
+
 Program.cs debe permanecer limpio y únicamente invocar los métodos de extensión de los endpoints.
 
 Agrega comentarios XML y utiliza Minimal APIs.
@@ -762,7 +793,7 @@ Revisar la propuesta generada y aceptar los cambios sugeridos.
 
 ---
 
-## Ejercicio 9
+## Ejercicio 10
 
 Solicitar:
 
@@ -777,29 +808,7 @@ Crea el archivo ObtenerSolicitudSeguroPorId.cs.
 
 Utiliza una clase estática y un método de extensión llamado MapObtenerSolicitudSeguroPorId.
 
-Utiliza la entidad SolicitudSeguro existente.
-
-Agrega comentarios XML y utiliza Minimal APIs.
-```
-
-Aceptar los cambios sugeridos.
-
----
-
-## Ejercicio 10
-
-Solicitar:
-
-```text
-Genera un endpoint REST para registrar una solicitud de seguro.
-
-No agregues código directamente en Program.cs.
-
-Utiliza la carpeta Endpoints.
-
-Crea el archivo CrearSolicitudSeguro.cs.
-
-Utiliza una clase estática y un método de extensión llamado MapCrearSolicitudSeguro.
+Obtén la información utilizando ISolicitudSeguroRepository mediante inyección de dependencias.
 
 Utiliza la entidad SolicitudSeguro existente.
 
@@ -815,15 +824,17 @@ Aceptar los cambios sugeridos.
 Solicitar:
 
 ```text
-Genera un endpoint REST para actualizar una solicitud de seguro existente.
+Genera un endpoint REST para registrar una solicitud de seguro.
 
 No agregues código directamente en Program.cs.
 
 Utiliza la carpeta Endpoints.
 
-Crea el archivo ActualizarSolicitudSeguro.cs.
+Crea el archivo CrearSolicitudSeguro.cs.
 
-Utiliza una clase estática y un método de extensión llamado MapActualizarSolicitudSeguro.
+Utiliza una clase estática y un método de extensión llamado MapCrearSolicitudSeguro.
+
+Utiliza ISolicitudSeguroRepository mediante inyección de dependencias para almacenar la información.
 
 Utiliza la entidad SolicitudSeguro existente.
 
@@ -839,6 +850,32 @@ Aceptar los cambios sugeridos.
 Solicitar:
 
 ```text
+Genera un endpoint REST para actualizar una solicitud de seguro existente.
+
+No agregues código directamente en Program.cs.
+
+Utiliza la carpeta Endpoints.
+
+Crea el archivo ActualizarSolicitudSeguro.cs.
+
+Utiliza una clase estática y un método de extensión llamado MapActualizarSolicitudSeguro.
+
+Utiliza ISolicitudSeguroRepository mediante inyección de dependencias para actualizar la información.
+
+Utiliza la entidad SolicitudSeguro existente.
+
+Agrega comentarios XML y utiliza Minimal APIs.
+```
+
+Aceptar los cambios sugeridos.
+
+---
+
+## Ejercicio 13
+
+Solicitar:
+
+```text
 Genera un endpoint REST para eliminar una solicitud de seguro por Id.
 
 No agregues código directamente en Program.cs.
@@ -848,6 +885,8 @@ Utiliza la carpeta Endpoints.
 Crea el archivo EliminarSolicitudSeguro.cs.
 
 Utiliza una clase estática y un método de extensión llamado MapEliminarSolicitudSeguro.
+
+Utiliza ISolicitudSeguroRepository mediante inyección de dependencias para eliminar la información.
 
 Utiliza la entidad SolicitudSeguro existente.
 
