@@ -637,8 +637,45 @@ Solicitar:
 Genera una relación entre SolicitudSeguro y DocumentoAdjunto.
 
 Una solicitud puede tener múltiples documentos adjuntos.
+
+En la entidad SolicitudSeguro agrega una colección de DocumentoAdjunto.
+
+En la entidad DocumentoAdjunto agrega únicamente la propiedad SolicitudSeguroId para representar la relación.
+
+No agregues una propiedad de navegación SolicitudSeguro dentro de DocumentoAdjunto.
+
+La solución debe poder serializarse y deserializarse correctamente desde Swagger utilizando JSON.
 ```
 
+---
+
+### Nota
+
+Para simplificar las pruebas del workshop, la entidad `DocumentoAdjunto` solamente tendrá una referencia mediante `SolicitudSeguroId`.
+
+Esto evita relaciones circulares y problemas de serialización o deserialización al probar el endpoint `POST /api/solicitudes-seguro` desde Swagger.
+
+La estructura esperada sería:
+
+```csharp
+public class SolicitudSeguro
+{
+    // Propiedades...
+
+    public List<DocumentoAdjunto> DocumentosAdjuntos { get; set; } = new();
+}
+
+public class DocumentoAdjunto
+{
+    public int Id { get; set; }
+    public string NombreArchivo { get; set; } = string.Empty;
+    public string TipoContenido { get; set; } = string.Empty;
+    public long TamanoBytes { get; set; }
+    public DateTime FechaCarga { get; set; }
+
+    public int? SolicitudSeguroId { get; set; }
+}
+```
 ---
 
 ## Ejercicio 5
