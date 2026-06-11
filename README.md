@@ -1182,7 +1182,8 @@ Respuesta más precisa.
 
 ## Nivel 3: Prompts Estructurado
 
-### Prompt 1: diseño
+## Prompt 1: diseño
+
 ```text
 Actúa como Arquitecto de Software.
 
@@ -1201,13 +1202,18 @@ Restricciones:
 * No implementes código todavía.
 
 Resultado esperado:
-Describe la estructura recomendada de carpetas, responsabilidades por capa, entidades principales y endpoints necesarios.
+
+Crea una carpeta llamada docs si no existe y genera el documento:
+
+- docs/arquitectura.md
+
+El documento debe describir la estructura recomendada de carpetas, responsabilidades por capa, entidades principales y endpoints necesarios.
 
 Evita usar métodos o paquetes adicionales que no estén configurados en el proyecto.
-
 ```
 
-### Prompt 2: pruebas
+## Prompt 2: pruebas
+
 ```text
 Con base en el diseño anterior, propone las pruebas unitarias necesarias para validar la API de solicitudes de seguro.
 
@@ -1218,7 +1224,24 @@ Restricciones:
 * Comentarios en español.
 
 Resultado esperado:
-Lista los escenarios de prueba recomendados para entidades, repositorios y endpoints.
+
+Genera el documento:
+
+- docs/pruebas-unitarias.md
+
+El documento debe listar los escenarios de prueba recomendados para entidades, repositorios y endpoints.
+```
+
+
+### Prompt 3: implementación
+```text
+
+Implementa la solución basándote en los documentos:
+
+- docs/arquitectura.md
+- docs/pruebas-unitarias.md
+
+Respeta la arquitectura definida y valida que el proyecto compile correctamente.
 
 ```
 
