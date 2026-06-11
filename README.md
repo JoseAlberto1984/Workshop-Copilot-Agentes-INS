@@ -1185,7 +1185,7 @@ Respuesta más precisa.
 ### Prompt 1: implementación
 
 ```text
-**Rol:**
+# Rol:
 
 Actúa como Ingeniero de Calidad.
 
