@@ -1211,15 +1211,33 @@ El documento debe describir los escenarios de prueba recomendados para el endpoi
 ### Prompt 2: implementación
 
 ```text
-Implementa las pruebas unitarias basándote en el documento:
+Actúa como Ingeniero de Calidad.
 
-- docs/pruebas-obtener-solicitudes.md
+Implementa únicamente 5 pruebas con XUnit para el endpoint existente:
 
-Utiliza XUnit.
+GET /api/solicitudes-seguro
 
-Crea únicamente las clases y métodos de prueba necesarios.
+Escenarios obligatorios:
 
-Respeta la estructura actual del proyecto y valida que la solución compile correctamente.
+1. Retorna 200 OK.
+2. La respuesta es un array JSON.
+3. Cuando existen datos, retorna al menos una solicitud.
+4. Cada solicitud contiene id, numeroSolicitud y nombreCliente.
+5. Los valores de id tienen formato Guid válido.
+
+Restricciones:
+
+* No implementes más de 5 pruebas.
+* No uses Theory ni InlineData.
+* Usa solo métodos Fact.
+* No uses Assert.NotNull sobre JsonElement.
+* No uses Assert.Equal con mensaje como tercer parámetro.
+* No accedas a .Value en JsonElement.
+* Si validas JsonElement, utiliza ValueKind.
+* Crea únicamente los archivos necesarios para que las pruebas compilen.
+* Respeta la estructura actual del proyecto.
+* Valida con dotnet test.
+
 ```
 
 ### Resultado
