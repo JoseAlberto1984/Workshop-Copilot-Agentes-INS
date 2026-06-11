@@ -1182,33 +1182,7 @@ Respuesta más precisa.
 
 ## Nivel 3: Prompts Estructurados
 
-### Prompt 1: análisis
-
-```text
-Actúa como Ingeniero de Calidad.
-
-Objetivo:
-Diseñar las pruebas unitarias necesarias para validar el endpoint de obtención de solicitudes de seguro existente.
-
-Contexto:
-La API ya contiene los endpoints y el repositorio correspondiente.
-
-Restricciones:
-
-- Utiliza XUnit.
-- Comentarios en español.
-- No implementes código todavía.
-
-Resultado esperado:
-
-Crea una carpeta llamada docs si no existe y genera el documento:
-
-- docs/pruebas-obtener-solicitudes.md
-
-El documento debe describir los escenarios de prueba recomendados para el endpoint de obtención de solicitudes de seguro.
-```
-
-### Prompt 2: implementación
+### Prompt 1: implementación
 
 ```text
 Actúa como Ingeniero de Calidad.
