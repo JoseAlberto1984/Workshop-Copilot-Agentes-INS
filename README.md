@@ -1180,28 +1180,46 @@ Respuesta más precisa.
 
 ---
 
-## Nivel 3: Prompt Estructurado
+## Nivel 3: Prompts Estructurado
 
+###Prompt 1: diseño
 ```text
 Actúa como Arquitecto de Software.
 
 Objetivo:
-Diseñar una API REST para administrar solicitudes relacionadas con seguros.
+Proponer el diseño inicial de una API REST para administrar solicitudes de seguro.
 
 Contexto:
 La aplicación será utilizada por colaboradores de una organización.
 
 Restricciones:
 
-- .NET 8.
-- Minimal API.
-- Clean Architecture.
-- XUnit.
-- Comentarios en español.
+* .NET 8.
+* Minimal APIs.
+* Clean Architecture simplificada.
+* Comentarios en español.
+* No implementes código todavía.
 
 Resultado esperado:
+Describe la estructura recomendada de carpetas, responsabilidades por capa, entidades principales y endpoints necesarios.
 
-Generar entidades, endpoints y pruebas unitarias.
+Evita usar métodos o paquetes adicionales que no estén configurados en el proyecto.
+
+```
+
+###Prompt 2: pruebas
+```text
+Con base en el diseño anterior, propone las pruebas unitarias necesarias para validar la API de solicitudes de seguro.
+
+Restricciones:
+
+* Utiliza XUnit.
+* No implementes código todavía.
+* Comentarios en español.
+
+Resultado esperado:
+Lista los escenarios de prueba recomendados para entidades, repositorios y endpoints.
+
 ```
 
 ### Resultado
