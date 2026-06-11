@@ -1185,13 +1185,21 @@ Respuesta más precisa.
 ### Prompt 1: implementación
 
 ```text
+**Rol:**
+
 Actúa como Ingeniero de Calidad.
+
+**Objetivo:**
 
 Implementa únicamente 5 pruebas con XUnit para el endpoint existente:
 
 GET /api/solicitudes-seguro
 
-Escenarios obligatorios:
+**Contexto:**
+
+La API ya contiene el endpoint de obtención de solicitudes de seguro y se desea validar su comportamiento básico mediante pruebas automatizadas.
+
+**Escenarios obligatorios:**
 
 1. Retorna 200 OK.
 2. La respuesta es un array JSON.
@@ -1199,7 +1207,7 @@ Escenarios obligatorios:
 4. Cada solicitud contiene id, numeroSolicitud y nombreCliente.
 5. Los valores de id tienen formato Guid válido.
 
-Restricciones:
+**Restricciones:**
 
 * No implementes más de 5 pruebas.
 * No uses Theory ni InlineData.
@@ -1211,6 +1219,10 @@ Restricciones:
 * Crea únicamente los archivos necesarios para que las pruebas compilen.
 * Respeta la estructura actual del proyecto.
 * Valida con dotnet test.
+
+**Resultado esperado:**
+
+Generar las pruebas unitarias necesarias para validar el endpoint indicado, manteniendo el código simple, compilable y alineado con la estructura actual del proyecto.
 
 ```
 
