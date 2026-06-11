@@ -778,19 +778,25 @@ Solicitar:
 ```text
 Genera un endpoint REST en .NET 8 para obtener todas las solicitudes de seguro.
 
-No agregues código directamente en Program.cs.
+Crea la carpeta Endpoints y el archivo ObtenerSolicitudesSeguro.cs.
 
-Crea una carpeta llamada Endpoints.
+Usa una clase estática con un método de extensión llamado MapObtenerSolicitudesSeguro que extienda IEndpointRouteBuilder.
 
-Dentro de ella crea el archivo ObtenerSolicitudesSeguro.cs.
+El endpoint debe ser:
 
-Utiliza una clase estática y un método de extensión llamado MapObtenerSolicitudesSeguro.
+GET /api/solicitudes-seguro
 
-Obtén los datos utilizando ISolicitudSeguroRepository mediante inyección de dependencias.
+Debe obtener los datos desde ISolicitudSeguroRepository usando inyección de dependencias en el handler.
 
-Program.cs debe permanecer limpio y únicamente invocar los métodos de extensión de los endpoints.
+No agregues la lógica del endpoint directamente en Program.cs; solo actualiza Program.cs para invocar:
 
-Agrega comentarios XML y utiliza Minimal APIs.
+app.MapObtenerSolicitudesSeguro();
+
+Usa Minimal APIs con métodos básicos como MapGet, WithName y WithTags.
+
+No uses WithOpenApi, WithSummary, WithDescription ni Produces.
+
+Agrega comentarios XML y valida que compile.
 ```
 
 Revisar la propuesta generada y aceptar los cambios sugeridos.
@@ -802,21 +808,29 @@ Revisar la propuesta generada y aceptar los cambios sugeridos.
 Solicitar:
 
 ```text
-Genera un endpoint REST para obtener una solicitud de seguro por Id.
+Genera un endpoint REST en .NET 8 para obtener una solicitud de seguro por Id.
 
-No agregues código directamente en Program.cs.
+Crea el archivo ObtenerSolicitudSeguroPorId.cs dentro de la carpeta Endpoints.
 
-Utiliza la carpeta Endpoints.
+Utiliza una clase estática y un método de extensión llamado MapObtenerSolicitudSeguroPorId que extienda IEndpointRouteBuilder.
 
-Crea el archivo ObtenerSolicitudSeguroPorId.cs.
+El endpoint debe ser:
 
-Utiliza una clase estática y un método de extensión llamado MapObtenerSolicitudSeguroPorId.
+GET /api/solicitudes-seguro/{id}
 
-Obtén la información utilizando ISolicitudSeguroRepository mediante inyección de dependencias.
+Obtén la información utilizando ISolicitudSeguroRepository mediante inyección de dependencias en el handler.
 
 Utiliza la entidad SolicitudSeguro existente.
 
-Agrega comentarios XML y utiliza Minimal APIs.
+No agregues la lógica del endpoint directamente en Program.cs; únicamente registra:
+
+app.MapObtenerSolicitudSeguroPorId();
+
+Usa Minimal APIs con métodos básicos como MapGet, WithName y WithTags.
+
+No uses WithOpenApi, WithSummary, WithDescription ni Produces.
+
+Agrega comentarios XML y valida que el proyecto compile correctamente.
 ```
 
 Aceptar los cambios sugeridos.
@@ -828,21 +842,29 @@ Aceptar los cambios sugeridos.
 Solicitar:
 
 ```text
-Genera un endpoint REST para registrar una solicitud de seguro.
+Genera un endpoint REST en .NET 8 para registrar una solicitud de seguro.
 
-No agregues código directamente en Program.cs.
+Crea el archivo CrearSolicitudSeguro.cs dentro de la carpeta Endpoints.
 
-Utiliza la carpeta Endpoints.
+Utiliza una clase estática y un método de extensión llamado MapCrearSolicitudSeguro que extienda IEndpointRouteBuilder.
 
-Crea el archivo CrearSolicitudSeguro.cs.
+El endpoint debe ser:
 
-Utiliza una clase estática y un método de extensión llamado MapCrearSolicitudSeguro.
+POST /api/solicitudes-seguro
 
-Utiliza ISolicitudSeguroRepository mediante inyección de dependencias para almacenar la información.
+Utiliza ISolicitudSeguroRepository mediante inyección de dependencias en el handler para almacenar la información.
 
 Utiliza la entidad SolicitudSeguro existente.
 
-Agrega comentarios XML y utiliza Minimal APIs.
+No agregues la lógica del endpoint directamente en Program.cs; únicamente registra:
+
+app.MapCrearSolicitudSeguro();
+
+Usa Minimal APIs con métodos básicos como MapPost, WithName y WithTags.
+
+No uses WithOpenApi, WithSummary, WithDescription ni Produces.
+
+Agrega comentarios XML y valida que el proyecto compile correctamente.
 ```
 
 Aceptar los cambios sugeridos.
@@ -854,21 +876,29 @@ Aceptar los cambios sugeridos.
 Solicitar:
 
 ```text
-Genera un endpoint REST para actualizar una solicitud de seguro existente.
+Genera un endpoint REST en .NET 8 para actualizar una solicitud de seguro existente.
 
-No agregues código directamente en Program.cs.
+Crea el archivo ActualizarSolicitudSeguro.cs dentro de la carpeta Endpoints.
 
-Utiliza la carpeta Endpoints.
+Utiliza una clase estática y un método de extensión llamado MapActualizarSolicitudSeguro que extienda IEndpointRouteBuilder.
 
-Crea el archivo ActualizarSolicitudSeguro.cs.
+El endpoint debe ser:
 
-Utiliza una clase estática y un método de extensión llamado MapActualizarSolicitudSeguro.
+PUT /api/solicitudes-seguro/{id}
 
-Utiliza ISolicitudSeguroRepository mediante inyección de dependencias para actualizar la información.
+Utiliza ISolicitudSeguroRepository mediante inyección de dependencias en el handler para actualizar la información.
 
 Utiliza la entidad SolicitudSeguro existente.
 
-Agrega comentarios XML y utiliza Minimal APIs.
+No agregues la lógica del endpoint directamente en Program.cs; únicamente registra:
+
+app.MapActualizarSolicitudSeguro();
+
+Usa Minimal APIs con métodos básicos como MapPut, WithName y WithTags.
+
+No uses WithOpenApi, WithSummary, WithDescription ni Produces.
+
+Agrega comentarios XML y valida que el proyecto compile correctamente.
 ```
 
 Aceptar los cambios sugeridos.
@@ -880,21 +910,29 @@ Aceptar los cambios sugeridos.
 Solicitar:
 
 ```text
-Genera un endpoint REST para eliminar una solicitud de seguro por Id.
+Genera un endpoint REST en .NET 8 para eliminar una solicitud de seguro por Id.
 
-No agregues código directamente en Program.cs.
+Crea el archivo EliminarSolicitudSeguro.cs dentro de la carpeta Endpoints.
 
-Utiliza la carpeta Endpoints.
+Utiliza una clase estática y un método de extensión llamado MapEliminarSolicitudSeguro que extienda IEndpointRouteBuilder.
 
-Crea el archivo EliminarSolicitudSeguro.cs.
+El endpoint debe ser:
 
-Utiliza una clase estática y un método de extensión llamado MapEliminarSolicitudSeguro.
+DELETE /api/solicitudes-seguro/{id}
 
-Utiliza ISolicitudSeguroRepository mediante inyección de dependencias para eliminar la información.
+Utiliza ISolicitudSeguroRepository mediante inyección de dependencias en el handler para eliminar la información.
 
 Utiliza la entidad SolicitudSeguro existente.
 
-Agrega comentarios XML y utiliza Minimal APIs.
+No agregues la lógica del endpoint directamente en Program.cs; únicamente registra:
+
+app.MapEliminarSolicitudSeguro();
+
+Usa Minimal APIs con métodos básicos como MapDelete, WithName y WithTags.
+
+No uses WithOpenApi, WithSummary, WithDescription ni Produces.
+
+Agrega comentarios XML y valida que el proyecto compile correctamente.
 ```
 
 Aceptar los cambios sugeridos.
