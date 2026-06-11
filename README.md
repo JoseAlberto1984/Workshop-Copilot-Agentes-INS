@@ -1180,69 +1180,46 @@ Respuesta más precisa.
 
 ---
 
-## Nivel 3: Prompts Estructurado
+## Nivel 3: Prompts Estructurados
 
-## Prompt 1: diseño
+### Prompt 1: análisis
 
 ```text
-Actúa como Arquitecto de Software.
+Actúa como Ingeniero de Calidad.
 
 Objetivo:
-Proponer el diseño inicial de una API REST para administrar solicitudes de seguro.
+Diseñar las pruebas unitarias necesarias para validar el endpoint de obtención de solicitudes de seguro existente.
 
 Contexto:
-La aplicación será utilizada por colaboradores de una organización.
+La API ya contiene los endpoints y el repositorio correspondiente.
 
 Restricciones:
 
-* .NET 8.
-* Minimal APIs.
-* Clean Architecture simplificada.
-* Comentarios en español.
-* No implementes código todavía.
+- Utiliza XUnit.
+- Comentarios en español.
+- No implementes código todavía.
 
 Resultado esperado:
 
 Crea una carpeta llamada docs si no existe y genera el documento:
 
-- docs/arquitectura.md
+- docs/pruebas-obtener-solicitudes.md
 
-El documento debe describir la estructura recomendada de carpetas, responsabilidades por capa, entidades principales y endpoints necesarios.
-
-Evita usar métodos o paquetes adicionales que no estén configurados en el proyecto.
+El documento debe describir los escenarios de prueba recomendados para el endpoint de obtención de solicitudes de seguro.
 ```
 
-## Prompt 2: pruebas
+### Prompt 2: implementación
 
 ```text
-Con base en el diseño anterior, propone las pruebas unitarias necesarias para validar la API de solicitudes de seguro.
+Implementa las pruebas unitarias basándote en el documento:
 
-Restricciones:
+- docs/pruebas-obtener-solicitudes.md
 
-* Utiliza XUnit.
-* No implementes código todavía.
-* Comentarios en español.
+Utiliza XUnit.
 
-Resultado esperado:
+Crea únicamente las clases y métodos de prueba necesarios.
 
-Genera el documento:
-
-- docs/pruebas-unitarias.md
-
-El documento debe listar los escenarios de prueba recomendados para entidades, repositorios y endpoints.
-```
-
-
-### Prompt 3: implementación
-```text
-
-Implementa la solución basándote en los documentos:
-
-- docs/arquitectura.md
-- docs/pruebas-unitarias.md
-
-Respeta la arquitectura definida y valida que el proyecto compile correctamente.
-
+Respeta la estructura actual del proyecto y valida que la solución compile correctamente.
 ```
 
 ### Resultado
