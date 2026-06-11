@@ -1182,7 +1182,7 @@ Respuesta más precisa.
 
 ## Nivel 3: Prompts Estructurado
 
-###Prompt 1: diseño
+### Prompt 1: diseño
 ```text
 Actúa como Arquitecto de Software.
 
@@ -1207,7 +1207,7 @@ Evita usar métodos o paquetes adicionales que no estén configurados en el proy
 
 ```
 
-###Prompt 2: pruebas
+### Prompt 2: pruebas
 ```text
 Con base en el diseño anterior, propone las pruebas unitarias necesarias para validar la API de solicitudes de seguro.
 
