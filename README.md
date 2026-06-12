@@ -1664,9 +1664,11 @@ Los agentes permiten:
 
 ✅ Facilitar la incorporación de nuevos desarrolladores.
 
----
 # Ejercicio Práctico 1: Crear un Agente QA
 
+Solicitar a GitHub Copilot:
+
+```text
 Actúa como experto en GitHub Copilot.
 
 Objetivo:
@@ -1684,11 +1686,8 @@ La solución utiliza .NET 8 y XUnit.
 Resultado esperado:
 
 1. Crear el archivo del agente.
-
 2. Generar una descripción adecuada.
-
 3. Definir las Instructions del agente.
-
 4. Definir los Skills necesarios.
 
 Restricciones:
@@ -1699,32 +1698,40 @@ Restricciones:
 - Promover pruebas unitarias y de integración.
 - Utilizar únicamente XUnit.
 - Seguir buenas prácticas de automatización.
+```
+
+---
 
 # Ejercicio Práctico 2: Utilizando el Agente
 
 Una vez creado el agente:
 
+```text
 Especialista QA .NET
+```
 
 podemos utilizarlo para generar pruebas unitarias sobre una entidad existente de la solución.
 
-Por ejemplo, sobre:
+En este caso utilizaremos la entidad:
 
-SolicitudSeguro
+```text
+Beneficiario
+```
 
 Realizar la siguiente consulta:
 
+```text
 Actúa como Especialista QA .NET.
 
-Implementa únicamente 5 pruebas con XUnit para la entidad SolicitudSeguro.
+Implementa únicamente 5 pruebas con XUnit para la entidad Beneficiario.
 
 Escenarios obligatorios:
 
-1. Verificar que Id tenga un Guid válido.
-2. Verificar que NumeroSolicitud pueda asignarse correctamente.
-3. Verificar que NombreCliente pueda asignarse correctamente.
-4. Verificar que FechaSolicitud almacene la fecha indicada.
-5. Verificar que TipoSeguro pueda asignarse correctamente.
+1. Verificar que Id se genere automáticamente con un Guid válido.
+2. Verificar que un beneficiario válido no retorne errores de validación.
+3. Verificar que Identificacion sea requerida.
+4. Verificar que PorcentajeBeneficio no permita valores menores a 0.
+5. Verificar que CorreoElectronico tenga un formato válido.
 
 Restricciones:
 
@@ -1734,16 +1741,21 @@ Restricciones:
 - Crear solo los archivos necesarios.
 - Respetar la estructura actual del proyecto.
 - Validar con dotnet test.
+```
+
+---
 
 # Beneficio del Agente
 
 Obsérvese que ya no es necesario repetir constantemente:
 
+```text
 - Utiliza .NET 8.
 - Usa XUnit.
 - Prioriza la calidad.
 - Sigue buenas prácticas.
 - Responde en español.
+```
 
 Estas reglas forman parte del comportamiento permanente del agente, permitiendo obtener respuestas más consistentes y alineadas con los estándares del equipo.
 
