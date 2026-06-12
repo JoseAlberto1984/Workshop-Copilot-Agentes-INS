@@ -1759,6 +1759,8 @@ Obsérvese que ya no es necesario repetir constantemente:
 
 Estas reglas forman parte del comportamiento permanente del agente, permitiendo obtener respuestas más consistentes y alineadas con los estándares del equipo.
 
+---
+
 # Casos de Uso Empresariales
 
 Dentro de una organización podrían existir agentes especializados como:
