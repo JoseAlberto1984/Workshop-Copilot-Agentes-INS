@@ -1665,245 +1665,87 @@ Los agentes permiten:
 ✅ Facilitar la incorporación de nuevos desarrolladores.
 
 ---
+# Ejercicio Práctico 1: Crear un Agente QA
 
-# Utilizando la IA para Crear un Agente
-
-Al igual que aprendimos a construir prompts efectivos, también podemos utilizar la IA para diseñar nuestros propios agentes.
-
-Por ejemplo, podríamos solicitar:
-
-```text
 Actúa como experto en GitHub Copilot.
 
 Objetivo:
-Crear un agente especializado para un equipo Backend .NET.
+Crear un agente especializado en pruebas unitarias para la solución Workshop.Seguros.API.
+
+Nombre del agente:
+Especialista QA .NET
+
+Ubicación:
+Crear el agente dentro de la carpeta .github de la solución.
 
 Contexto:
-El equipo desarrolla APIs empresariales utilizando .NET.
+La solución utiliza .NET 8 y XUnit.
 
 Resultado esperado:
 
-Generar:
+1. Crear el archivo del agente.
 
-1. Nombre del agente.
-2. Descripción.
-3. Instructions recomendadas.
-4. Skills recomendados.
-```
+2. Generar una descripción adecuada.
 
----
+3. Definir las Instructions del agente.
 
-# Caso Práctico del Taller
+4. Definir los Skills necesarios.
 
-Supongamos que el equipo desea estandarizar la forma en que se desarrollan los servicios Backend.
+Restricciones:
 
-En lugar de repetir instrucciones constantemente, se crea un agente especializado.
+- Responder en español.
+- Utilizar .NET 8.
+- Priorizar calidad y mantenibilidad.
+- Promover pruebas unitarias y de integración.
+- Utilizar únicamente XUnit.
+- Seguir buenas prácticas de automatización.
 
----
+# Ejercicio Práctico 2: Utilizando el Agente
 
-# Nombre del Agente
+Una vez creado el agente:
 
-```text
-Especialista Backend .NET
-```
+Especialista QA .NET
 
----
+podemos utilizarlo para generar pruebas unitarias sobre una entidad existente de la solución.
 
-# Descripción
+Por ejemplo, sobre:
 
-```text
-Agente especializado en el desarrollo de APIs empresariales utilizando .NET y aplicando principios de Clean Architecture y buenas prácticas de ingeniería de software.
-```
+SolicitudSeguro
 
----
+Realizar la siguiente consulta:
 
-# Instructions
+Actúa como Especialista QA .NET.
 
-```text
-- Responde en español.
+Implementa únicamente 5 pruebas con XUnit para la entidad SolicitudSeguro.
+
+Escenarios obligatorios:
+
+1. Verificar que Id tenga un Guid válido.
+2. Verificar que NumeroSolicitud pueda asignarse correctamente.
+3. Verificar que NombreCliente pueda asignarse correctamente.
+4. Verificar que FechaSolicitud almacene la fecha indicada.
+5. Verificar que TipoSeguro pueda asignarse correctamente.
+
+Restricciones:
+
+- No implementar más de 5 pruebas.
+- Utilizar únicamente métodos Fact.
+- No usar Theory ni InlineData.
+- Crear solo los archivos necesarios.
+- Respetar la estructura actual del proyecto.
+- Validar con dotnet test.
+
+# Beneficio del Agente
+
+Obsérvese que ya no es necesario repetir constantemente:
 
 - Utiliza .NET 8.
-
-- Aplica principios de Clean Architecture.
-
-- Sugiere pruebas unitarias utilizando XUnit.
-
-- Prioriza código mantenible y desacoplado.
-
-- Utiliza nombres descriptivos.
-
-- Genera comentarios XML cuando sea apropiado.
-
-- Aplica buenas prácticas de seguridad.
-
-- Sugiere validaciones de negocio.
-
-- Propón alternativas cuando existan varias opciones.
-
-- Sigue principios SOLID y Clean Code.
-
-- Explica las decisiones de diseño cuando sea necesario.
-```
-
----
-
-# Skills
-
-```text
-- Diseño de APIs REST.
-
-- Clean Architecture.
-
-- C# y .NET 8.
-
-- Minimal APIs.
-
-- Pruebas Unitarias con XUnit.
-
-- Validaciones de negocio.
-
-- Documentación técnica.
-
-- Revisión de código.
-
-- Principios SOLID.
-
-- Clean Code.
-```
-
----
-
-# Crear un Agente en GitHub Copilot
-
-## Paso 1
-
-Abrir GitHub Copilot.
-
----
-
-## Paso 2
-
-Seleccionar:
-
-```text
-Agents
-```
-
----
-
-## Paso 3
-
-Crear un nuevo agente.
-
----
-
-## Paso 4
-
-Definir:
-
-* Nombre.
-* Descripción.
-* Instructions.
-
----
-
-## Paso 5
-
-Agregar los Skills correspondientes.
-
----
-
-## Paso 6
-
-Guardar el agente y comenzar a utilizarlo.
-
----
-
-# Ejercicio Práctico 1
-
-Solicitar a GitHub Copilot:
-
-```text
-Actúa como experto en GitHub Copilot.
-
-Objetivo:
-Crear un agente especializado para QA.
-
-Contexto:
-La solución Workshop.Seguros.API utiliza .NET 8 y XUnit.
-
-Resultado esperado:
-
-Generar:
-
-1. Nombre del agente.
-2. Descripción.
-3. Instructions.
-4. Skills.
-```
-
----
-
-# Posible Resultado
-
-## Nombre
-
-```text
-Especialista QA .NET
-```
-
----
-
-## Instructions
-
-```text
+- Usa XUnit.
+- Prioriza la calidad.
+- Sigue buenas prácticas.
 - Responde en español.
-- Prioriza la calidad del software.
-- Sugiere pruebas unitarias y de integración.
-- Promueve alta cobertura de código.
-- Sigue buenas prácticas de automatización.
-```
 
----
-
-## Skills
-
-```text
-- Pruebas Unitarias.
-- Pruebas de Integración.
-- Cobertura de Código.
-- Automatización.
-- Revisión de Calidad.
-```
-
----
-
-# Ejercicio Práctico 2
-
-Utilizando el agente:
-
-```text
-Especialista Backend .NET
-```
-
-realizar la siguiente consulta:
-
-```text
-Necesito implementar la funcionalidad para registrar una solicitud de seguro.
-```
-
-Analizar cómo las respuestas ya incorporan automáticamente:
-
-* .NET 8.
-* Clean Architecture.
-* Buenas prácticas.
-* Validaciones.
-* XUnit.
-* Código mantenible.
-
-sin necesidad de repetir dichas instrucciones.
-
----
+Estas reglas forman parte del comportamiento permanente del agente, permitiendo obtener respuestas más consistentes y alineadas con los estándares del equipo.
 
 # Casos de Uso Empresariales
 
